@@ -146,6 +146,39 @@
     height: 4px;
     background-color: #ff0000;
 }
+/* --- DISEÑO DEL INDICADOR DE RUTA --- */
+.caja-ruta-exterior {
+    position: absolute;
+    width: 38px;
+    height: 48px;
+    background-color: #000000; /* Caja chapa negra */
+    border: 2px solid #333333;
+    border-radius: 4px;
+    display: none; /* Arranca apagado y oculto por defecto */
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+.visor-ruta-interior {
+    width: 28px;
+    height: 38px;
+    background-color: #e6c300; /* Amarillo real de tu foto */
+    border: 2px solid #000000;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-ruta-negro {
+    font-family: 'Courier New', monospace;
+    font-size: 30px;
+    font-weight: 900;
+    color: #000000; /* Letras o números negros */
+    line-height: 1;
+    user-select: none;
+}
 
 </style>
 </head>
@@ -1440,6 +1473,8 @@ rotate(45deg);"></div>
 
 
 
+
+</div>
 
 </div>
 
@@ -3198,7 +3233,7 @@ rotate(45deg);"></div>
             if (!cabinas.trafico_sanfernando) procesarDatosTrafico(dataSf.trafico, "SF");
             procesarEnclavamientosCambios(dataSf.enclavamientos);
         }
-        // ==========================================
+       // ==========================================
         // 6. PROCESAMIENTO CABINA TERMINAL TIGRE (CORREGIDO)
         // ==========================================
         var dataTig = cabinas.tigre || cabinas["tigre"];
@@ -3241,8 +3276,32 @@ rotate(45deg);"></div>
             }
             procesarBloqueSenales(dataTig.senales);
             procesarEnclavamientosCambios(dataTig.enclavamientos);
+
+            // >>> ¡LA LLAMADA CLAVE QUE FALTA AGREGAR VA ACÁ! <<<
+            // Si desde Firebase o el ESP32 mandan la clave "itinerario_tigre", actualiza el cartel
+            if(dataTig.itinerario_tigre !== undefined) {
+                actualizarCartelRuta(dataTig.itinerario_tigre);
+            }
         }
 
+// FUNCIÓN PARA ENTRADA DE DATOS DE ITINERARIO (Tal cual la pusiste vos, está perfecta acá abajo)
+function actualizarCartelRuta(datoItinerario) {
+    var cajaExterior = document.getElementById('cartel_ruta_tigre');
+    var textoInterior = document.getElementById('texto_ruta_tigre');
+
+    if (!cajaExterior || !textoInterior) return;
+
+    var ruta = String(datoItinerario).trim().toUpperCase();
+    var rutasValidas = ['1', '2', '3', '4', 'T', 'G', 'P', 'M'];
+
+    if (rutasValidas.includes(ruta)) {
+        textoInterior.innerText = ruta;
+        cajaExterior.style.display = 'flex'; 
+    } else {
+        textoInterior.innerText = '';
+        cajaExterior.style.display = 'none'; 
+    }
+}
 // ==================================================================
         // 7. PROCESAMIENTO CABINA VICTORIA (CORREGIDO INTEGRAL CON W47/143)
         // ==================================================================
