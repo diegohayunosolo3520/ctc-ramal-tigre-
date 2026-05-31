@@ -358,6 +358,24 @@
     <div class="label-plataforma" style="top: 990px; left: 8755px; width: 170px; height: 35px;">PLATAFORMA 2</div>
     <div class="label-plataforma" style="top: 990px; left: 9260px; width: 170px; height: 35px;">PLATAFORMA 2</div>
 
+<div id="cartel_ruta_tigre" class="caja-ruta-exterior" style="top: 775px; left: 9950px;">
+    <div class="visor-ruta-interior">
+        <div id="texto_ruta_tigre" class="texto-ruta-negro"></div>
+    </div></div>
+
+<div id="cartel_ruta_v_vic" class="caja-ruta-exterior" style="top: 775px; left: 6375px;">
+    <div class="visor-ruta-interior">
+        <div id="texto_ruta_v_vic" class="texto-ruta-negro"></div>
+    </div>
+</div>
+<div id="cartel_ruta_w_vic" class="caja-ruta-exterior" style="top: 365px; left: 8290px;">
+
+    <div class="visor-ruta-interior">
+        <div id="texto_ruta_w_vic" class="texto-ruta-negro"></div>
+    </div>
+</div>
+
+</div>
         <div class="andenfin" style="top: 476px; left: 6664px; width: 100px; transform: rotate(-90deg);"></div>
         <div class="andenfin" style="top: 437px; left: 6900px; width: 40px; transform: rotate(-90deg);"></div>
         <div class="andenfin" style="top:  80px; left: 7702px; width: 50px; transform: rotate(-45deg);"></div>
@@ -3279,8 +3297,8 @@ rotate(45deg);"></div>
 
             // >>> ¡LA LLAMADA CLAVE QUE FALTA AGREGAR VA ACÁ! <<<
             // Si desde Firebase o el ESP32 mandan la clave "itinerario_tigre", actualiza el cartel
-            if(dataTig.itinerario_tigre !== undefined) {
-                actualizarCartelRuta(dataTig.itinerario_tigre);
+           if(dataTig.itinerario_tigre !== undefined) {
+                actualizarCartelEspecifico('cartel_ruta_tigre', 'texto_ruta_tigre', dataTig.itinerario_tigre);
             }
         }
 
@@ -3530,30 +3548,44 @@ function actualizarCartelRuta(datoItinerario) {
                 });
             }
 
-            if(dataVic.trafico) {
+     // [Acá termina tu procesamiento existente de Victoria...]
+           if(dataVic.trafico) {
                 procesarDatosTrafico(dataVic.trafico, "VI");
             }
             
             procesarBloqueSenales(dataVic.senales);
             procesarEnclavamientosCambios(dataVic.enclavamientos);
 
-            // >>> 1. ¡LA LLAMADA VA ACÁ JUSTO ANTES DE CERRAR LA CABINA!
+            // ================================================================
+            // >>> EL LUGAR EXACTO: LOS DOS INDICADORES DE VICTORIA VAN ACÁ <<<
+            // ================================================================
+            // Lee "itinerario_v_vic" colgado de la carpeta "victoria" en tu Firebase
+            if(dataVic.itinerario_v_vic !== undefined) {
+                actualizarCartelEspecifico('cartel_ruta_v_vic', 'texto_ruta_v_vic', dataVic.itinerario_v_vic);
+            }
+
+            // Lee "itinerario_w_vic" colgado de la carpeta "victoria" en tu Firebase
+            if(dataVic.itinerario_w_vic !== undefined) {
+                actualizarCartelEspecifico('cartel_ruta_w_vic', 'texto_ruta_w_vic', dataVic.itinerario_w_vic);
+            }
+
+            // >>> ¡LA LLAMADA ORIGINAL TUYA SIGUE ACÁ IMPECABLE!
             sincronizarViasEspejo(dataVic);
         }
     }); // Fin de la escucha Firebase  
 
-// >>> 2. LA FUNCIÓN VA ACÁ AFUERA (ENTRE LA ESCUCHA Y EL ONLOAD)
+// ==================================================================
+// >>> FUNCIONES SUELTAS (AFUERA DE LA ESCUCHA DE FIREBASE)
+// ==================================================================
+
+// LA FUNCIÓN DE VIAS ESPEJO QUE YA TENÍAS
 function sincronizarViasEspejo(dataVic) {
     if (!dataVic || !dataVic.vias) return;
-
-    // Buscamos el estado real del circuito usando la clave que manda Firebase ("cv-vic")
     var estadoVia = dataVic.vias["cv-vic"];
-
     if (estadoVia !== undefined) {
         var elRecta = document.getElementById('cv-vic');
         var elDiagonal = document.getElementById('cvv-vic');
         var esLibre = (estadoVia === 0);
-
         if (elRecta) {
             elRecta.classList.toggle('libre', esLibre);
             elRecta.classList.toggle('ocupado', !esLibre);
@@ -3565,11 +3597,31 @@ function sincronizarViasEspejo(dataVic) {
     }
 }
 
+// NUEVA: FUNCIÓN UNIVERSAL PARA CUALQUIER CARTEL DEL MAPA
+// (Te sirve para Tigre, Victoria V, Victoria W o el que quieras, validando las 8 opciones)
+function actualizarCartelEspecifico(idCaja, idTexto, datoItinerario) {
+    var cajaExterior = document.getElementById(idCaja);
+    var textoInterior = document.getElementById(idTexto);
+
+    if (!cajaExterior || !textoInterior) return;
+
+    var ruta = String(datoItinerario).trim().toUpperCase();
+    var rutasValidas = ['1', '2', '3', '4', 'T', 'G', 'P', 'M'];
+
+    if (rutasValidas.includes(ruta)) {
+        textoInterior.innerText = ruta;
+        cajaExterior.style.display = 'flex'; // Prende el visor amarillo con letras negras
+    } else {
+        textoInterior.innerText = '';
+        cajaExterior.style.display = 'none'; // Se apaga por completo negro sobre negro en reposo
+    }
+}
+// TU CARGA INICIAL
 window.onload = function() {
-        pW();
-        Object.keys(cambiosNuz).forEach(actualizarChangeNuz);
-        Object.keys(panesNuz).forEach(actualizarPAN);
-    };
+    pW();
+    Object.keys(cambiosNuz).forEach(actualizarChangeNuz);
+    Object.keys(panesNuz).forEach(actualizarPAN);
+};
 
 </script>
 
