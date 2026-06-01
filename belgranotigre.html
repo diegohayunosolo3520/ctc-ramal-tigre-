@@ -3040,25 +3040,31 @@ rotate(45deg);"></div>
             }
             
             // >>> PINTADO AUTOMÁTICO PARA ENTRADAS SECTORIZADAS DEL S3 <<<
-            if (viasS3) {
-                Object.keys(viasS3).forEach(function(id) {
-                    var idL = id.toLowerCase().trim();
-                    var el = document.getElementById(id) || document.getElementById(idL) || document.getElementById(id.toUpperCase()) || document.getElementById("c" + idL) || document.getElementById("cdv" + idL);
-                    if(!el) {
-                        if(idL === "a-bel") el = document.getElementById("a-Bel");
-                        if(idL === "b-bel") el = document.getElementById("b-Bel");
-                        if(idL === "y-bel") el = document.getElementById("y-Bel");
-                        if(idL === "z-bel") el = document.getElementById("z-Bel");
-                    }
-                    if (el) {
-                        var val = viasS3[id];
-                        // Si el Mega mandó "1" (Ocupada), le metemos la clase 'ocupado'
-                        var esOcu = (val === 1 || val === "1");
-                        el.classList.toggle('ocupado', esOcu);
-                        el.classList.toggle('libre', !esOcu);
-                    }
-                });
+if (viasS3) {
+    Object.keys(viasS3).forEach(function(id) {
+        var idL = id.toLowerCase().trim();
+        var el = document.getElementById(id) || document.getElementById(idL) || document.getElementById(id.toUpperCase()) || document.getElementById("c" + idL) || document.getElementById("cdv" + idL);
+        if(!el) {
+            if(idL === "a-bel") el = document.getElementById("a-Bel");
+            if(idL === "b-bel") el = document.getElementById("b-Bel");
+            if(idL === "y-bel") el = document.getElementById("y-Bel");
+            if(idL === "z-bel") el = document.getElementById("z-Bel");
+        }
+        if (el) {
+            var val = viasS3[id];
+            var esOcu = (val === 1 || val === "1");
+            
+            // --- REPARACIÓN DE LIMPIEZA CRÍTICA ---
+            if (esOcu) {
+                el.classList.add('ocupado');
+                el.classList.remove('libre');
+            } else {
+                el.classList.remove('ocupado');
+                el.classList.add('libre');
             }
+        }
+    });
+}
 
             if(dataBel.cambios) {
                 if(dataBel.cambios.W12 !== undefined) curW = dataBel.cambios.W12.toString();
