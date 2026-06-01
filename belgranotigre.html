@@ -3054,7 +3054,7 @@ if (viasS3) {
             var val = viasS3[id];
             var esOcu = (val === 1 || val === "1");
             
-            // --- REPARACIÓN DE LIMPIEZA CRÍTICA ---
+            // --- ESTO ES LO QUE REMUEVE EL ROJO ---
             if (esOcu) {
                 el.classList.add('ocupado');
                 el.classList.remove('libre');
@@ -3065,7 +3065,6 @@ if (viasS3) {
         }
     });
 }
-
             if(dataBel.cambios) {
                 if(dataBel.cambios.W12 !== undefined) curW = dataBel.cambios.W12.toString();
                 if(dataBel.cambios.AW12 !== undefined) flagAveria_Bel = dataBel.cambios.AW12;
