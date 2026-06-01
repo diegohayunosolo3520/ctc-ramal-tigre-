@@ -3009,13 +3009,19 @@ rotate(45deg);"></div>
         }
 
         // ==========================================
-        // 1. PROCESAMIENTO BELGRANO
+        // 1. PROCESAMIENTO BELGRANO (CORREGIDO ESP32-S3)
         // ==========================================
         var dataBel = cabinas.belgrano;
         if(dataBel) {
+            
+            // Caza de subcarpetas nuevas del S3
+            var viasS3 = dataBel.vias ? dataBel.vias : null;
+            var senalesS3 = dataBel.senales ? dataBel.senales : null;
+
             if(dataBel.vias) {
                 if(dataBel.vias["w1pm"] !== undefined) w1_ocupado = (dataBel.vias["w1pm"] === 1);
                 if(dataBel.vias["w2pm"] !== undefined) w2_ocupado = (dataBel.vias["w2pm"] === 1);
+                
                 Object.keys(dataBel.vias).forEach(function(id) {
                     viasEstadoBel[id] = dataBel.vias[id]; 
                     var idL = id.toLowerCase().trim();
@@ -3028,18 +3034,48 @@ rotate(45deg);"></div>
                     }
                     if(el && !["w1plus", "w1minus", "w2plus", "w2minus", "w1pm", "w2pm"].includes(el.id)) {
                         el.classList.toggle('libre', dataBel.vias[id] === 0);
+                        el.classList.toggle('ocupado', dataBel.vias[id] === 1); // Aseguramos color de ocupación
                     }
                 });
             }
+            
+            // >>> PINTADO AUTOMÁTICO PARA ENTRADAS SECTORIZADAS DEL S3 <<<
+            if (viasS3) {
+                Object.keys(viasS3).forEach(function(id) {
+                    var idL = id.toLowerCase().trim();
+                    var el = document.getElementById(id) || document.getElementById(idL) || document.getElementById(id.toUpperCase()) || document.getElementById("c" + idL) || document.getElementById("cdv" + idL);
+                    if(!el) {
+                        if(idL === "a-bel") el = document.getElementById("a-Bel");
+                        if(idL === "b-bel") el = document.getElementById("b-Bel");
+                        if(idL === "y-bel") el = document.getElementById("y-Bel");
+                        if(idL === "z-bel") el = document.getElementById("z-Bel");
+                    }
+                    if (el) {
+                        var val = viasS3[id];
+                        // Si el Mega mandó "1" (Ocupada), le metemos la clase 'ocupado'
+                        var esOcu = (val === 1 || val === "1");
+                        el.classList.toggle('ocupado', esOcu);
+                        el.classList.toggle('libre', !esOcu);
+                    }
+                });
+            }
+
             if(dataBel.cambios) {
                 if(dataBel.cambios.W12 !== undefined) curW = dataBel.cambios.W12.toString();
                 if(dataBel.cambios.AW12 !== undefined) flagAveria_Bel = dataBel.cambios.AW12;
             }
+            
+            // Render de señales clásicas
             procesarBloqueSenales(dataBel.senales);
+
+            // Render de señales nuevas del S3
+            if (senalesS3) {
+                procesarBloqueSenales(senalesS3);
+            }
+
             procesarDatosTrafico(dataBel.trafico || dataBel.datos_trafico, "B");
             procesarEnclavamientosCambios(dataBel.enclavamientos);
         }
-
         // ==========================================
         // 2. PROCESAMIENTO NÚÑEZ / RIVADAVIA
         // ==========================================
