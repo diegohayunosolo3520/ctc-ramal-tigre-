@@ -3008,79 +3008,70 @@ rotate(45deg);"></div>
             });
         }
 
-        // ==========================================
-        // 1. PROCESAMIENTO BELGRANO (CORREGIDO ESP32-S3)
-        // ==========================================
-        var dataBel = cabinas.belgrano;
-        if(dataBel) {
+     // ==================================================================
+// CONFIGURACIÓN DE PINTURA ULTRA-RÁPIDA PARA SECTOR BELGRANO C
+// ==================================================================
+var dataBel = cabinas.belgrano;
+if (dataBel) {
+    
+    // 1. Procesamiento de Vías y Circuitos (Mesa + S3)
+    if (dataBel.vias) {
+        Object.keys(dataBel.vias).forEach(function(id) {
+            var val = dataBel.vias[id];
+            var esOcupado = (val === 1 || val === "1");
             
-            // Caza de subcarpetas nuevas del S3
-            var viasS3 = dataBel.vias ? dataBel.vias : null;
-            var senalesS3 = dataBel.senales ? dataBel.senales : null;
+            // Convertimos el ID a minúsculas y limpiamos espacios para no errarle
+            var idL = id.toLowerCase().trim();
+            
+            // Buscamos la vía de todas las formas posibles en tu plano HTML
+            var el = document.getElementById(id) || 
+                     document.getElementById(idL) || 
+                     document.getElementById(id.toUpperCase()) || 
+                     document.getElementById("c" + idL) || 
+                     document.getElementById("cdv" + idL) ||
+                     document.getElementById("CDV" + id.toUpperCase());
+            
+            // Caso especial para los circuitos de las puntas que tienen nombres cruzados
+            if (!el) {
+                if (idL === "a-bel" || idL === "a-belgrano") el = document.getElementById("a-Bel");
+                if (idL === "b-bel" || idL === "b-belgrano") el = document.getElementById("b-Bel");
+                if (idL === "y-bel" || idL === "y-belgrano") el = document.getElementById("y-Bel");
+                if (idL === "z-bel" || idL === "z-belgrano") el = document.getElementById("z-Bel");
+                if (idL === "cvt7") el = document.getElementById("CVT7");
+            }
+            
+            // >>> EL SECRETO DEL BORRADO COMPLETO <<<
+            if (el) {
+                if (esOcupado) {
+                    el.classList.remove('libre');
+                    el.classList.add('ocupado'); // Clava el Rojo furioso
+                } else {
+                    el.classList.remove('ocupado'); // ¡Saca el rojo sin dejar rastro!
+                    el.classList.add('libre');   // Clava el Verde/Gris de vía libre
+                }
+            }
+        });
 
-            if(dataBel.vias) {
-                if(dataBel.vias["w1pm"] !== undefined) w1_ocupado = (dataBel.vias["w1pm"] === 1);
-                if(dataBel.vias["w2pm"] !== undefined) w2_ocupado = (dataBel.vias["w2pm"] === 1);
-                
-                Object.keys(dataBel.vias).forEach(function(id) {
-                    viasEstadoBel[id] = dataBel.vias[id]; 
-                    var idL = id.toLowerCase().trim();
-                    var el = document.getElementById(id) || document.getElementById(idL) || document.getElementById(id.toUpperCase()) || document.getElementById("c" + idL) || document.getElementById("cdv" + idL);
-                    if(!el) {
-                        if(idL === "a-bel") el = document.getElementById("a-Bel");
-                        if(idL === "b-bel") el = document.getElementById("b-Bel");
-                        if(idL === "y-bel") el = document.getElementById("y-Bel");
-                        if(idL === "z-bel") el = document.getElementById("z-Bel");
-                    }
-                    if(el && !["w1plus", "w1minus", "w2plus", "w2minus", "w1pm", "w2pm"].includes(el.id)) {
-                        el.classList.toggle('libre', dataBel.vias[id] === 0);
-                        el.classList.toggle('ocupado', dataBel.vias[id] === 1); // Aseguramos color de ocupación
-                    }
-                });
-            }
-            
-            // >>> PINTADO AUTOMÁTICO PARA ENTRADAS SECTORIZADAS DEL S3 <<<
-if (viasS3) {
-    Object.keys(viasS3).forEach(function(id) {
-        var idL = id.toLowerCase().trim();
-        var el = document.getElementById(id) || document.getElementById(idL) || document.getElementById(id.toUpperCase()) || document.getElementById("c" + idL) || document.getElementById("cdv" + idL);
-        if(!el) {
-            if(idL === "a-bel") el = document.getElementById("a-Bel");
-            if(idL === "b-bel") el = document.getElementById("b-Bel");
-            if(idL === "y-bel") el = document.getElementById("y-Bel");
-            if(idL === "z-bel") el = document.getElementById("z-Bel");
-        }
-        if (el) {
-            var val = viasS3[id];
-            var esOcu = (val === 1 || val === "1");
-            
-            // --- ESTO ES LO QUE REMUEVE EL ROJO ---
-            if (esOcu) {
-                el.classList.add('ocupado');
-                el.classList.remove('libre');
-            } else {
-                el.classList.remove('ocupado');
-                el.classList.add('libre');
-            }
-        }
-    });
+        // Mantenemos tus variables globales por si las usás en enclavamientos
+        if(dataBel.vias["w1pm"] !== undefined) w1_ocupado = (dataBel.vias["w1pm"] === 1 || dataBel.vias["w1pm"] === "1");
+        if(dataBel.vias["w2pm"] !== undefined) w2_ocupado = (dataBel.vias["w2pm"] === 1 || dataBel.vias["w2pm"] === "1");
+    }
+
+    // 2. Procesamiento de Señales (Tu bloque actual rápido)
+    if (dataBel.senales) {
+        procesarBloqueSenales(dataBel.senales);
+    }
+
+    // 3. Cambios y Desvíos
+    if (dataBel.cambios) {
+        if (dataBel.cambios.W12 !== undefined) curW = dataBel.cambios.W12.toString();
+        if (dataBel.cambios.AW12 !== undefined) flagAveria_Bel = dataBel.cambios.AW12;
+    }
+
+    // Resto del tráfico y enclavamientos originales...
+    procesarDatosTrafico(dataBel.trafico || dataBel.datos_trafico, "B");
+    procesarEnclavamientosCambios(dataBel.enclavamientos);
 }
-            if(dataBel.cambios) {
-                if(dataBel.cambios.W12 !== undefined) curW = dataBel.cambios.W12.toString();
-                if(dataBel.cambios.AW12 !== undefined) flagAveria_Bel = dataBel.cambios.AW12;
-            }
-            
-            // Render de señales clásicas
-            procesarBloqueSenales(dataBel.senales);
-
-            // Render de señales nuevas del S3
-            if (senalesS3) {
-                procesarBloqueSenales(senalesS3);
-            }
-
-            procesarDatosTrafico(dataBel.trafico || dataBel.datos_trafico, "B");
-            procesarEnclavamientosCambios(dataBel.enclavamientos);
-        }
         // ==========================================
         // 2. PROCESAMIENTO NÚÑEZ / RIVADAVIA
         // ==========================================
