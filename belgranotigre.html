@@ -146,6 +146,39 @@
     height: 4px;
     background-color: #ff0000;
 }
+/* --- DISEÑO DEL INDICADOR DE RUTA --- */
+.caja-ruta-exterior {
+    position: absolute;
+    width: 38px;
+    height: 48px;
+    background-color: #000000; /* Caja chapa negra */
+    border: 2px solid #333333;
+    border-radius: 4px;
+    display: none; /* Arranca apagado y oculto por defecto */
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+.visor-ruta-interior {
+    width: 28px;
+    height: 38px;
+    background-color: #e6c300; /* Amarillo real de tu foto */
+    border: 2px solid #000000;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-ruta-negro {
+    font-family: 'Courier New', monospace;
+    font-size: 30px;
+    font-weight: 900;
+    color: #000000; /* Letras o números negros */
+    line-height: 1;
+    user-select: none;
+}
 
 </style>
 </head>
@@ -157,7 +190,66 @@
         <div class="status-row"><b>W2/1</b><div id="LW12P" class="led-rd"></div><b>+</b><div id="LW12M" class="led-rd"></div><b>-</b><div id="AW12" class="led-rd"></div><b>A</b></div>
     </div>
 
- 
+    <div class="status-container-nuz">
+        <div class="status-row"><div class="nombre-grupo">W10/11</div><div id="LW1011P" class="led-rd"></div><b>+</b><div id="LW1011M" class="led-rd"></div><b>-</b><div id="AW1011" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W12/15</div><div id="LW1215P" class="led-rd"></div><b>+</b><div id="LW1215M" class="led-rd"></div><b>-</b><div id="AW1215" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W124/123</div><div id="LW124123P" class="led-rd"></div><b>+</b><div id="LW124123M" class="led-rd"></div><b>-</b><div id="AW124123" class="led-rd"></div><b>A</b></div>
+    </div>
+
+    <div class="status-container-oli">
+        <div class="status-row"><div class="nombre-grupo">W20/21</div><div id="LW2021P" class="led-rd"></div><b>+</b><div id="LW2021M" class="led-rd"></div><b>-</b><div id="AW2021" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W24/25</div><div id="LW2425P" class="led-rd"></div><b>+</b><div id="LW2425M" class="led-rd"></div><b>-</b><div id="AW2425" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W132/131</div><div id="LW132131P" class="led-rd"></div><b>+</b><div id="LW132131M" class="led-rd"></div><b>-</b><div id="AW132131" class="led-rd"></div><b>A</b></div>
+    </div>
+
+    <div class="status-container-isi">
+        <div class="status-row"><div class="nombre-grupo">W30/31</div><div id="LW3031P" class="led-rd"></div><b>+</b><div id="LW3031M" class="led-rd"></div><b>-</b><div id="AW3031" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W32/33</div><div id="LW3233P" class="led-rd"></div><b>+</b><div id="LW3233M" class="led-rd"></div><b>-</b><div id="AW3233" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W152/151</div><div id="LW152m151mP" class="led-rd"></div><b>+</b><div id="LW152m151mM" class="led-rd"></div><b>-</b><div id="AW152m151m" class="led-rd"></div><b>A</b></div>
+    </div>
+
+<div class="status-container-vic">
+        <div class="status-row"><div class="nombre-grupo">W40/41</div><div id="LW4041P" class="led-rd"></div><b>+</b><div id="LW4041M" class="led-rd"></div><b>-</b><div id="AW4041" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W152</div><div id="LW152P" class="led-rd"></div><b>+</b><div id="LW152M" class="led-rd"></div><b>-</b><div id="AW152" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W43/141</div><div id="LW43141P" class="led-rd"></div><b>+</b><div id="LW43141M" class="led-rd"></div><b>-</b><div id="AW43141" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W45/45a</div><div id="LW4545aP" class="led-rd"></div><b>+</b><div id="LW4545aM" class="led-rd"></div><b>-</b><div id="AW4545a" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W46/49</div><div id="LW4649P" class="led-rd"></div><b>+</b><div id="LW4649M" class="led-rd"></div><b>-</b><div id="AW4649" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W51/52</div><div id="LW5152P" class="led-rd"></div><b>+</b><div id="LW5152M" class="led-rd"></div><b>-</b><div id="AW5152" class="led-rd"></div><b>A</b></div>
+         <div class="status-row"><div class="nombre-grupo">W154/54</div><div id="LW15454P" class="led-rd"></div><b>+</b><div id="LW15454M" class="led-rd"></div><b>-</b><div id="AW15454" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W156/56b</div><div id="LW15656bP" class="led-rd"></div><b>+</b><div id="LW15656bM" class="led-rd"></div><b>-</b><div id="AW15656b" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W50/150</div><div id="LW50150P" class="led-rd"></div><b>+</b><div id="LW50150M" class="led-rd"></div><b>-</b><div id="AW50150" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W56a/55</div><div id="LW56a55P" class="led-rd"></div><b>+</b><div id="LW56a55M" class="led-rd"></div><b>-</b><div id="AW56a55" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W151</div><div id="LW151P" class="led-rd"></div><b>+</b><div id="LW151M" class="led-rd"></div><b>-</b><div id="AW151" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W142</div><div id="LW142P" class="led-rd"></div><b>+</b><div id="LW142M" class="led-rd"></div><b>-</b><div id="AW142" class="led-rd"></div><b>A</b></div>
+         <div class="status-row"><div class="nombre-grupo">W53</div><div id="LW53P" class="led-rd"></div><b>+</b><div id="LW53M" class="led-rd"></div><b>-</b><div id="AW53" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W147/140</div><div id="LW147140P" class="led-rd"></div><b>+</b><div id="LW147140M" class="led-rd"></div><b>-</b><div id="AW147140" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W145</div><div id="LW145P" class="led-rd"></div><b>+</b><div id="LW145M" class="led-rd"></div><b>-</b><div id="AW145" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W47/143</div><div id="LW47143P" class="led-rd"></div><b>+</b><div id="LW47143M" class="led-rd"></div><b>-</b><div id="AW47143" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W44</div><div id="LW4449xP" class="led-rd"></div><b>+</b><div id="LW4449xM" class="led-rd"></div><b>-</b><div id="AW4449x" class="led-rd"></div><b>A</b></div>
+        </div>
+
+
+<div class="status-container-fer">
+        <div class="status-row"><div class="nombre-grupo">W60/61</div><div id="LW6061P" class="led-rd"></div><b>+</b><div id="LW6061M" class="led-rd"></div><b>-</b><div id="AW6061" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W62/65</div><div id="LW6265P" class="led-rd"></div><b>+</b><div id="LW6265M" class="led-rd"></div><b>-</b><div id="AW6265" class="led-rd"></div><b>A</b></div>
+        </div>
+
+
+
+
+<div class="status-container-tig">
+        <div class="status-row"><div class="nombre-grupo">W70/71</div><div id="LW7071P" class="led-rd"></div><b>+</b><div id="LW7071M" class="led-rd"></div><b>-</b><div id="AW7071" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W74/73</div><div id="LW7473P" class="led-rd"></div><b>+</b><div id="LW7473M" class="led-rd"></div><b>-</b><div id="AW7473" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W72</div><div id="LW72P" class="led-rd"></div><b>+</b><div id="LW72M" class="led-rd"></div><b>-</b><div id="AW72" class="led-rd"></div><b>A</b></div>
+        <div class="status-row"><div class="nombre-grupo">W75</div><div id="LW75P" class="led-rd"></div><b>+</b><div id="LW75M" class="led-rd"></div><b>-</b><div id="AW75" class="led-rd"></div><b>A</b></div>
+        </div>
+
+
+
+
+
+
+
 
 
 
@@ -166,27 +258,148 @@
 
 
     <div class="cd-via-panelB"><div><div id="led-CDV1_B" class="led-10mm"></div>CDV1</div><div><div id="led-CDV2_B" class="led-10mm"></div>CDV2</div><div><div id="led-RF_B" class="led-10mm"></div>R.F</div><div><div id="led-RU_B" class="led-10mm"></div>R.U</div></div>
- 
+    <div class="cd-via-panelN"><div><div id="led-CDV1_N" class="led-10mm"></div>CDV1</div><div><div id="led-CDV2_N" class="led-10mm"></div>CDV2</div><div><div id="led-RF_N" class="led-10mm"></div>R.F</div><div><div id="led-RU_N" class="led-10mm"></div>R.U</div></div>
+    <div class="cd-via-panelR"><div><div id="led-RF_R" class="led-10mm"></div>R.F</div><div><div id="led-RU_R" class="led-10mm"></div>R.U</div></div>
+    <div class="cd-via-panelVL"><div><div id="led-RF_VL" class="led-10mm"></div>R.F</div><div><div id="led-RU_VL" class="led-10mm"></div>R.U</div></div>
+    <div class="cd-via-panelO"><div><div id="led-CDV1_O" class="led-10mm"></div>CDV1</div><div><div id="led-CDV2_O" class="led-10mm"></div>CDV2</div><div><div id="led-RF_O" class="led-10mm"></div>R.F</div><div><div id="led-RU_O" class="led-10mm"></div>R.U</div></div>
+    <div class="cd-via-panelLL"><div><div id="led-RF_LL" class="led-10mm"></div>R.F</div><div><div id="led-RU_LL" class="led-10mm"></div>R.U</div></div>
+    <div class="cd-via-panelSI"><div><div id="led-CDV1_SI" class="led-10mm"></div>CDV1</div><div><div id="led-CDV2_SI" class="led-10mm"></div>CDV2</div><div><div id="led-RF_SI" class="led-10mm"></div>R.F</div><div><div id="led-RU_SI" class="led-10mm"></div>R.U</div></div>
+    <div class="cd-via-panelMA"><div><div id="led-RF_MA" class="led-10mm"></div>R.F</div><div><div id="led-RU_MA" class="led-10mm"></div>R.U</div></div>
+    <div class="cd-via-panelAC"><div><div id="led-RF_AC" class="led-10mm"></div>R.F</div><div><div id="led-RU_AC" class="led-10mm"></div>R.U</div></div>
+    <div class="cd-via-panelVI"><div><div id="led-CDV1_VI" class="led-10mm"></div>CDV1</div><div><div id="led-CDV2_VI" class="led-10mm"></div>CDV2</div><div><div id="led-RF_VI" class="led-10mm"></div>R.F</div><div><div id="led-RU_VI" class="led-10mm"></div>R.U</div></div>
+    <div class="cd-via-panelBC"><div><div id="led-RF_BC" class="led-10mm"></div>R.F</div><div><div id="led-RU_BC" class="led-10mm"></div>R.U</div></div>
+
+
+
+
+    <div class="cd-via-panelSF"><div><div id="led-CDV1_SF" class="led-10mm"></div>CDV1</div><div><div id="led-CDV2_SF" class="led-10mm"></div>CDV2</div><div><div id="led-RF_SF" class="led-10mm"></div>R.F</div><div><div id="led-RU_SF" class="led-10mm"></div>R.U</div></div>
+    <div class="cd-via-panelVY"><div><div id="led-RF_V" class="led-10mm"></div>R.F</div><div><div id="led-RU_V" class="led-10mm"></div>R.U</div></div>
+    <div class="cd-via-panelCA"><div><div id="led-RF_C" class="led-10mm"></div>R.F</div><div><div id="led-RU_C" class="led-10mm"></div>R.U</div></div>
+ <div class="cd-via-panelT"><div><div id="led-CDV1_T" class="led-10mm"></div>CDV1</div><div><div id="led-CDV2_T" class="led-10mm"></div>CDV2</div><div><div id="led-RF_T" class="led-10mm"></div>R.F</div><div><div id="led-RU_T" class="led-10mm"></div>R.U</div></div>
+
 
 
 
     <div class="estacion" style="top: 728px; left: 240px;">L. DE LA TORRE</div>
     <div class="estacion" style="top: 728px; left: 705px;">BELGRANO C</div>
-    
+    <div class="estacion" style="top: 728px; left: 1805px;">NUÑEZ</div>
+    <div class="estacion" style="top: 728px; left: 2335px;">RIVADAVIA</div>
+    <div class="estacion" style="top: 728px; left: 2765px;">VICENTE LOPEZ</div>
+    <div class="estacion" style="top: 728px; left: 3545px;">OLIVOS</div>
+    <div class="estacion" style="top: 728px; left: 4030px;">LA LUCILA</div>
+    <div class="estacion" style="top: 728px; left: 4385px;">MARTINEZ</div>
+    <div class="estacion" style="top: 728px; left: 4845px;">ACASSUSO</div>
+    <div class="estacion" style="top: 728px; left: 5410px;">SAN ISIDRO</div>
+    <div class="estacion" style="top: 728px; left: 6095px;">BECCAR</div>
+    <div class="estacion" style="top: 728px; left: 7010px;">VICTORIA</div>
+    <div class="estacion" style="top: 728px; left: 8205px;">VIRREYES</div>
+    <div class="estacion" style="top: 728px; left: 8740px;">SAN FERNANDO</div>
+    <div class="estacion" style="top: 728px; left: 9275px;">CARUPA</div>
+    <div class="estacion" style="top: 728px; left: 10830px;">TIGRE</div>
 
 
 
     <div class="anden" style="top: 785px; left: 290px; width: 130px;"></div><div class="anden" style="top: 990px; left: 275px; width: 130px;"></div>
     <div class="anden" style="top: 785px; left: 740px; width: 130px;"></div><div class="anden" style="top: 990px; left: 740px; width: 130px;"></div>
-  
+    <div class="anden" style="top: 785px; left: 1800px; width: 130px;"></div><div class="anden" style="top: 990px; left: 1800px; width: 130px;"></div>
+    <div class="anden" style="top: 785px; left: 2370px; width: 120px;"></div><div class="anden" style="top: 990px; left: 2370px; width: 120px;"></div>
+    <div class="anden" style="top: 785px; left: 2820px; width: 120px;"></div><div class="anden" style="top: 990px; left: 2820px; width: 120px;"></div>
+    <div class="anden" style="top: 785px; left: 3550px; width: 120px;"></div><div class="anden" style="top: 990px; left: 3550px; width: 120px;"></div>
+    <div class="anden" style="top: 785px; left: 4065px; width: 120px;"></div><div class="anden" style="top: 990px; left: 4065px; width: 120px;"></div>
+    <div class="anden" style="top: 785px; left: 4415px; width: 110px;"></div><div class="anden" style="top: 990px; left: 4415px; width: 110px;"></div>
+    <div class="anden" style="top: 785px; left: 4880px; width: 115px;"></div><div class="anden" style="top: 990px; left: 4880px; width: 115px;"></div>
+    <div class="anden" style="top: 785px; left: 5430px; width: 130px;"></div><div class="anden" style="top: 990px; left: 5430px; width: 130px;"></div>
+    <div class="anden" style="top: 785px; left: 6100px; width: 130px;"></div><div class="anden" style="top: 990px; left: 6100px; width: 130px;"></div>
+<div class="anden" style="top: 785px; left: 7010px; width: 150px;"></div><div class="anden" style="top: 990px; left: 7010px; width: 150px;"></div>
+<div class="anden" style="top: 185px; left: 7010px; width: 150px;"></div><div class="anden" style="top: 390px; left: 7010px; width: 150px;"></div>
+<div class="anden" style="top: 785px; left: 8205px; width: 150px;"></div><div class="anden" style="top: 990px; left: 8205px; width: 150px;"></div>
+<div class="anden" style="top: 785px; left: 8765px; width: 150px;"></div><div class="anden" style="top: 990px; left: 8765px; width: 150px;"></div>
+<div class="anden" style="top: 785px; left: 9270px; width: 140px;"></div><div class="anden" style="top: 990px; left: 9270px; width: 140px;"></div>
+<div class="anden" style="top: 785px; left: 10800px; width: 170px;"></div><div class="anden" style="top: 970px; left: 10800px; width: 170px;"></div><div class="anden" style="top: 1005px; left: 10800px; width: 170px;"></div><div class="anden" style="top: 1190px; left: 10800px; width: 170px;"></div>
 
 
     <div class="label-plataforma" style="top: 785px; left: 270px; width: 170px; height: 35px;">PLATAFORMA 1</div>
     <div class="label-plataforma" style="top: 785px; left: 720px; width: 170px; height: 35px;">PLATAFORMA 1</div>
+    <div class="label-plataforma" style="top: 785px; left: 1780px; width: 170px; height: 35px;">PLATAFORMA 1</div>
+    <div class="label-plataforma" style="top: 785px; left: 2345px; width: 170px; height: 35px;">PLATAFORMA 1</div>
+    <div class="label-plataforma" style="top: 785px; left: 2795px; width: 170px; height: 35px;">PLATAFORMA 1</div>
+    <div class="label-plataforma" style="top: 785px; left: 3525px; width: 170px; height: 35px;">PLATAFORMA 1</div>
+    <div class="label-plataforma" style="top: 785px; left: 4040px; width: 170px; height: 35px;">PLATAFORMA 1</div>
+    <div class="label-plataforma" style="top: 785px; left: 4385px; width: 170px; height: 35px;">PLATAFORMA 1</div>
+    <div class="label-plataforma" style="top: 785px; left: 4855px; width: 170px; height: 35px;">PLATAFORMA 1</div>
+    <div class="label-plataforma" style="top: 785px; left: 5405px; width: 170px; height: 35px;">PLATAFORMA 1</div>
+    <div class="label-plataforma" style="top: 785px; left: 6075px; width: 170px; height: 35px;">PLATAFORMA 1</div>
+    <div class="label-plataforma" style="top: 785px; left: 7000px; width: 170px; height: 35px;">PLATAFORMA 2</div>
+    <div class="label-plataforma" style="top: 185px; left: 7000px; width: 170px; height: 35px;">PLATAFORMA 4</div>
+    <div class="label-plataforma" style="top: 390px; left: 7000px; width: 170px; height: 35px;">PLATAFORMA 3</div>
+    <div class="label-plataforma" style="top: 785px; left: 8195px; width: 170px; height: 35px;">PLATAFORMA 1</div>
+    <div class="label-plataforma" style="top: 785px; left: 8755px; width: 170px; height: 35px;">PLATAFORMA 1</div>
+    <div class="label-plataforma" style="top: 785px; left: 9260px; width: 170px; height: 35px;">PLATAFORMA 1</div>
+    
+
+    <div class="label-plataforma" style="top: 785px; left: 10800px; width: 170px; height: 35px;">PLATAFORMA 1</div>
+    <div class="label-plataforma" style="top: 970px; left: 10800px; width: 170px; height: 35px;">PLATAFORMA 2</div>
+    <div class="label-plataforma" style="top: 1005px; left: 10800px; width: 170px; height: 35px;">PLATAFORMA 3</div>
+    <div class="label-plataforma" style="top: 1190px; left: 10800px; width: 170px; height: 35px;">PLATAFORMA 4</div>
+
     <div class="label-plataforma" style="top: 990px; left: 255px; width: 170px; height: 35px;">PLATAFORMA 2</div>
     <div class="label-plataforma" style="top: 990px; left: 720px; width: 170px; height: 35px;">PLATAFORMA 2</div>
+    <div class="label-plataforma" style="top: 990px; left: 1780px; width: 170px; height: 35px;">PLATAFORMA 2</div>
+    <div class="label-plataforma" style="top: 990px; left: 2345px; width: 170px; height: 35px;">PLATAFORMA 2</div>
+    <div class="label-plataforma" style="top: 990px; left: 2795px; width: 170px; height: 35px;">PLATAFORMA 2</div>
+    <div class="label-plataforma" style="top: 990px; left: 3525px; width: 170px; height: 35px;">PLATAFORMA 2</div>
+    <div class="label-plataforma" style="top: 990px; left: 4040px; width: 170px; height: 35px;">PLATAFORMA 2</div>
+    <div class="label-plataforma" style="top: 990px; left: 4385px; width: 170px; height: 35px;">PLATAFORMA 2</div>
+    <div class="label-plataforma" style="top: 990px; left: 4855px; width: 170px; height: 35px;">PLATAFORMA 2</div>
+    <div class="label-plataforma" style="top: 990px; left: 5405px; width: 170px; height: 35px;">PLATAFORMA 2</div>
+    <div class="label-plataforma" style="top: 990px; left: 6075px; width: 170px; height: 35px;">PLATAFORMA 2</div>
+    <div class="label-plataforma" style="top: 990px; left: 7000px; width: 170px; height: 35px;">PLATAFORMA 1</div>
+    <div class="label-plataforma" style="top: 990px; left: 8195px; width: 170px; height: 35px;">PLATAFORMA 2</div>
+    <div class="label-plataforma" style="top: 990px; left: 8755px; width: 170px; height: 35px;">PLATAFORMA 2</div>
+    <div class="label-plataforma" style="top: 990px; left: 9260px; width: 170px; height: 35px;">PLATAFORMA 2</div>
 
+<div id="cartel_ruta_tigre" class="caja-ruta-exterior" style="top: 775px; left: 9950px;">
+    <div class="visor-ruta-interior">
+        <div id="texto_ruta_tigre" class="texto-ruta-negro"></div>
+    </div></div>
+
+<div id="cartel_ruta_v_vic" class="caja-ruta-exterior" style="top: 775px; left: 6375px;">
+    <div class="visor-ruta-interior">
+        <div id="texto_ruta_v_vic" class="texto-ruta-negro"></div>
+    </div>
+</div>
+<div id="cartel_ruta_w_vic" class="caja-ruta-exterior" style="top: 365px; left: 8290px;">
+
+    <div class="visor-ruta-interior">
+        <div id="texto_ruta_w_vic" class="texto-ruta-negro"></div>
+    </div>
+</div>
+
+</div>
+        <div class="andenfin" style="top: 476px; left: 6664px; width: 100px; transform: rotate(-90deg);"></div>
+        <div class="andenfin" style="top: 437px; left: 6900px; width: 40px; transform: rotate(-90deg);"></div>
+        <div class="andenfin" style="top:  80px; left: 7702px; width: 50px; transform: rotate(-45deg);"></div>
+        <div class="andenfin" style="top: 150px; left: 7525px; width: 50px;"></div>
+        <div class="andenfin" style="top: 540px; left: 7654px; width: 51px; transform: rotate(-45deg);"></div>
+        <div class="andenfin" style="top: 450px; left: 7605px; width: 50px;"></div>
+        <div class="andenfin" style="top: 450px; left: 8252px; width: 100px;"></div>
+        <div class="andenfin"style="top: 450px; left: 7400px; width: 50px;"></div>
+        <div class="andenfin" style="top: 250px; left: 6745px; width: 50px;"></div>
+        <div class="andenfin" style="top: 450px; left: 7109px; width: 50px;"></div>
        
+
+        <div class="indicacion" style="top: 400px; left: 6680px;">PLAYA</div>
+        <div class="indicacion" style="top: 144px; left: 7410px;">OBRADOR</div>
+        <div class="indicacion" style="top: 420px; left: 8270px;">POSO</div>
+        <div class="indicacion" style="top: 244px; left: 8600px;">A SCHWEITZER </div>
+        <div class="indicacion" style="top: 344px; left: 8600px;">DE SCHWEITZER</div>
+        <div class="indicacion" style="top: 420px; left: 7410px;">CARBONERA</div>
+        <div class="indicacion" style="top: 420px; left: 7565px;">TORNO</div>
+        <div class="indicacion" style="top: 510px; left: 7575px;">GALPON</div>
+        <div class="indicacion" style="top: 690px; left: 7190px;">PARAGOLPE</div>
+        <div class="indicacion" style="top: 690px; left: 6570px;">PARAGOLPE</div>
+        <div class="indicacion" style="top: 645px; left: 7800px;">5</div>
+        <div class="indicacion" style="top: 745px; left: 7800px;">6</div>
 
 
     <div id="cT7" class="via v-arriba" data-nombre="CVT7" style="top: 850px; left: 60px; width: 85px;"></div>
@@ -200,7 +413,348 @@
     <div id="w1minus" class="via diagonal via-fantasma v-arriba" data-nombre="" style="top: 900px; left: 982px; width: 72px; transform: rotate(-45deg);"></div>
     <div id="b-Bel" class="via v-arriba" data-nombre="CVDB-BEL" style="top: 850px; left: 1100px; width: 145px;"></div>
     <div id="c113" class="via v-arriba" data-nombre="CVD113" style="top: 850px; left: 1250px; width: 195px;"></div>
+    <div id="c115" class="via v-arriba" data-nombre="CDV115"  style="top: 850px; left: 1450px; width: 95px;"></div>
+    <div id="w11plus" class="via v-arriba" data-nombre=""  style="top: 850px; left: 1550px; width: 132px;"></div>
+    <div id="w11pm" class="via v-arriba" data-nombre="11" style="top: 850px; left: 1682px; width: 113px;"></div>
+    <div id="w11minus" class="via diagonal via-fantasma v-arriba" data-nombre="" style="top: 900px; left: 1634px; width: 72px; transform: rotate(-45deg);"></div>
+    <div id="ca-Nuñ" class="via v-arriba" data-nombre="CDVA-NUN" style="top: 850px; left: 1800px; width: 165px;"></div>
+    <div id="w15plus" class="via v-arriba" data-nombre="" style="top: 850px; left: 1970px; width: 100px;"></div>
+    <div id="w15pm" class="via v-arriba" data-nombre="15" style="top: 850px; left: 2070px; width: 75px;"></div>
+    <div id="w15minus" class="via diagonal via-fantasma v-arriba" data-nombre="" style="top: 900px; left: 2022px; width: 72px; transform: rotate(-45deg);"></div>
+    <div id="cb-Nuñ" class="via v-arriba" data-nombre="CDVB-NUN" style="top: 850px; left: 2150px; width: 45px;"></div>
+    <div id="c121"  class="via v-arriba" data-nombre="CDV121" style="top: 850px; left: 2200px; width: 85px;"></div>
+    <div id="w123plus"  class="via v-arriba" data-nombre="" style="top: 850px; left: 2290px; width: 75px;"></div>
+    <div id="w123pm"  class="via v-arriba" data-nombre="123" style="top: 850px; left: 2365px; width: 170px;"></div>
+    <div id="w123minus" class="via diagonal via-fantasma v-arriba" data-nombre="" style="top: 900px; left: 2318px; width: 72px; transform: rotate(-45deg);"></div>
+    <div id="c125"  class="via v-arriba" data-nombre="CDV125" style="top: 850px; left: 2540px; width: 145px;"></div>
+    <div id="c127" class="via v-arriba" data-nombre="CDV127" style="top: 850px; left: 2690px; width: 85px;"></div>
+
+    <div id="c129" class="via v-arriba" data-nombre="CDV129" style="top: 850px; left: 2780px; width: 175px;"></div>
+    <div id="w131plus" class="via v-arriba" data-nombre="" style="top: 850px; left: 2960px; width: 83px;"></div>
+    <div id="w131pm" class="via v-arriba" data-nombre="131" style="top: 850px; left: 3043px; width: 100px;"></div>
+    <div id="w131minus" class="via diagonal via-fantasma v-arriba" data-nombre="" style="top: 900px; left: 2995px; width: 75px; transform: rotate(-45deg);"></div>
+    <div id="c133" class="via v-arriba" data-nombre="CDV133" style="top: 850px; left: 3148px; width: 75px;"></div>
+    <div id="c135" class="via v-arriba" data-nombre="CDV135" style="top: 850px; left: 3228px; width: 100px;"></div>
+    <div id="w21plus" class="via v-arriba" data-nombre="" style="top: 850px; left: 3333px; width: 145px;"></div>
+    <div id="w21pm" class="via v-arriba" data-nombre="21" style="top: 850px; left: 3478px; width: 55px;"></div>
+    <div id="w21minus" class="via diagonal via-fantasma v-arriba" data-nombre="" style="top: 900px; left: 3428px; width: 75px; transform: rotate(-45deg);"></div>
+    <div id="ca-oli" class="via v-arriba" data-nombre="CDVA-OLI" style="top: 850px; left: 3538px; width: 155px;"></div>
+    <div id="w25plus" class="via v-arriba" data-nombre="" style="top: 850px; left: 3698px; width: 148px;"></div>
+    <div id="w25pm" class="via v-arriba" data-nombre="25" style="top: 850px; left: 3846px; width: 40px;"></div>
+    <div id="w25minus" class="via diagonal via-fantasma v-arriba" data-nombre="" style="top: 902px; left: 3795px; width: 75px; transform: rotate(-45deg);"></div>
+    <div id="cb-oli" class="via v-arriba" data-nombre="CDVB-OLI" style="top: 850px; left: 3891px; width: 60px;"></div>
+    <div id="c141" class="via v-arriba" data-nombre="CDV141" style="top: 850px; left: 3956px; width: 65px;"></div>
+    <div id="c143" class="via v-arriba" data-nombre="CDV143" style="top: 850px; left: 4026px; width: 185px;"></div>
+    <div id="c145" class="via v-arriba" data-nombre="CDV145" style="top: 850px; left: 4216px; width: 80px;"></div>
+    <div id="c147" class="via v-arriba" data-nombre="CDV147" style="top: 850px; left: 4301px; width: 70px;"></div>
+
+    <div id="c149" class="via v-arriba" data-nombre="CDV149" style="top: 850px; left: 4376px; width: 185px;"></div>
+    <div id="w151mplus"  class="via v-arriba" data-nombre="" style="top: 850px; left: 4566px; width: 93px;"></div>
+    <div id="w151mpm"  class="via v-abajo" data-nombre="151" style="top: 850px; left: 4652px; width: 63px;"></div>
+    <div id="w151mminus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 903px; left: 4601px; width: 77px; transform: rotate(-45deg);"></div>
+    <div id="c153" class="via v-arriba" data-nombre="CDV153" style="top: 850px; left: 4719px; width: 115px;"></div>
+    <div id="c155" class="via v-arriba" data-nombre="CDV155" style="top: 850px; left: 4839px; width: 185px;"></div>
+    <div id="c157" class="via v-arriba" data-nombre="CDV157" style="top: 850px; left: 5029px; width: 85px;"></div>
+    <div id="c159" class="via v-arriba" data-nombre="CDV159" style="top: 850px; left: 5119px; width: 125px;"></div>
+    <div id="w31plus" class="via v-arriba" data-nombre="" style="top: 850px; left: 5249px; width: 130px;"></div>
+    <div id="w31pm" class="via v-arriba" data-nombre="31" style="top: 850px; left: 5379px; width: 40px;"></div>
+    <div id="w31minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 902px; left: 5327px; width: 77px; transform: rotate(-45deg);"></div>
+    <div id="ca-isi" class="via v-arriba" data-nombre="CDVA-ISI" style="top: 850px; left: 5424px; width: 195px;"></div>
+    <div id="w33plus"  class="via v-arriba" data-nombre="" style="top: 850px; left: 5624px; width: 115px;"></div>
+    <div id="w33pm"  class="via v-arriba" data-nombre="33" style="top: 850px; left: 5739px; width: 30px;"></div>
+ <div id="w33minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 902px; left: 5669px; width: 77px; transform: rotate(-45deg);"></div>
+   <div id="cw35"  class="via v-arriba" data-nombre="35" style="top: 850px; left: 5774px; width: 20px;"></div>
+    <div id="cb-isi" class="via v-arriba" data-nombre="CDVB-ISI" style="top: 850px; left: 5799px; width: 45px;"></div>
+    <div id="c165" class="via v-arriba" data-nombre="CDV165" style="top: 850px; left: 5849px; width: 76px;"></div>
+    <div id="cw37" class="via v-arriba" data-nombre="37" style="top: 850px; left: 5930px; width: 55px;"></div>
+    <div id="c167" class="via v-arriba" data-nombre="CDV167" style="top: 850px; left: 5990px; width: 60px;"></div>
+    <div id="c169" class="via v-arriba" data-nombre="CDV169" style="top: 850px; left: 6055px; width: 210px;"></div>
+    <div id="c171" class="via v-arriba" data-nombre="CDV171" style="top: 850px; left: 6270px; width: 65px;"></div>
+    <div id="c173" class="via v-arriba" data-nombre="CDV173" style="top: 850px; left: 6340px; width: 95px;"></div>
     
+    <div id="ca1-vic" class="via v-arriba" data-nombre="CDA1-VIC" style="top: 850px; left: 6870px; width: 135px;"></div>
+    <div id="ca3-vic" class="via v-arriba" data-nombre="CDA3-VIC" style="top: 850px; left: 7010px; width: 195px;"></div>
+    <div id="ca5-vic" class="via v-arriba" data-nombre="CDVA5-VIC" style="top: 250px; left: 7010px; width: 203px;"></div>
+      <div id="cx-vic" class="via v-abajo" data-nombre="CDVX-VIC" style="top: 350px; left: 8263px; width: 225px;"></div>
+    <div id="cvv-vic" class="via" style="top: 385px; left: 6908px; width: 100px;transform: rotate(-45deg);"></div>
+    <div id="cz-vic" class="via v-abajo" data-nombre="CDVZ-VIC" style="top: 950px; left: 6985px; width: 220px;"></div>
+    <div id="c180" class="via v-abajo" data-nombre="CDV180" style="top: 950px; left: 7948px; width: 230px;"></div>
+    <div id="cb-vic" class="via v-arriba" data-nombre="CDB-VIC" style="top: 850px; left: 7855px; width: 265px;"></div>
+<div id="cc-vic" class="via v-arriba" data-nombre="CDVC-VIC" style="top: 250px; left: 7620px; width: 95px;"></div>
+<div id="cw-vic" class="via v-abajo" data-nombre="CDVW-VIC" style="top: 350px; left: 7728px; width: 95px;"></div>
+<div id="cd-vic" class="via v-arriba" data-nombre="CDVD-VIC" style="top: 250px; left: 8142px; width: 245px;"></div>
+<div id="ce-vic" class="via v-arriba" data-nombre="CDVE-VIC" style="top: 250px; left: 8392px; width: 176px;"></div>
+<div id="c238T" class="via v-abajo" data-nombre="C238T" style="top: 350px; left: 8493px; width: 75px;"></div>
+<div id="cv-vic" class="via v-abajo" data-nombre="CDVV-VIC" style="top: 350px; left: 6990px; width: 225px;"></div>
+
+
+
+
+
+
+
+<div id="c179" class="via v-arriba" data-nombre="CDV179" style="top: 850px; left: 8125px; width: 245px;"></div>
+
+<div id="c181" class="via v-arriba" data-nombre="CDV181" style="top: 850px; left: 8375px; width: 180px;"></div>
+
+<div id="w61pm" class="via v-arriba" data-nombre="61" style="top: 850px; left: 8730px; width: 35px;"></div>
+
+<div id="w61plus" class="via v-abajo" data-nombre="" style="top: 850px; left: 8560px; width: 170px;"></div>
+
+<div id="w61minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 897px; left: 8683px; width: 68px; transform:rotate(-45deg);"></div>
+
+<div id="ca-fer" class="via v-arriba" data-nombre="CDVA-FER" style="top: 850px; left: 8770px; width: 200px;"></div>
+   
+<div id="w65pm" class="via v-arriba" data-nombre="65" style="top: 850px; left: 9048px; width: 52px;"></div>
+
+<div id="w65plus" class="via v-abajo" data-nombre="" style="top: 850px; left: 8975px; width: 73px;"></div>
+
+<div id="w65minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 897px; left: 9003px; width: 68px; transform:rotate(-45deg);"></div> 
+
+<div id="cb-fer" class="via v-arriba" data-nombre="CDVB-FER" style="top: 850px; left: 9105px; width: 95px;"></div>
+
+<div id="c187" class="via v-arriba" data-nombre="CDV187" style="top: 850px; left: 9205px; width: 215px;"></div>
+           
+<div id="c189" class="via v-arriba" data-nombre="CDV189" style="top: 850px; left: 9425px; width: 110px;"></div>
+
+
+<div id="c191" class="via v-arriba" data-nombre="CDV191" style="top: 850px; left: 9540px; width: 245px;"></div>
+
+<div id="c193" class="via v-arriba" data-nombre="CDV193" style="top: 850px; left: 9790px; width: 220px;"></div>
+
+<div id="w71plus" class="via v-arriba" data-nombre="" style="top: 850px; left: 10045px; width: 260px;"></div>
+
+<div id="w71pm" class="via v-arriba" data-nombre="71" style="top: 850px; left: 10015px; width: 30px;"></div>
+
+<div id="w71minus" class="via diagonal via-fantasma v-abajo"" style="top: 850px; left: 10042px; width: 68px; transform: rotate(45deg);"></div>
+
+
+<div id="w73pm" class="via v-arriba" data-nombre="73" style="top: 850px; left: 10635px; width: 120px;"></div>
+
+<div id="w73plus" class="via v-abajo" data-nombre="" style="top: 850px; left: 10310px; width: 325px;"></div>
+
+<div id="w73minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 902px; left: 10586px; width: 77px; transform:    rotate(-45deg);"></div>
+
+
+<div id="cz1" class="via v-arriba" data-nombre="CDVZ1" style="top: 850px; left: 10760px; width: 160px;"></div>
+   
+     
+<div id="c182" class="via v-abajo" data-nombre="CDV182" style="top: 950px; left: 8183px; width: 300px;"></div>
+<div id="cy-fer" class="via v-abajo" data-nombre="CDVY-FER" style="top: 950px; left: 8488px; width: 100px;"></div>
+<div id="w60pm" class="via v-abajo" data-nombre="60" style="top: 950px; left: 8593px; width: 40px;"></div>
+<div id="w60plus" class="via v-abajo" data-nombre="" style="top: 950px; left: 8633px; width: 110px;"></div>
+<div id="w60minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 950px; left: 8630px; width: 72px; transform: rotate(-45deg);"></div>
+<div id="cz-fer" class="via v-abajo" data-nombre="CDVZ-FER" style="top: 950px; left: 8748px; width: 170px;"></div>
+<div id="w62pm" class="via v-abajo" data-nombre="62" style="top: 950px; left: 8923px; width: 29px;"></div>
+<div id="w62plus" class="via v-abajo" data-nombre="" style="top: 950px; left: 8952px; width: 180px;"></div>
+<div id="w62minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 952px; left: 8948px; width: 75px; transform:  rotate(-45deg);"></div>
+<div id="c188" class="via v-abajo" data-nombre="CDV188" style="top: 950px; left: 9137px; width: 100px;"></div>
+<div id="c190" class="via v-abajo" data-nombre="CDV190" style="top: 950px; left: 9242px; width: 215px;"></div>
+<div id="c192" class="via v-abajo" data-nombre="CDV192" style="top: 950px; left: 9462px; width: 120px;"></div>
+
+
+<div id="c194" class="via v-abajo" data-nombre="CDV194" style="top: 950px; left: 9587px; width: 225px;"></div>
+<div id="c2z2" class="via v-abajo" data-nombre="CDV2Z2" style="top: 950px; left: 9817px; width: 175px;"></div>
+<div id="w70plus" class="via v-abajo" data-nombre="" style="top: 950px; left: 9997px; width: 150px;"></div>
+<div id="w70pm" class="via v-abajo" data-nombre="70" style="top: 950px; left: 10140px; width: 62px;"></div>
+<div id="w70minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 903px; left: 10095px; width: 68px; transform:rotate(45deg);"></div>
+<div id="ca-tig" class="via v-abajo" data-nombre="CDVA-TIG" style="top: 950px; left: 10207px; width: 95px;"></div>
+<div id="w72pm" class="via v-abajo" data-nombre="72" style="top: 950px; left: 10307px; width: 77px;"></div>
+<div id="w72plus" class="via v-abajo" data-nombre="" style="top: 950px; left: 10384px; width: 98px;"></div>
+<div id="w72minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 950px; left: 10382px; width: 66px; transform:rotate(45deg);"></div>
+<div id="w74pm" class="via v-abajo" data-nombre="74" style="top: 950px; left: 10487px; width: 50px;"></div>
+<div id="w74plus" class="via v-abajo" data-nombre="" style="top: 950px; left: 10537px; width: 215px;"></div>
+<div id="w74minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 952px; left: 10536px; width: 66px; transform:rotate(-45deg);"></div>
+<div id="cz2" class="via v-arriba" data-nombre="CDVZ2" style="top: 950px; left: 10757px; width: 160px;"></div>
+
+<div id="w75pm" class="via v-arriba" data-nombre="75" style="top: 1028px; left: 10425px; width: 68px; transform: rotate(45deg);"></div>
+
+<div id="w75plus" class="via v-abajo" data-nombre="" style="top: 1050px; left: 10478px; width: 277px;"></div>
+
+<div id="w75minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 1050px; left: 10480px; width: 145px; transform:    rotate(45deg);"></div>
+     
+<div id="w75mm" class="via v-arriba" data-nombre="" style="top: 1150px; left: 10580px; width: 175px;"></div>
+
+<div id="cz3" class="via v-abajo" data-nombre="CDVZ3" style="top: 1050px; left: 10760px; width: 160px;"></div>
+
+<div id="cz4" class="via v-abajo" data-nombre="CDVZ4" style="top: 1150px; left: 10760px; width: 160px;"></div
+
+
+
+
+
+
+<div class="paragolpe-diseno" style="top: 845px; left: 10930px;"><div class="union"></div></div>
+<div class="paragolpe-diseno" style="top: 845px; left: 10930px;"><div class="union"></div></div>
+
+<div class="paragolpe-diseno" style="top: 945px; left: 10930px;"><div class="union"></div></div>
+<div class="paragolpe-diseno" style="top: 1045px; left: 10930px;"><div class="union"></div></div>
+<div class="paragolpe-diseno" style="top: 1145px; left: 10930px;"><div class="union"></div></div>
+
+
+<div id="w41plus" class="via v-arriba" data-nombre="" style="top: 850px; left: 6440px; width: 125px;"></div>
+<div id="w41pm" class="via v-arriba" data-nombre="41" style="top: 850px; left: 6565px; width: 27px;"></div>
+<div id="w41minus" class="via diagonal via-fantasma v-arriba" data-nombre="" style="top: 902px; left: 6521px; width: 72px;transform: rotate(-45deg);"></div>
+
+<div id="w40pm" class="via v-abajo" data-nombre="40" style="top: 950px; left: 6440px; width: 40px;"></div>
+<div id="w40plus" class="via v-abajo" data-nombre="" style="top:  950px; left: 6480px; width: 500px;"></div>
+<div id="w40minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 952px; left: 6470px; width: 68px; transform:rotate(-45deg);"></div>
+
+<div id="w141plus" class="via v-arriba" data-nombre="" style="top: 750px; left: 6620px; width: 100px;"></div>
+<div id="w141pm" class="via v-arriba" data-nombre="141" style="top: 640px; left: 6600px; width: 230px;transform: rotate(-90deg);"></div>
+<div id="w141minus" class="via diagonal via-fantasma v-arriba" data-nombre="" style="top: 802px; left: 6667px; width: 72px;transform:rotate(-45deg);"></div>
+
+<div id="w43pm" class="via v-arriba" data-nombre="43" style="top: 850px; left: 6597px; width: 23px;"></div>
+<div id="w43plus" class="via v-abajo" data-nombre="" style="top: 850px; left: 6620px; width: 95px;"></div>
+<div id="w43minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 852px; left: 6616px; width: 68px; transform:rotate(-45deg);"></div>
+
+<div id="w45aplus" class="via v-arriba" data-nombre="" style="top: 250px; left: 6795px; width: 75px;"></div>
+<div id="w45apm" class="via v-arriba" data-nombre="45a" style="top: 250px; left: 6870px; width: 135px;"></div>
+<div id="w45aminus" class="via diagonal via-fantasma v-arriba" data-nombre="" style="top: 303px; left: 6818px; width: 77px;transform: rotate(-45deg);"></div>
+<div id="w45amm" class="via diagonal via-fantasma v-arriba" data-nombre=""" style="top: 803px; left: 6820px; width: 503px;transform:rotate(-90deg);"></div>
+
+<div id="w45pm" class="via v-arriba" data-nombre="45" style="top: 850px; left: 6720px; width: 50px;"></div>
+<div id="w45plus" class="via v-abajo" data-nombre="" style="top: 850px; left: 6770px; width: 95px;"></div>
+<div id="w45minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 852px; left: 6768px; width: 66px;transform:rotate(-45deg);"></div>
+
+<div id="w47pm" class="via v-abajo" data-nombre="47" style="top: 850px; left: 7210px; width: 45px;"></div><div id="w47plus" class="via v-abajo" data-nombre="" style="top: 850px; left: 7255px; width: 75px;"></div>
+<div id="w47minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 852px; left: 7252px; width: 70px;transform:rotate(-45deg);"></div>
+
+<div id="w143pm" class="via v-arriba" data-nombre="143" style="top: 700px; left: 7333px; width: 145px;transform: rotate(-45deg);"></div>
+<div id="w143plus" class="via v-abajo" data-nombre="" style="top: 750px; left: 7240px; width: 118px;"></div>
+<div id="w143minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 800px; left: 7305px; width: 70px;transform:rotate(-45deg);"></div>
+
+<div id="w145plus" class="via v-arriba" data-nombre="" style="top: 650px; left: 7620px; width: 48px;"></div>
+<div id="w145pm" class="via v-arriba"  style="top: 650px; left: 7454px; width: 166px;"><span style="position: absolute; top: -18px; left: 50%; transform: translateX(-50%); color: #ffff00; font-weight: bold; font-size: 11px;">145</span>
+</div>
+
+<div id="w145minus" class="via diagonal via-fantasma v-arriba" data-nombre="" style="top: 647px; left: 7618px; width: 70px;transform:rotate(45deg);"></div>
+
+
+<div id="w147plus" class="via v-arriba" data-nombre="" style="top: 650px; left: 7673px; width: 52px;"></div>
+<div id="w147pm" class="via v-arriba" data-nombre="147" style="top: 650px; left: 7725px; width: 73px;"></div>
+<div id="w147minus" class="via diagonal via-fantasma v-arriba" data-nombre="" style="top: 696px; left: 7682px; width: 68px;transform:rotate(-45deg);"></div>
+
+<div id="w140pm" class="via v-abajo" data-nombre="140" style="top: 750px; left: 7500px; width: 128px;"></div><div id="w140plus" class="via v-abajo" data-nombre="" style="top: 750px; left: 7628px; width: 40px;"></div>
+<div id="w140minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 752px; left: 7624px; width: 62px;transform:rotate(-45deg);"></div>
+
+<div id="w142pm" class="via v-abajo" style="top: 750px; left: 7720px; width: 78px;"  >
+    <span style="position: absolute; top: 18px; left: 50%; transform: translateX(-50%); color: #ffff00; font-weight: bold; font-size: 11px;">142</span>
+</div>
+
+<div id="w142minus" class="via v-abajo" data-nombre="" style="top: 709px; left: 7680px; width: 60px;transform: 
+rotate(45deg);"></div>
+
+<div id="w142plus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 750px; left: 7673px; width: 47px;"></div>
+
+
+
+<div id="w49xpm" class="via v-arriba" data-nombre="" style="top: 850px; left: 7400px; width: 2px;"></div>
+<div id="w49xplus" class="via v-abajo" data-nombre="" style="top: 850px; left: 7335px; width: 245px;"></div>
+<div id="w49xminus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 900px; left: 7350px; width: 215px;transform:rotate(-45deg);"></div>
+
+
+<div id="w44pm" class="via v-abajo" data-nombre="44" style="top: 950px; left: 7210px; width: 90px;"></div>
+<div id="w44plus" class="via v-abajo" data-nombre="" style="top: 950px; left: 7300px; width: 245px;"></div>
+<div id="w44minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 952px; left: 7298px; width: 69px;transform:rotate(-45deg);"></div>
+
+<div id="w49pm" class="via v-arriba" data-nombre="49" style="top: 850px; left: 7695px; width: 155px;"></div>
+<div id="w49plus" class="via v-arriba" data-nombre="" style="top: 850px; left: 7580px; width: 115px;"></div>
+<div id="w49minus" class="via diagonal v-arriba" data-nombre="" style="top: 902px; left: 7646px; width: 77px; transform: rotate(-45deg); transform-origin: 0% 50%;"></div>
+
+<div id="w46pm" class="via v-abajo" data-nombre="46" style="top: 950px; left: 7550px; width: 48px;"></div>
+<div id="w46plus" class="via v-abajo" data-nombre="" style="top: 950px; left: 7598px; width: 345px;"></div>
+<div id="w46minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 952px; left: 7595px; width: 67px; transform:rotate(-45deg);"></div>
+
+<div id="w51pm" class="via v-abajo" data-nombre="51" style="top: 250px; left: 7495px; width: 120px;"></div>
+<div id="w51plus" class="via v-abajo" data-nombre="" style="top: 250px; left: 7218px; width: 277px;"></div>
+<div id="w51minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 302px; left: 7453px; width: 72px;transform:rotate(-45deg);"></div>
+
+
+<div id="w52pm" class="via v-abajo" data-nombre="52" style="top: 350px; left: 7355px; width: 53px;"></div>
+<div id="w52plus" class="via v-abajo" data-nombre="" style="top: 350px; left: 7408px; width: 315px;"></div>
+<div id="w52minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 352px; left: 7403px; width: 68px;transform:rotate(-45deg);"></div>
+
+<div id="w50pm" class="via v-abajo" data-nombre="50" style="top: 350px; left: 7220px; width: 47px;"></div>
+<div id="w50plus" class="via v-arriba" data-nombre="" style="top: 350px; left: 7267px; width: 83px;"></div>
+<div id="w50minus" class="via diagonal via-fantasma v-arriba" data-nombre="" style="top: 348px; left: 7263px; width: 68px; transform:rotate(45deg);"></div>
+
+<div id="w150pm" class="via v-abajo" data-nombre="150" style="top: 450px; left: 7362px; width: 43px;"></div>
+<div id="w150plus" class="via v-abajo" data-nombre="" style="top: 450px; left: 7160px; width: 202px;"></div>
+<div id="w150minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 398px; left: 7314px; width: 75px;transform:rotate(45deg);"></div>
+
+
+<div id="w53pm" class="via v-arriba" style="top: 250px; left: 7847px; width: 35px;">
+<span style="position: absolute; top: -18px; left: 50%; transform: translateX(-50%); color: #ffff00; font-weight: bold; font-size: 11px;">53</span>
+</div>
+<div id="w53plus" class="via v-abajo" data-nombre="" style="top: 250px; left: 7720px; width: 127px;"></div>
+<div id="w53minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 252px; left: 7850px; width: 145px;transform:rotate(-135deg);"></div>
+
+
+<div id="w151pm" class="via v-arriba" style="top: 150px; left: 7575px; width: 85px;">
+<span style="position: absolute; top: -18px; left: 50%; transform: translateX(-50%); color: #ffff00; font-weight: bold; font-size: 11px;">151</span>
+</div>
+<div id="w151plus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 150px; left: 7660px; width: 90px;"></div>
+<div id="w151minus" class="via v-abajo" data-nombre="" style="top: 152px; left: 7655px; width: 75px; transform: rotate(-45deg);"></div>
+
+<div id="w55pm" class="via v-arriba" data-nombre="55" style="top: 250px; left: 7887px; width: 73px;"></div>
+<div id="w55plus" class="via v-abajo" data-nombre="" style="top: 250px; left: 7960px; width: 177px;"></div>
+<div id="w55minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 248px; left: 7957px; width: 72px;transform:rotate(45deg);"></div>
+
+
+<div id="w56bpm" class="via v-abajo" data-nombre="" style="top: 350px; left: 8058px; width: 3px;"></div>
+<div id="w56bplus" class="via v-abajo" data-nombre="56B" style="top: 350px; left: 8061px; width: 197px;"></div>
+<div id="w56bminus" class="via diagonal via-fantasma v-arriba" data-nombre="" style="top: 349px; left: 8058px; width: 72px;transform:rotate(45deg);"></div>
+
+<div id="w56apm" class="via v-arriba" data-nombre="" style="top: 350px; left: 8058px; width: 3px;"></div>
+<div id="w56aplus" class="via v-abajo" data-nombre="56A" style="top: 350px; left: 7988px; width: 70px;"></div>
+<div id="w56aminus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 302px; left: 8011px; width: 70px;transform:rotate(45deg);"></div>
+
+
+
+
+
+
+<div id="w156pm" class="via v-abajo" data-nombre="156" style="top: 450px; left: 8157px; width: 95px;"></div>
+<div id="w156plus" class="via v-abajo" data-nombre="" style="top: 450px; left: 7980px; width: 177px;"></div>
+<div id="w156minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 405px; left: 8114px; width: 66px;transform:rotate(45deg);"></div>
+
+<div id="w54pm" class="via v-arriba" data-nombre="54" style="top: 350px; left: 7938px; width: 45px;"></div><div id="w54plus" class="via v-abajo" data-nombre="" style="top: 350px; left: 7828px; width: 110px;"></div>
+<div id="w54minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 402px; left: 7892px; width: 72px;transform:rotate(-45deg);"></div>
+
+<div id="w154pm" class="via v-abajo" data-nombre="154" style="top: 450px; left: 7820px; width: 25px;"></div>
+<div id="w154plus" class="via v-abajo" data-nombre="" style="top: 450px; left: 7845px; width: 130px;"></div>
+<div id="w154minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 452px; left: 7842px; width: 66px;transform:rotate(-45deg);"></div>
+
+
+<div id="w152pm" class="via v-abajo" data-nombre="152" style="top: 450px; left: 7770px; width: 45px;"></div>
+<div id="w152plus" class="via v-abajo via-fantasma " data-nombre="" style="top: 450px; left: 7655px; width: 115px;"></div>
+<div id="w152minus" class="via diagonal  v-abajo" data-nombre="" style="top: 448px; left:7775px;width:108px;transform:rotate(-225deg);"></div>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div id="c14" class="via v-abajo" data-nombre="CVLD14" style="top: 950px; left: 60px; width: 95px;"></div>
     <div id="c104" class="via v-abajo" data-nombre="CDV104" style="top: 950px; left: 160px; width: 85px;"></div>
     <div id="c106" class="via v-abajo" data-nombre="CDV106" style="top: 950px; left: 250px; width: 195px;"></div>
@@ -213,10 +767,149 @@
     <div id="w2minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 952px; left: 930px; width: 68px; transform: rotate(-45deg);"></div>
     <div id="c114" class="via v-abajo" data-nombre="CDV114" style="top: 950px; left: 1165px; width: 130px;"></div>
     <div id="c116" class="via v-abajo" data-nombre="CDV116" style="top: 950px; left: 1300px; width: 145px;"></div>
+    <div id="cy-Nuñ" class="via v-abajo" data-nombre="CDVY-NUN" style="top: 950px; left: 1450px; width: 95px;"></div>
+    <div id="w10pm" class="via v-abajo" data-nombre="10" style="top: 950px; left: 1550px; width: 38px;"></div>
+    <div id="w10plus" class="via v-abajo" data-nombre="" style="top: 950px; left: 1588px; width: 137px;"></div>
+    <div id="w10minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 952px; left: 1584px; width: 68px; transform: rotate(-45deg);"></div>
+    <div id="cz-Nuñ" class="via v-abajo" data-nombre="CDVZ-NUN" style="top: 950px; left: 1730px; width: 195px;"></div>
+    <div id="w12pm" class="via v-abajo" data-nombre="12" style="top: 950px; left: 1930px; width: 45px;"></div>
+    <div id="w12plus" class="via v-abajo" data-nombre="" style="top: 950px; left: 1975px; width: 150px;"></div>
+    <div id="w12minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 952px; left: 1970px; width: 68px; transform: rotate(-45deg);"></div>
+    <div id="c122" class="via v-abajo" data-nombre="CDV122" style="top: 950px; left: 2130px; width: 95px;"></div>
+    <div id="w124pm" class="via v-abajo" data-nombre="124" style="top: 950px; left: 2230px; width: 40px;"></div>
+    <div id="w124plus" class="via v-abajo" data-nombre="" style="top: 950px; left: 2270px; width: 85px;"></div>
+    <div id="w124minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 952px; left: 2267px; width: 68px; transform: rotate(-45deg);"></div>
+    <div id="c126" class="via v-abajo" data-nombre="CDV126" style="top: 950px; left: 2360px; width: 185px;"></div>
+    <div id="c128" class="via v-abajo" data-nombre="CDV128" style="top: 950px; left: 2550px; width: 145px;"></div>
+    <div id="c130" class="via v-abajo" data-nombre="CDV130" style="top: 950px; left: 2700px; width: 100px;"></div>
+
+    <div id="w132pm" class="via v-abajo" data-nombre="132" style="top: 950px; left: 2805px; width: 145px;"></div>
+    <div id="w132plus" class="via v-abajo" data-nombre="" style="top: 950px; left: 2950px; width: 130px;"></div>
+    <div id="w132minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 952px; left: 2945px; width: 68px; transform: rotate(-45deg);"></div>
+    <div id="c134" class="via v-abajo" data-nombre="CDV134" style="top: 950px; left: 3085px; width: 90px;"></div>
+    <div id="c136" class="via v-abajo" data-nombre="CDV136" style="top: 950px; left: 3180px; width: 90px;"></div>
+    <div id="cy-Oli" class="via v-abajo" data-nombre="CDVY-OLI" style="top: 950px; left: 3275px; width: 80px;"></div>
+    <div id="w20pm" class="via v-abajo" data-nombre="20" style="top: 950px; left: 3360px; width: 20px;"></div>
+    <div id="w20plus" class="via v-abajo" data-nombre="" style="top: 950px; left: 3380px; width: 95px;"></div>
+    <div id="w20minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 952px; left: 3378px; width: 66px; transform: rotate(-45deg);"></div>
+    <div id="cz-oli" class="via v-abajo" data-nombre="CDVZ-OLI" style="top: 950px; left: 3480px; width: 205px;"></div>
+    <div id="w24pm" class="via v-abajo" data-nombre="24" style="top: 950px; left: 3690px; width: 60px;"></div>
+    <div id="w24plus" class="via v-abajo" data-nombre="" style="top: 950px; left: 3750px; width: 125px;"></div>
+    <div id="w24minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 952px; left: 3745px; width: 66px; transform: rotate(-45deg);"></div>
+    <div id="c142" class="via v-abajo" data-nombre="CDV142" style="top: 950px; left: 3880px; width: 115px;"></div>
+    <div id="c144" class="via v-abajo" data-nombre="CDV144" style="top: 950px; left: 4000px; width: 55px;"></div>
+    <div id="c146" class="via v-abajo" data-nombre="CDV146" style="top: 950px; left: 4060px; width: 165px;"></div>
+    <div id="c148" class="via v-abajo" data-nombre="CDV148" style="top: 950px; left: 4230px; width: 85px;"></div>
+    <div id="c150" class="via v-abajo" data-nombre="CDV150" style="top: 950px; left: 4320px; width: 90px;"></div>
+
+    <div id="w152mpm" class="via v-abajo" data-nombre="152" style="top: 950px; left: 4415px; width: 138px;"></div>
+    <div id="w152mplus" class="via v-abajo" data-nombre="" style="top: 950px; left: 4550px; width: 110px;"></div>
+    <div id="w152mminus" class="via diagonal via-fantasma v-abajo" data-nombre=""style="top: 952px; left: 4550px; width: 68px; transform: rotate(-45deg);"></div>
+
+    <div id="c154" class="via v-abajo" data-nombre="CDV154" style="top: 950px; left: 4665px; width: 105px;"></div>
+    <div id="c156" class="via v-abajo" data-nombre="CDV156" style="top: 950px; left: 4775px; width: 95px;"></div>
+    <div id="c158" class="via v-abajo" data-nombre="CDV158" style="top: 950px; left: 4875px; width: 175px;"></div>
+    <div id="c160" class="via v-abajo" data-nombre="CDV160" style="top: 950px; left: 5055px; width: 105px;"></div>
+    <div id="cw-isi" class="via v-abajo" data-nombre="CDVW-ISI" style="top: 950px; left: 5165px; width: 65px;"></div>
+    <div id="w30pm" class="via v-abajo" data-nombre="30" style="top: 950px; left: 5235px; width: 35px;"></div>
+    <div id="w30plus" class="via v-abajo" data-nombre="" style="top: 950px; left: 5270px; width: 100px;"></div>
+    <div id="w30minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 952px; left: 5277px; width: 68px; transform: rotate(-45deg);"></div>
+    <div id="cx-isi" class="via v-abajo" data-nombre="CDVX-ISI" style="top: 950px; left: 5375px; width: 195px;"></div>
+    <div id="w32pm" class="via v-abajo" data-nombre="32" style="top: 950px; left: 5575px; width: 50px;"></div>
+    <div id="w32plus" class="via v-abajo" data-nombre="" style="top: 950px; left: 5625px; width: 155px;"></div>
+    <div id="w32minus" class="via diagonal via-fantasma v-abajo" data-nombre="" style="top: 952px; left: 5618px; width: 68px; transform: rotate(-45deg);"></div>
+    <div id="c166" class="via v-abajo" data-nombre="CDV166" style="top: 950px; left: 5785px; width: 100px;"></div>
+    <div id="c168" class="via v-abajo" data-nombre="CDV168" style="top: 950px; left: 5890px; width: 55px;"></div>
+    <div id="cw34" class="via v-abajo" data-nombre="34" style="top: 950px; left: 5950px; width: 75px;"></div>
+    <div id="c170" class="via v-abajo" data-nombre="CDV170" style="top: 950px; left: 6030px; width: 60px;"></div>
+    <div id="c172" class="via v-abajo" data-nombre="CDV172" style="top: 950px; left: 6095px; width: 190px;"></div>
+    <div id="c174" class="via v-abajo" data-nombre="CDV174" style="top: 950px; left: 6290px; width: 65px;"></div>
+    <div id="cy-vic" class="via v-abajo" data-nombre="CDVY-VIC" style="top: 950px; left: 6360px; width: 75px;"></div>
     
-   
+
+
+
+    
+
+    
+   <div class="paragolpe-diseno" style="top: 745px; left: 6580px; transform: rotate(180deg);"><div class="union"></div></div>
+   <div class="paragolpe-diseno" style="top: 745px; left: 7200px; transform: rotate(180deg);"><div class="union"></div></div>
 
    
+
+    <div class="pan-etiqueta" style="top: 730px; left: 2270px;">RAMALLO</div><div class="pan-rect" style="top: 650px; left: 2250px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 2250px;"><div id="B_RAM_A" class="ind-alto"></div><div id="B_RAM_B" class="ind-bajo"></div></div>
+
+    <div class="pan-etiqueta" style="top: 730px; left: 2525px;">ZUFRIATEGUI</div><div class="pan-rect" style="top: 650px; left: 2505px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 2505px;"><div id="B_ZUF_A" class="ind-alto"></div><div id="B_ZUF_B" class="ind-bajo"></div></div>
+    
+    <div class="pan-etiqueta" style="top: 730px; left: 2680px;">LAPRIDA</div><div class="pan-rect" style="top: 650px; left: 2660px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 2660px;"><div id="B_LAP_A" class="ind-alto"></div><div id="B_LAP_B" class="ind-bajo"></div></div>
+
+    <div class="pan-etiqueta" style="top: 730px; left: 3070px;">ROCA</div><div class="pan-rect" style="top: 650px; left: 3050px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 3050px;"><div id="B_ROC_A" class="ind-alto"></div><div id="B_ROC_B" class="ind-bajo"></div></div>
+
+    <div class="pan-etiqueta" style="top: 730px; left: 3130px;">S.MARTIN</div><div class="pan-rect" style="top: 650px; left: 3110px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 3110px;"><div id="B_SMA_A" class="ind-alto"></div><div id="B_SMA_B" class="ind-bajo"></div></div>
+
+    <div class="pan-etiqueta" style="top: 730px; left: 3200px;">H.YRIGOYEN</div><div class="pan-rect" style="top: 650px; left: 3180px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 3180px;"><div id="B_HYR_A" class="ind-alto"></div><div id="B_HYR_B" class="ind-bajo"></div></div>
+
+    <div class="pan-etiqueta" style="top: 730px; left: 3260px;">MALAVER</div><div class="pan-rect" style="top: 650px; left: 3240px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 3240px;"><div id="B_MAL_A" class="ind-alto"></div><div id="B_MAL_B" class="ind-bajo"></div></div>
+
+    <div class="pan-etiqueta" style="top: 730px; left: 3310px;">VILLATE</div><div class="pan-rect" style="top: 650px; left: 3290px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 3290px;"><div id="B_VIL_A" class="ind-alto"></div><div id="B_VIL_B" class="ind-bajo"></div></div>
+
+    <div class="pan-etiqueta" style="top: 730px; left: 3520px;">CORRIENTES</div><div class="pan-rect" style="top: 650px; left: 3500px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 3500px;"><div id="B_COR_A" class="ind-alto"></div><div id="B_COR_B" class="ind-bajo"></div></div>
+
+    <div class="pan-etiqueta" style="top: 730px; left: 3990px;">ROMA</div><div class="pan-rect" style="top: 650px; left: 3970px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 3970px;"><div id="B_ROM_A" class="ind-alto"></div><div id="B_ROM_B" class="ind-bajo"></div></div>
+
+    <div class="pan-etiqueta" style="top: 730px; left: 4210px;">D.VELEZ</div><div class="pan-rect" style="top: 650px; left: 4190px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 4190px;"><div id="B_DVE_A" class="ind-alto"></div><div id="B_DVE_B" class="ind-bajo"></div></div>
+
+    <div class="pan-etiqueta" style="top: 730px; left: 4370px;">PACHECO</div><div class="pan-rect" style="top: 650px; left: 4350px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 4350px;"><div id="B_PAC_A" class="ind-alto"></div><div id="B_PAC_B" class="ind-bajo"></div></div>
+
+    <div class="pan-etiqueta" style="top: 705px; left: 4550px;">ALVEAR</div><div class="pan-rect" style="top: 650px; left: 4530px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 4530px;"><div id="B_ALV_A" class="ind-alto active"></div><div id="B_ALV_B" class="ind-bajo"></div></div>
+
+    <div class="pan-etiqueta" style="top: 730px; left: 4685px;">SARMIENTO</div><div class="pan-rect" style="top: 650px; left: 4665px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 4665px;"><div id="B_SAR_A" class="ind-alto active"></div><div id="B_SAR_B" class="ind-bajo"></div></div>
+
+    <div class="pan-etiqueta" style="top: 705px; left: 5020px;">PERU</div><div class="pan-rect" style="top: 650px; left: 5000px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 5000px;"><div id="B_PER_A" class="ind-alto active"></div><div id="B_PER_B" class="ind-bajo"></div></div>
+
+    <div class="pan-etiqueta" style="top: 705px; left: 5420px;">ALEM</div><div class="pan-rect" style="top: 650px; left: 5400px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 5400px;"><div id="B_ALE_A" class="ind-alto active"></div><div id="B_ALE_B" class="ind-bajo"></div></div>
+
+    <div class="pan-etiqueta" style="top: 705px; left: 5600px;">BELGRANO</div><div class="pan-rect" style="top: 650px; left: 5580px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 5580px;"><div id="B_BEL_A" class="ind-alto active"></div><div id="B_BEL_B" class="ind-bajo"></div></div>
+
+<div class="pan-etiqueta" style="top: 705px; left: 6260px;">AYACUCHO</div><div class="pan-rect" style="top: 650px; left: 6240px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 6240px;"><div id="B_AYA_A" class="ind-alto active"></div><div id="B_AYA_B" class="ind-bajo"></div></div>
+
+<div class="pan-etiqueta" style="top: 705px; left: 8110px;">G.SPANO</div><div class="pan-rect" style="top: 650px; left: 8090px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 8090px;"><div id="B_GSP_A" class="ind-alto active"></div><div id="B_GSP_B" class="ind-bajo"></div></div>
+
+<div class="pan-etiqueta" style="top: 705px; left: 8620px;">MAIPU</div><div class="pan-rect" style="top: 650px; left: 8600px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 8600px;"><div id="B_MAI_A" class="ind-alto active"></div><div id="B_MAI_B" class="ind-bajo"></div></div>
+
+<div class="pan-etiqueta" style="top: 705px; left: 8950px;">9DEJULIO</div><div class="pan-rect" style="top: 650px; left: 8930px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 8930px;"><div id="B_9DJ_A" class="ind-alto active"></div><div id="B_9DJ_B" class="ind-bajo"></div></div>
+
+<div class="pan-etiqueta" style="top: 705px; left: 9195px;">ALVEAR</div><div class="pan-rect" style="top: 650px; left: 9175px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 9175px;"><div id="B_AAR_A" class="ind-alto active"></div><div id="B_AAR_B" class="ind-bajo"></div></div>
+
+<div class="pan-etiqueta" style="top: 705px; left: 9265px;">RIVADAVIA</div><div class="pan-rect" style="top: 650px; left: 9245px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 9245px;"><div id="B_RIV_A" class="ind-alto active"></div><div id="B_RIV_B" class="ind-bajo"></div></div>
+
+<div class="pan-etiqueta" style="top: 705px; left: 9630px;">MARABOTTO</div><div class="pan-rect" style="top: 650px; left: 9610px;"></div>
+    <div class="ind-pan-container" style="top: 1060px; left: 9610px;"><div id="B_MAR_A" class="ind-alto active"></div><div id="B_MAR_B" class="ind-bajo"></div></div>
+
+
 
 
 
@@ -228,7 +921,88 @@
     <div id="sA-BEL_base" class="senal-unificada f-rojo" style="top: 780px; left: 695px;"><div class="s-nombre-real">A-BEL</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
     <div id="sB-BEL_base" class="senal-unificada f-rojo" style="top: 780px; left: 900px;"><div class="s-nombre-real">B-BEL</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
     <div id="s113_base" class="senal-unificada f-rojo" style="top: 780px; left: 1245px;"><div class="s-nombre-real">113</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
-   
+    <div id="s115_base" class="senal-unificada f-rojo" style="top: 780px; left: 1450px;"><div class="s-nombre-real">115</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="sA-NUN_base" class="senal-unificada f-rojo" style="top: 780px; left: 1550px;"><div class="s-nombre-real">A-NUN</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="sB-NUN_base" class="senal-unificada f-rojo" style="top: 780px; left: 1970px;"><div class="s-nombre-real">B-NUN</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s121_base" class="senal-unificada f-rojo" style="top: 780px; left: 2200px;"><div class="s-nombre-real">121</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="sA-RIV_base" class="senal-unificada f-rojo" style="top: 780px; left: 2290px;"><div class="s-nombre-real">A-RIV</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s125_base" class="senal-unificada f-rojo" style="top: 780px; left: 2540px;"><div class="s-nombre-real">125</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s127_base" class="senal-unificada f-rojo" style="top: 780px; left: 2690px;"><div class="s-nombre-real">127</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s129_base" class="senal-unificada f-rojo" style="top: 780px; left: 2780px;"><div class="s-nombre-real">129</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="sA-LOP_base" class="senal-unificada f-rojo" style="top: 780px; left: 2960px;"><div class="s-nombre-real">A-LOP</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s133_base" class="senal-unificada f-rojo" style="top: 780px; left: 3148px;"><div class="s-nombre-real">133</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s135_base" class="senal-unificada f-rojo" style="top: 780px; left: 3228px;"><div class="s-nombre-real">135</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="sA-OLI_base" class="senal-unificada f-rojo" style="top: 780px; left: 3330px;"><div class="s-nombre-real">A-OLI</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="sB-OLI_base" class="senal-unificada f-rojo" style="top: 780px; left: 3695px;"><div class="s-nombre-real">B-OLI</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s141_base" class="senal-unificada f-rojo" style="top: 780px; left: 3955px;"><div class="s-nombre-real">141</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s143_base" class="senal-unificada f-rojo" style="top: 780px; left: 4025px;"><div class="s-nombre-real">143</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s145_base" class="senal-unificada f-rojo" style="top: 780px; left: 4215px;"><div class="s-nombre-real">145</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s147_base" class="senal-unificada f-rojo" style="top: 780px; left: 4300px;"><div class="s-nombre-real">147</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s149_base" class="senal-unificada f-rojo" style="top: 780px; left: 4380px;"><div class="s-nombre-real">149</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="sA-MAR_base" class="senal-unificada f-rojo" style="top: 780px; left: 4570px;"><div class="s-nombre-real">A-MAR</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s153_base" class="senal-unificada f-rojo" style="top: 780px; left: 4715px;"><div class="s-nombre-real">153</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s155_base" class="senal-unificada f-rojo" style="top: 780px; left: 4840px;"><div class="s-nombre-real">155</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s157_base" class="senal-unificada f-rojo" style="top: 780px; left: 5030px;"><div class="s-nombre-real">157</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s159_base" class="senal-unificada f-rojo" style="top: 780px; left: 5120px;"><div class="s-nombre-real">159</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="sA-ISI_base" class="senal-unificada f-rojo" style="top: 780px; left: 5250px;"><div class="s-nombre-real">A-ISI</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="sB-ISI_base" class="senal-unificada f-rojo" style="top: 780px; left: 5625px;"><div class="s-nombre-real">B-ISI</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s165_base" class="senal-unificada f-rojo" style="top: 780px; left: 5850px;"><div class="s-nombre-real">165</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s167_base" class="senal-unificada f-rojo" style="top: 780px; left: 5930px;"><div class="s-nombre-real">167</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s169_base" class="senal-unificada f-rojo" style="top: 780px; left: 6050px;"><div class="s-nombre-real">169</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s171_base" class="senal-unificada f-rojo" style="top: 780px; left: 6270px;"><div class="s-nombre-real">171</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s173_base" class="senal-unificada f-rojo" style="top: 780px; left: 6340px;"><div class="s-nombre-real">173</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+   <div id="sA-VIC_base" class="senal-unificada f-rojo" style="top: 780px; left: 6440px;"><div class="s-nombre-real">A-VIC</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+<div id="sB-VIC_base" class="senal-unificada f-rojo" style="top: 780px; left: 7210px;"><div class="s-nombre-real">B-VIC</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+<div id="s179_base" class="senal-unificada f-rojo" style="top: 780px; left: 8120px;"><div class="s-nombre-real">179</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+<div id="s181_base" class="senal-unificada f-rojo" style="top: 780px; left: 8370px;"><div class="s-nombre-real">181</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+<div id="sA-FER_base" class="senal-unificada f-rojo" style="top: 780px; left: 8555px;"><div class="s-nombre-real">A-FER</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+<div id="sB-FER_base" class="senal-unificada f-rojo" style="top: 780px; left: 8975px;"><div class="s-nombre-real">B-FER</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+<div id="s187_base" class="senal-unificada f-rojo" style="top: 780px; left: 9205px;"><div class="s-nombre-real">187</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+<div id="s189_base" class="senal-unificada f-rojo" style="top: 780px; left: 9425px;"><div class="s-nombre-real">189</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+<div id="s191_base" class="senal-unificada f-rojo" style="top: 780px; left: 9540px;"><div class="s-nombre-real">191</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+<div id="sA1-TIG_base" class="senal-unificada f-rojo" style="top: 780px; left: 9790px;"><div class="s-nombre-real">A1-TIG</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+<div id="s192_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 9550px;"><div class="s-nombre-real">192</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+<div id="s194_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 9775px;"><div class="s-nombre-real">194</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+<div id="sA-TIG_base" class="senal-unificada f-rojo" style="top: 780px; left: 10015px;"><div class="s-nombre-real">A-TIG</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+<div id="sZ1-TIG_base" class="senal-unificada f-rojo sentido-izq nombre-s-arriba" style="top: 805px; left: 10720px;"><div class="s-nombre-real">Z1-TIG</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+
+<div id="sZ2-TIG_base" class="senal-unificada f-rojo sentido-izq nombre-s-arriba" style="top: 905px; left: 10720px;"><div class="s-nombre-real">Z2-TIG</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+
+<div id="sZ3-TIG_base" class="senal-unificada f-rojo sentido-izq nombre-s-arriba" style="top: 1005px; left: 10720px;"><div class="s-nombre-real">Z3-TIG</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+
+<div id="sZ4-TIG_base" class="senal-unificada f-rojo sentido-izq nombre-s-arriba" style="top: 1105px; left: 10720px;"><div class="s-nombre-real">Z4-TIG</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+
+
+<div id="sC-VIC_base" class="senal-unificada f-rojo" style="top: 180px; left: 7215px;"><div class="s-nombre-real">C-VIC</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+<div id="sD-VIC_base" class="senal-unificada f-rojo" style="top: 180px; left: 7620px;"><div class="s-nombre-real">D-VIC</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+<div id="sE-VIC_base" class="senal-unificada f-rojo" style="top: 180px; left: 8385px;"><div class="s-nombre-real">E-VIC</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+
+<div id="sT-VIC_base" class="senal-unificada f-rojo sentido-izq nombre-s-arriba" style="top: 530px; left: 6655px;transform: rotate(-90deg);"><div class="s-nombre-real">T-VIC</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+<div id="sU-VIC_base" class="senal-unificada f-rojo sentido-izq nombre-s-arriba" style="top: 420px; left: 6870px;transform: rotate(-90deg);"><div class="s-nombre-real">U-VIC</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+<div id="sV-VIC_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 370px; left: 7803px;"><div class="s-nombre-real">V-VIC</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+<div id="sW-VIC_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 370px; left: 8230px;"><div class="s-nombre-real">W-VIC</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div> 
+
+  <div id="sX-VIC_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 370px; left: 8455px;"><div class="s-nombre-real">X-VIC</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>        
+
+
+
+
 
 
 
@@ -247,13 +1021,64 @@
     <div id="sY-BEL_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 680px;"><div class="s-nombre-real">Y-BEL</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
     <div id="sZ-BEL_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 1130px;"><div class="s-nombre-real">Z-BEL</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
     <div id="s114_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 1265px;"><div class="s-nombre-real">114</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
-    
-  
+    <div id="s116_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 1410px;"><div class="s-nombre-real">116</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="sY-NUN_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 1690px;"><div class="s-nombre-real">Y-NUN</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="sZ-NUN_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 2095px;"><div class="s-nombre-real">Z-NUN</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s122_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 2195px;"><div class="s-nombre-real">122</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="sZ-RIV_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 2322px;"><div class="s-nombre-real">Z-RIV</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s126_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 2515px;"><div class="s-nombre-real">126</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s128_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 2665px;"><div class="s-nombre-real">128</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s130_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 2765px;"><div class="s-nombre-real">130</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="sZ-LOP_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 3045px;"><div class="s-nombre-real">Z-LOP</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s134_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 3140px;"><div class="s-nombre-real">134</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s136_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 3235px;"><div class="s-nombre-real">136</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="sY-OLI_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 3445px;"><div class="s-nombre-real">Y-OLI</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="sZ-OLI_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 3840px;"><div class="s-nombre-real">Z-OLI</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s142_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 3965px;"><div class="s-nombre-real">142</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s144_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 4025px;"><div class="s-nombre-real">144</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s146_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 4190px; left: 4190px;"><div class="s-nombre-real">146</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s148_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 4280px;"><div class="s-nombre-real">148</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s150_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 4380px;"><div class="s-nombre-real">150</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="sZ-MAR_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 4625px;"><div class="s-nombre-real">Z-MAR</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s154_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 4740px;"><div class="s-nombre-real">154</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s156_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 4840px;"><div class="s-nombre-real">156</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s158_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 5020px;"><div class="s-nombre-real">158</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s160_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 5125px;"><div class="s-nombre-real">160</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="sW-ISI_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 5335px;"><div class="s-nombre-real">W-ISI</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="sX-ISI_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 5748px;"><div class="s-nombre-real">X-ISI</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s166_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 5855px;"><div class="s-nombre-real">166</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s168_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 5990px;"><div class="s-nombre-real">168</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s170_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 6055px;"><div class="s-nombre-real">170</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s172_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 6255px;"><div class="s-nombre-real">172</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s174_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 6320px;"><div class="s-nombre-real">174</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="sY-VIC_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 6945px;"><div class="s-nombre-real">Y-VIC</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+<div id="sZ-VIC_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 7910px;"><div class="s-nombre-real">Z-VIC</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+<div id="s180_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 8145px;"><div class="s-nombre-real">180</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+<div id="s182_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 8450px;"><div class="s-nombre-real">182</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+<div id="sY-FER_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 8710px;"><div class="s-nombre-real">Y-FER</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+<div id="sZ-FER_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 9100px;"><div class="s-nombre-real">Z-FER</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+<div id="s188_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 9200px;"><div class="s-nombre-real">188</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+<div id="s190_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo" style="top: 985px; left: 9425px;"><div class="s-nombre-real">190</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
 
 
 
 
-<div id="s2a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 900px;">
+
+
+
+
+
+
+
+
+    <div id="s2a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 900px;">
   <div class="s-nombre-real">2A</div>
   <div class="s-grafico-real">
     <div class="t-girada">T</div>
@@ -269,21 +1094,456 @@
   </div>
 </div>
 
+    <div id="s12a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 1925px;"><div class="s-nombre-real">12A</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s10a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 1550px;"><div class="s-nombre-real">10A</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    
+<div id="s17a_base" class="senal-unificada f-rojo nombre-s-abajo enana" style="top: 865px; left: 2125px;">
+
+  <div class="s-nombre-real">17A</div>
+  <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content: center;">
+    <div class="t-girada">T</div>
+    <div class="circulo-led"></div>
+  </div>
+</div>
+
+
+
+    <div id="s13a_base" class="senal-unificada f-rojo nombre-s-abajo enana"  style="top: 865px; left: 1775px;">
+<div class="s-nombre-real">13A</div>
+<div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content: center;">
+    <div class="t-girada">T</div>
+    <div class="circulo-led"></div>
+  </div>
+</div>
+
+<div id="s21a_base" class="senal-unificada f-rojo nombre-s-abajo enana" style="top: 865px; left: 3510px;">
+<div class="s-nombre-real">21A</div>
+<div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content: center;">
+    <div class="t-girada">T</div>
+    <div class="circulo-led"></div>
+  </div>
+</div>
+
   
+<div id="s20a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 3360px;">
+<div class="s-nombre-real">20A</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+<div id="s25a_base" class="senal-unificada f-rojo nombre-s-abajo enana" style="top: 865px; left: 3865px;">
+<div class="s-nombre-real">25A</div>
+<div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content: center;">
+    <div class="t-girada">T</div>
+    <div class="circulo-led"></div>
+  </div>
+</div>
+ 
+
+
+<div id="s24a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 3690px;">
+<div class="s-nombre-real">24A</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+
+<div id="s31a_base" class="senal-unificada f-rojo nombre-s-abajo enana" style="top: 865px; left: 5400px;">
+<div class="s-nombre-real">31A</div>
+        <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content: center;">
+    <div class="t-girada">T</div>
+    <div class="circulo-led"></div>
+  </div>
+</div>
+
+  
+<div id="s30a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 5235px;">
+        <div class="s-nombre-real">30A</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+
+<div id="s33ba_base" class="senal-unificada f-rojo nombre-s-abajo enana" style="top: 865px; left: 5745px;">
+<div class="s-nombre-real">33BA</div>
+        <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content: center;">
+    <div class="t-girada">T</div>
+    <div class="circulo-led"></div>
+  </div>
+</div>
+
+
+
+<div id="s32a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 5575px;">
+        <div class="s-nombre-real">32A</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+
+
+
+
+<div id="s45b_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo enana" style="top: 865px; left: 6985px;">
+        <div class="s-nombre-real">45B</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+
+ <div id="s40a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 6440px;">
+        <div class="s-nombre-real">40A</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+
+<div id="s47a_base" class="senal-unificada f-rojo enana" style="top: 865px; left: 7212px;">
+        <div class="s-nombre-real">47A</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+
+<div id="s44a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 7212px;">
+        <div class="s-nombre-real">44A</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+
+ <div id="s49a_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo enana" style="top: 865px; left: 7830px;">
+        <div class="s-nombre-real">49A</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+<div id="s51a_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo enana" style="top: 265px; left: 7595px;">
+        <div class="s-nombre-real">51A</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+<div id="s147a_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo enana" style="top: 665px; left: 7770px;">
+        <div class="s-nombre-real">147A</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+<div id="s142a_base" class="senal-unificada f-rojo sentido-izq nombre-s-arriba enana" style="top: 715px; left: 7770px;">
+        <div class="s-nombre-real">142A</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+
+
+<div id="s143c_base" class="senal-unificada f-rojo enana" style="top: 715px; left: 7240px;">
+        <div class="s-nombre-real">143C</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+
+ 
+
+
+ <div id="s151a_base" class="senal-unificada f-rojo enana" style="top: 115px; left: 7575px;">
+        <div class="s-nombre-real">151A</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+
+<div id="s45c_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo enana" style="top: 265px; left: 6985px;">
+        <div class="s-nombre-real">45C</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+
+<div id="s150a_base" class="senal-unificada f-rojo sentido-izq nombre-s-arriba enana" style="top: 415px; left: 7375px;">
+        <div class="s-nombre-real">150A</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+
+<div id="s152b_base" class="senal-unificada f-rojo enana" style="top: 415px; left: 7655px;">
+        <div class="s-nombre-real">152B</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+<div id="s152c_base" class="senal-unificada f-rojo enana" style="top: 490px; left: 7670px;transform: rotate(-45deg);">
+        <div class="s-nombre-real">152C</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+
+<div id="s50a_base" class="senal-unificada f-rojo enana" style="top: 315px; left: 7220px;">
+        <div class="s-nombre-real">50A</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+
+<div id="s141a_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo enana" style="top: 530px; left: 6730px;transform: rotate(-90deg);">
+        <div class="s-nombre-real">141A</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+
+<div id="s141c_base" class="senal-unificada f-rojo enana" style="top: 715px; left: 6620px;">
+        <div class="s-nombre-real">141C</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+
+<div id="s156a_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo enana" style="top: 465px; left: 8225px;">
+        <div class="s-nombre-real">156A</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="s61a_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo enana" style="top: 865px; left: 8743px;">
+        <div class="s-nombre-real">61A</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div> 
+  
+<div id="s60a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 8593px;">
+        <div class="s-nombre-real">60A</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+
+<div id="s65a_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo enana" style="top: 865px; left: 9080px;">
+        <div class="s-nombre-real">65A</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div> 
+
+
+<div id="s62a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 8923px;">
+        <div class="s-nombre-real">62A</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+
+<div id="s72a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 9995px;">
+        <div class="s-nombre-real">72A</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+
+    <div id="s73a_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo enana" style="top: 865px; left: 10735px;">
+        <div class="s-nombre-real">73A</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+
+ <div id="s74a_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo enana" style="top: 965px; left: 10735px;">
+        <div class="s-nombre-real">74A</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+ <div id="s75b_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo enana" style="top: 1065px; left: 10735px;">
+        <div class="s-nombre-real">75B</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+ <div id="s75c_base" class="senal-unificada f-rojo sentido-izq nombre-s-abajo enana" style="top: 1165px; left: 10735px;">
+        <div class="s-nombre-real">75C</div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+    </div>
+
 <div class="nombre-cambio" style="top: 827px; left: 1020px;">w1</div>
 <div class="nombre-cambio" style="top: 970px; left: 940px;">w2</div>
 
 <div style="position: absolute; top: 805px; left: 1025px; text-align: center;"><div id="EW1" class="led-enclav"></div></div>
 <div style="position: absolute; top: 990px; left: 945px; text-align: center;"><div id="EW2" class="led-enclav"></div></div>
 
+<div class="nombre-cambio" style="top: 827px; left: 1680px;">w11</div>
+<div class="nombre-cambio" style="top: 970px; left: 1620px;">w10</div>
+
+<div style="position: absolute; top: 805px; left: 1684px; text-align: center;"><div id="EW11" class="led-enclav"></div></div>
+<div style="position: absolute; top: 990px; left: 1625px; text-align: center;"><div id="EW10" class="led-enclav"></div></div>
+
+<div class="nombre-cambio" style="top: 827px; left: 2050px;">w15</div>
+<div class="nombre-cambio" style="top: 970px; left: 1980px;">w12</div>
+<div style="position: absolute; top: 805px; left: 2055px; text-align: center;"><div id="EW15" class="led-enclav"></div></div>
+<div style="position: absolute; top: 990px; left: 1985px; text-align: center;"><div id="EW12" class="led-enclav"></div></div>
 
 <div style="position: absolute; top: 797px; left: 675px; text-align: center;"><div id="ESAB" class="led-enclav"></div></div>
 <div style="position: absolute; top: 797px; left: 880px; text-align: center;"><div id="ESBB" class="led-enclav"></div></div>
 <div style="position: absolute; top: 995px; left: 1170px; text-align: center;"><div id="ESZB" class="led-enclav"></div></div>
 <div style="position: absolute; top: 995px; left: 720px; text-align: center;"><div id="ESYB" class="led-enclav"></div></div>
 
+<div style="position: absolute; top: 797px; left: 1530px; text-align: center;"><div id="ESAN" class="led-enclav"></div></div>
+<div style="position: absolute; top: 797px; left: 1950px; text-align: center;"><div id="ESBN" class="led-enclav"></div></div>
+<div style="position: absolute; top: 995px; left: 1730px; text-align: center;"><div id="ESYN" class="led-enclav"></div></div>
+<div style="position: absolute; top: 995px; left: 2135px; text-align: center;"><div id="ESZN" class="led-enclav"></div></div>
 
 
+<div style="position: absolute; top: 797px; left: 3312px; text-align: center;"><div class="label-enc"></div><div id="ESAO" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 797px; left: 3675px; text-align: center;"><div class="label-enc"></div><div id="ESBO" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 995px; left: 3880px; text-align: center;"><div class="label-enc"></div><div id="ESZO" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 995px; left: 3485px; text-align: center;"><div class="label-enc"></div><div id="ESYO" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 990px; left: 3400px; text-align: center;"><div class="label-enc"></div><div id="EW20" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 805px; left: 3458px; text-align: center;"><div class="label-enc"></div><div id="EW21" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 805px; left: 3830px; text-align: center;"><div class="label-enc"></div><div id="EW25" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 990px; left: 3750px; text-align: center;"><div class="label-enc"></div><div id="EW24" class="led-enclav"></div></div>
+
+
+
+    <div class="nombre-cambio" style="top: 827px; left: 3451px;">w21</div>
+    <div class="nombre-cambio" style="top: 970px; left: 3393px;">w20</div>
+    <div class="nombre-cambio" style="top: 827px; left: 3823px;">w25</div>
+    <div class="nombre-cambio" style="top: 970px; left: 3743px;">w24</div>
+
+<div style="position: absolute; top: 797px; left: 5230px; text-align: center;"><div class="label-enc"></div><div id="ESAI" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 797px; left: 5602px; text-align: center;"><div class="label-enc"></div><div id="ESBI" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 995px; left: 5788px; text-align: center;"><div class="label-enc"></div><div id="ESXI" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 995px; left: 5375px; text-align: center;"><div class="label-enc"></div><div id="ESWI" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 990px; left: 5280px; text-align: center;"><div class="label-enc"></div><div id="EW30" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 805px; left: 5360px; text-align: center;"><div class="label-enc"></div><div id="EW31" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 805px; left: 5700px; text-align: center;"><div class="label-enc"></div><div id="EW33" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 990px; left: 5630px; text-align: center;"><div class="label-enc"></div><div id="EW32" class="led-enclav"></div></div>
+
+
+
+    <div class="nombre-cambio" style="top: 827px; left: 5353px;">w31</div>
+    <div class="nombre-cambio" style="top: 970px; left: 5273px;">w30</div>
+    <div class="nombre-cambio" style="top: 827px; left: 5693px;">w33</div>
+    <div class="nombre-cambio" style="top: 970px; left: 5623px;">w32</div>
+
+
+<div class="nombre-cambio" style="top: 970px; left: 6480px;">w40</div>
+<div style="position: absolute; top: 985px; left: 6487px; text-align: center;"><div class="label-enc"></div><div id="EW40" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 827px; left: 6520px;">w41</div>
+<div style="position: absolute; top: 805px; left: 6527px; text-align: center;"><div class="label-enc"></div><div id="EW41" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 870px; left: 6620px;">w43</div>
+<div style="position: absolute; top: 885px; left: 6627px; text-align: center;"><div class="label-enc"></div><div id="EW43" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 870px; left: 6780px;">w45</div>
+<div style="position: absolute; top: 885px; left: 6787px; text-align: center;"><div class="label-enc"></div><div id="EW45" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 727px; left: 6670px;">w141</div>
+<div style="position: absolute; top: 705px; left: 6690px; text-align: center;"><div class="label-enc"></div><div id="EW141" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 870px; left: 7260px;">w47</div>
+<div style="position: absolute; top: 885px; left: 7267px; text-align: center;"><div class="label-enc"></div><div id="EW47" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 970px; left: 7300px;">w44</div>
+<div style="position: absolute; top: 985px; left: 7307px; text-align: center;"><div class="label-enc"></div><div id="EW44" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 970px; left: 7600px;">w46</div>
+<div style="position: absolute; top: 985px; left: 7607px; text-align: center;"><div class="label-enc"></div><div id="EW46" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 827px; left: 7650px;">w49</div>
+<div style="position: absolute; top: 805px; left: 7657px; text-align: center;"><div class="label-enc"></div><div id="EW49" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 770px; left: 7700px;">w142</div>
+<div style="position: absolute; top: 785px; left: 7707px; text-align: center;"><div class="label-enc"></div><div id="EW142" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 627px; left: 7700px;">w147</div>
+<div style="position: absolute; top: 605px; left: 7707px; text-align: center;"><div class="label-enc"></div><div id="EW147" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 627px; left: 7620px;">w145</div>
+<div style="position: absolute; top: 605px; left: 7627px; text-align: center;"><div class="label-enc"></div><div id="EW145" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 770px; left: 7620px;">w140</div>
+<div style="position: absolute; top: 785px; left: 7627px; text-align: center;"><div class="label-enc"></div><div id="EW140" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 727px; left: 7310px;">w143</div>
+<div style="position: absolute; top: 705px; left: 7317px; text-align: center;"><div class="label-enc"></div><div id="EW143" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 470px; left: 7320px;">w150</div>
+<div style="position: absolute; top: 485px; left: 7327px; text-align: center;"><div class="label-enc"></div><div id="EW150" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 327px; left: 7370px;">w52</div>
+<div style="position: absolute; top: 305px; left: 7377px; text-align: center;"><div class="label-enc"></div><div id="EW52" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 327px; left: 7270px;">w50</div>
+<div style="position: absolute; top: 305px; left: 7277px; text-align: center;"><div class="label-enc"></div><div id="EW50" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 470px; left: 7850px;">w154</div>
+<div style="position: absolute; top: 485px; left: 7857px; text-align: center;"><div class="label-enc"></div><div id="EW154" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 427px; left: 7720px;">w152</div>
+<div style="position: absolute; top: 405px; left: 7727px; text-align: center;"><div class="label-enc"></div><div id="EW152" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 470px; left: 8120px;">w156</div>
+<div style="position: absolute; top: 485px; left: 8127px; text-align: center;"><div class="label-enc"></div><div id="EW156" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 327px; left: 8077px;">w56b</div>
+<div style="position: absolute; top: 305px; left: 8084px; text-align: center;"><div class="label-enc"></div><div id="EW56B" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 367px; left: 8014px;">w56a</div>
+<div style="position: absolute; top: 385px; left: 8021px; text-align: center;"><div class="label-enc"></div><div id="EW56A" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 327px; left: 7900px;">w54</div>
+<div style="position: absolute; top: 305px; left: 7907px; text-align: center;"><div class="label-enc"></div><div id="EW54" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 227px; left: 7500px;">w51</div>
+<div style="position: absolute; top: 205px; left: 7507px; text-align: center;"><div class="label-enc"></div><div id="EW51" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 227px; left: 7940px;">w55</div>
+<div style="position: absolute; top: 205px; left: 7947px; text-align: center;"><div class="label-enc"></div><div id="EW55" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 270px; left: 7830px;">w53</div>
+<div style="position: absolute; top: 285px; left: 7837px; text-align: center;"><div class="label-enc"></div><div id="EW53" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 170px; left: 7670px;">w151</div>
+<div style="position: absolute; top: 185px; left: 7677px; text-align: center;"><div class="label-enc"></div><div id="EW151" class="led-enclav"></div></div>
+<div class="nombre-cambio" style="top: 227px; left: 6830px;">w45a</div>
+<div style="position: absolute; top: 205px; left: 6837px; text-align: center;"><div class="label-enc"></div><div id="EW45A" class="led-enclav"></div></div>
+
+
+
+<div style="position: absolute; top: 797px; left: 6420px; text-align: center;"><div class="label-enc"></div><div id="ESAV" class="led-enclav"></div></div>
+
+
+<div style="position: absolute; top: 797px; left: 7190px; text-align: center;"><div class="label-enc"></div><div id="ESBV" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 995px; left: 7952px; text-align: center;"><div class="label-enc"></div><div id="ESZV" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 995px; left: 6987px; text-align: center;"><div class="label-enc"></div><div id="ESYV" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 195px; left: 7195px; text-align: center;"><div class="label-enc"></div><div id="ESCV" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 195px; left: 7600px; text-align: center;"><div class="label-enc"></div><div id="ESDV" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 195px; left: 8365px; text-align: center;"><div class="label-enc"></div><div id="ESEV" class="led-enclav"></div></div>
+
+
+<div style="position: absolute; top: 510px; left: 6670px; text-align: center;"><div class="label-enc"></div><div id="ESTV" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 400px; left: 6885px; text-align: center;"><div class="label-enc"></div><div id="ESUV" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 379px; left: 7845px; text-align: center;"><div class="label-enc"></div><div id="ESVV" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 379px; left: 8270px; text-align: center;"><div class="label-enc"></div><div id="ESWV" class="led-enclav"></div></div>
+
+
+
+<div style="position: absolute; top: 797px; left: 8535px; text-align: center;"><div class="label-enc"></div><div id="ESAF" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 797px; left: 8955px; text-align: center;"><div class="label-enc"></div><div id="ESBF" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 995px; left: 9140px; text-align: center;"><div class="label-enc"></div><div id="ESZF" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 995px; left: 8750px; text-align: center;"><div class="label-enc"></div><div id="ESYF" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 985px; left: 8660px; text-align: center;"><div class="label-enc"></div><div id="EW60" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 805px; left: 8707px; text-align: center;"><div class="label-enc"></div><div id="EW61" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 805px; left: 9037px; text-align: center;"><div class="label-enc"></div><div id="EW65" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 985px; left: 8967px; text-align: center;"><div class="label-enc"></div><div id="EW62" class="led-enclav"></div></div>
+
+
+
+    <div class="nombre-cambio" style="top: 827px; left: 8700px;">w61</div>
+    <div class="nombre-cambio" style="top: 970px; left:8653px;">w60</div>
+    <div class="nombre-cambio" style="top: 827px; left: 9030px;">w65</div>
+    <div class="nombre-cambio" style="top: 970px; left: 8962px;">w62</div>
+
+
+<div class="nombre-cambio" style="top: 827px; left: 10600px;">w73</div>
+<div class="nombre-cambio" style="top: 925px; left: 10370px;">w72</div>
+<div class="nombre-cambio" style="top: 827px; left: 10050px;">W71</div>
+<div class="nombre-cambio" style="top: 970px; left: 10100px;">w70</div>
+<div class="nombre-cambio" style="top: 970px; left: 10550px;">w74</div>
+<div class="nombre-cambio" style="top: 1070px; left:10440px;">w75</div>
+
+
+<div style="position: absolute; top: 797px; left: 9995px; text-align: center;"><div class="label-enc"></div><div id="ESAT" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 822px; left: 10760px; text-align: center;"><div class="label-enc"></div><div id="ESZ1" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 922px; left: 10760px; text-align: center;"><div class="label-enc"></div><div id="ESZ2" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 1022px; left: 10760px; text-align: center;"><div class="label-enc"></div><div id="ESZ3" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 1122px; left: 10760px; text-align: center;"><div class="label-enc"></div><div id="ESZ4" class="led-enclav"></div></div>
+
+
+<div style="position: absolute; top: 990px; left: 10107px; text-align: center;"><div class="label-enc"></div><div id="EW70" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 805px; left: 10057px; text-align: center;"><div class="label-enc"></div><div id="EW71" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 905px; left: 10377px; text-align: center;"><div class="label-enc"></div><div id="EW72" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 805px; left: 10607px; text-align: center;"><div class="label-enc"></div><div id="EW73" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 990px; left: 10557px; text-align: center;"><div class="label-enc"></div><div id="EW74" class="led-enclav"></div></div>
+
+<div style="position: absolute; top: 1090px; left: 10447px; text-align: center;"><div class="label-enc"></div><div id="EW75" class="led-enclav"></div></div>
+
+
+
+
+
+
+
+
+
+</div>
 
 </div>
 
