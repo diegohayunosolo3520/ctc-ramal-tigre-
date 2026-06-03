@@ -1574,37 +1574,40 @@ rotate(45deg);"></div>
 
     // MATRIZ GENERAL DE CAMBIOS ELECTROMECÁNICOS
     var cambiosNuz = {
-        "1011":    { cur: "1", avg: 0, ocu: false, ids: ['w11plus', 'w11pm', 'w11minus'], leds: ['LW1011P', 'LW1011M', 'AW1011'] },
-        "1215":    { cur: "1", avg: 0, ocu: false, ids: ['w15plus', 'w15pm', 'w15minus'], leds: ['LW1215P', 'LW1215M', 'AW1215'] },
+        "1011":   { cur: "1", avg: 0, ocu: false, ids: ['w11plus', 'w11pm', 'w11minus'], leds: ['LW1011P', 'LW1011M', 'AW1011'] },
+        "1215":   { cur: "1", avg: 0, ocu: false, ids: ['w15plus', 'w15pm', 'w15minus'], leds: ['LW1215P', 'LW1215M', 'AW1215'] },
         "124123": { cur: "1", avg: 0, ocu: false, ids: ['w123plus', 'w123pm', 'w123minus'], leds: ['LW124123P', 'LW124123M', 'AW124123'] },
-        "2021":    { cur: "1", avg: 0, ocu: false, ids: ['w21plus', 'w21pm', 'w21minus'], leds: ['LW2021P', 'LW2021M', 'AW2021'] },
-        "2425":    { cur: "1", avg: 0, ocu: false, ids: ['w25plus', 'w25pm', 'w25minus'], leds: ['LW2425P', 'LW2425M', 'AW2425'] },
+        "2021":   { cur: "1", avg: 0, ocu: false, ids: ['w21plus', 'w21pm', 'w21minus'], leds: ['LW2021P', 'LW2021M', 'AW2021'] },
+        "2425":   { cur: "1", avg: 0, ocu: false, ids: ['w25plus', 'w25pm', 'w25minus'], leds: ['LW2425P', 'LW2425M', 'AW2425'] },
         "132131": { cur: "1", avg: 0, ocu: false, ids: ['w131plus', 'w131pm', 'w131minus'], leds: ['LW132131P', 'LW132131M', 'AW132131'] },
-        "3031":    { cur: "1", avg: 0, ocu: false, ids: ['w31plus', 'w31pm', 'w31minus'], leds: ['LW3031P', 'LW3031M', 'AW3031'] },
-        "3233":    { cur: "1", avg: 0, ocu: false, ids: ['w33plus', 'w33pm', 'w33minus'], leds: ['LW3233P', 'LW3233M', 'AW3233'] },
+        "3031":   { cur: "1", avg: 0, ocu: false, ids: ['w31plus', 'w31pm', 'w31minus'], leds: ['LW3031P', 'LW3031M', 'AW3031'] },
+        "3233":   { cur: "1", avg: 0, ocu: false, ids: ['w33plus', 'w33pm', 'w33minus'], leds: ['LW3233P', 'LW3233M', 'AW3233'] },
         "152m151m": { cur: "1", avg: 0, ocu: false, ids: ['w151mplus', 'w151mpm', 'w151mminus'], leds: ['LW152m151mP', 'LW152m151mM', 'AW152m151m'] },
-        "6061":    { cur: "1", avg: 0, ocu: false, ids: ['w61plus', 'w61pm', 'w61minus'], leds: ['LW6061P', 'LW6061M', 'AW6061'] },
-        "6265":    { cur: "1", avg: 0, ocu: false, ids: ['w65plus', 'w65pm', 'w65minus'], leds: ['LW6265P', 'LW6265M', 'AW6265'] },
-        "7071":    { cur: "1", avg: 0, ocu: false, ids: ['w70plus', 'w70pm', 'w70minus'], leds: ['LW7071P', 'LW7071M', 'AW7071'] },
-        "7473":    { cur: "1", avg: 0, ocu: false, ids: ['w74plus', 'w74pm', 'w74minus'], leds: ['LW7473P', 'LW7473M', 'AW7473'] },
-        "72":      { cur: "1", avg: 0, ocu: false, ids: ['w72plus', 'w72pm', 'w72minus'], leds: ['LW72P', 'LW72M', 'AW72'] },
-        "75":      { cur: "1", avg: 0, ocu: false, ids: ['w75plus', 'w75pm', 'w75minus'], leds: ['LW75P', 'LW75M', 'AW75'] },
-        "4041":   { cur: "1", avg: 0, ocu: false, ocuAbajo: false, ids: ['w41plus', 'w41pm', 'w41minus'], leds: ['LW4041P', 'LW4041M', 'AW4041'] },
-        "152":     { cur: "1", avg: 0, ocu: false, ids: ['w152plus', 'w152pm', 'w152minus'], leds: ['LW152P', 'LW152M', 'AW152'] },
-        "43141":  { cur: "1", avg: 0, ocu: false, ocuAbajo: false, ids: ['w141plus', 'w141pm', 'w141minus'], leds: ['LW43141P', 'LW43141M', 'AW43141'] },
-        "4545a":  { cur: "1", avg: 0, ocu: false, ocuAbajo: false, ids: ['w45aplus', 'w45apm', 'w45aminus'], leds: ['LW4545aP', 'LW4545aM', 'AW4545a'] },
-        "4649":   { cur: "1", avg: 0, ocu: false, ocuAbajo: false, ids: ['w46plus', 'w46pm', 'w46minus'], leds: ['LW4649P', 'LW4649M', 'AW4649'] },
-        "5152":   { cur: "1", avg: 0, ocu: false, ocuAbajo: false, ids: ['w51plus', 'w51pm', 'w51minus'], leds: ['LW5152P', 'LW5152M', 'AW5152'] },
-        "15454":  { cur: "1", avg: 0, ocu: false, ocuAbajo: false, ids: ['w154plus', 'w154pm', 'w154minus'], leds: ['LW15454P', 'LW15454M', 'AW15454'] },
-        "15656b": { cur: "1", avg: 0, ocu: false, ocuAbajo: false, ids: ['w56bplus', 'w56bpm', 'w56bminus'], leds: ['LW15656bP', 'LW15656bM', 'AW15656b'] },
-        "50150":  { cur: "1", avg: 0, ocu: false, ocuAbajo: false, ids: ['w150plus', 'w150pm', 'w150minus'], leds: ['LW50150P', 'LW50150M', 'AW50150'] },
-        "56a55":  { cur: "1", avg: 0, ocu: false, ocuAbajo: false, ids: ['w56aplus', 'w56apm', 'w56aminus'], leds: ['LW56a55P', 'LW56a55M', 'AW56a55'] },
+        // CAMBIOS SAN FERNANDO
+        "6061":   { cur: "1", avg: 0, ocu: false, ids: ['w61plus', 'w61pm', 'w61minus'], leds: ['LW6061P', 'LW6061M', 'AW6061'] },
+        "6265":   { cur: "1", avg: 0, ocu: false, ids: ['w65plus', 'w65pm', 'w65minus'], leds: ['LW6265P', 'LW6265M', 'AW6265'] },
+        // NUEVOS CAMBIOS: TERMINAL TIGRE
+        "7071":   { cur: "1", avg: 0, ocu: false, ids: ['w71plus', 'w71pm', 'w71minus'], leds: ['LW7071P', 'LW7071M', 'AW7071'] },
+        "7473":   { cur: "1", avg: 0, ocu: false, ids: ['w73plus', 'w73pm', 'w73minus'], leds: ['LW7473P', 'LW7473M', 'AW7473'] },
+        "72":     { cur: "1", avg: 0, ocu: false, ids: ['w72plus', 'w72pm', 'w72minus'], leds: ['LW72P', 'LW72M', 'AW72'] },
+        "75":     { cur: "1", avg: 0, ocu: false, ids: ['w75plus', 'w75pm', 'w75minus'], leds: ['LW75P', 'LW75M', 'AW75'] },
+        // CAMBIOS VICTORIA (CORREGIDO)
+        "4041":   { cur: "1", avg: 0, ocu: false, ids: ['w41plus', 'w41pm', 'w41minus'], leds: ['LW4041P', 'LW4041M', 'AW4041'] },
+        "152":    { cur: "1", avg: 0, ocu: false, ids: ['w152plus', 'w152pm', 'w152minus'], leds: ['LW152P', 'LW152M', 'AW152'] },
+        "43141":  { cur: "1", avg: 0, ocu: false, ids: ['w141plus', 'w141pm', 'w141minus'], leds: ['LW43141P', 'LW43141M', 'AW43141'] },
+        "4545a":  { cur: "1", avg: 0, ocu: false, ids: ['w45aplus', 'w45apm', 'w45aminus'], leds: ['LW4545aP', 'LW4545aM', 'AW4545a'] },
+        "4649":   { cur: "1", avg: 0, ocu: false, ids: ['w46plus', 'w46pm', 'w46minus'], leds: ['LW4649P', 'LW4649M', 'AW4649'] },
+        "5152":   { cur: "1", avg: 0, ocu: false, ids: ['w51plus', 'w51pm', 'w51minus'], leds: ['LW5152P', 'LW5152M', 'AW5152'] },
+        "15454":  { cur: "1", avg: 0, ocu: false, ids: ['w154plus', 'w154pm', 'w154minus'], leds: ['LW15454P', 'LW15454M', 'AW15454'] },
+        "15656b": { cur: "1", avg: 0, ocu: false, ids: ['w56bplus', 'w56bpm', 'w56bminus'], leds: ['LW15656bP', 'LW15656bM', 'AW15656b'] },
+        "50150":  { cur: "1", avg: 0, ocu: false, ids: ['w150plus', 'w150pm', 'w150minus'], leds: ['LW50150P', 'LW50150M', 'AW50150'] },
+        "56a55":  { cur: "1", avg: 0, ocu: false, ids: ['w56aplus', 'w56apm', 'w56aminus'], leds: ['LW56a55P', 'LW56a55M', 'AW56a55'] },
         "151":    { cur: "1", avg: 0, ocu: false, ids: ['w151plus', 'w151pm', 'w151minus'], leds: ['LW151P', 'LW151M', 'AW151'] },
         "142":    { cur: "1", avg: 0, ocu: false, ids: ['w142plus', 'w142pm', 'w142minus'], leds: ['LW142P', 'LW142M', 'AW142'] },
-        "53":      { cur: "1", avg: 0, ocu: false, ids: ['w53plus', 'w53pm', 'w53minus'], leds: ['LW53P', 'LW53M', 'AW53'] },
-        "147140": { cur: "1", avg: 0, ocu: false, ocuAbajo: false, ids: ['w147plus', 'w147pm', 'w147minus'], leds: ['LW147140P', 'LW147140M', 'AW147140'] },
+        "53":     { cur: "1", avg: 0, ocu: false, ids: ['w53plus', 'w53pm', 'w53minus'], leds: ['LW53P', 'LW53M', 'AW53'] },
+        "147140": { cur: "1", avg: 0, ocu: false, ids: ['w147plus', 'w147pm', 'w147minus'], leds: ['LW147140P', 'LW147140M', 'AW147140'] },
         "145":    { cur: "1", avg: 0, ocu: false, ids: ['w145plus', 'w145pm', 'w145minus'], leds: ['LW145P', 'LW145M', 'AW145'] },
-        "47143":  { cur: "1", avg: 0, ocu: false, ocuAbajo: false, ids: ['w47plus', 'w47pm', 'w47minus'], leds: ['LW47143P', 'LW47143M', 'AW47143'] },
+        "47143":  { cur: "1", avg: 0, ocu: false, ids: ['w47plus', 'w47pm', 'w47minus'], leds: ['LW47143P', 'LW47143M', 'AW47143'] },
         "4449x":  { cur: "1", avg: 0, ocu: false, ocuAbajo: false, ids: ['w49xplus', 'w49xpm', 'w49xminus'], leds: ['LW4449xP', 'LW4449xM', 'AW4449x'] }
     };
 
@@ -1637,15 +1640,26 @@ rotate(45deg);"></div>
 
     var tic = true;
 
-    // Reloj para destellos y acoplamientos mecánicos de fondo
     setInterval(function() {
         tic = !tic;
-        pW(); // Mantiene parpadeos de averías reales
+        pW();
         Object.keys(cambiosNuz).forEach(actualizarChangeNuz);
         Object.keys(panesNuz).forEach(actualizarPAN);
         
-        var elAmm = document.getElementById('w45amm');
+        // ==================================================================
+        // ACOPLAMIENTO DE VÍA ESPEJO: EL W43 COPIA AL W141 MELLIZO
+        // ==================================================================
+        var el141plus = document.getElementById('w141plus');
+        var el141minus = document.getElementById('w141minus');
+        var el43pm = document.getElementById('w43pm');
+        var el43plus = document.getElementById('w43plus');
+        var el43minus = document.getElementById('w43minus');
+
+        // ==================================================================
+        // ACOPLAMIENTO DE VÍA ESPEJO: CONTINUACIÓN DE AGUJA (W45MINUS -> W45AMM)
+        // ==================================================================
         var elMinus = document.getElementById('w45minus');
+        var elAmm = document.getElementById('w45amm');
         if (elMinus && elAmm) {
             elAmm.className = elMinus.className;
             elAmm.classList.add('diagonal');
@@ -1668,7 +1682,6 @@ rotate(45deg);"></div>
         }
     }
 
-    // FUNCIÓN DE RENDIMIENTO CRÍTICO: PINTA BELGRANO EN TIEMPO REAL COINCIDENTE
     function pW() {
         var v1p = document.getElementById('w1plus'), v1m = document.getElementById('w1minus'), v1pm = document.getElementById('w1pm');
         var v2p = document.getElementById('w2plus'), v2m = document.getElementById('w2minus'), v2pm = document.getElementById('w2pm');
@@ -1691,58 +1704,74 @@ rotate(45deg);"></div>
             v2m.classList.add('via-fantasma');
 
             if (!w1_ocupado) {
-                if (flagAveria_Bel === 1 && tic) { v1pm.className = "via v-arriba via-fantasma"; v1p.className = "via v-arriba via-fantasma"; } 
-                else { v1pm.classList.add('libre'); v1p.classList.add('libre'); }
+                if (flagAveria_Bel === 1 && tic) {
+                    v1pm.classList.add('via-fantasma'); v1p.classList.add('via-fantasma');
+                } else {
+                    v1pm.classList.add('libre'); v1p.classList.add('libre');
+                }
             } else {
-                if (flagAveria_Bel === 1 && tic) { v1pm.className = "via v-arriba via-fantasma"; v1p.className = "via v-arriba via-fantasma"; }
-                else { v1pm.classList.add('ocupado'); v1p.classList.add('ocupado'); }
+                if (flagAveria_Bel === 1 && tic) {
+                    v1pm.classList.add('via-fantasma'); v1p.classList.add('via-fantasma');
+                }
             }
 
             if (!w2_ocupado) {
-                if (flagAveria_Bel === 1 && tic) { v2pm.className = "via v-abajo via-fantasma"; v2p.className = "via v-abajo via-fantasma"; } 
-                else { v2pm.classList.add('libre'); v2p.classList.add('libre'); }
+                if (flagAveria_Bel === 1 && tic) {
+                    v2pm.classList.add('via-fantasma'); v2p.classList.add('via-fantasma');
+                } else {
+                    v2pm.classList.add('libre'); v2p.classList.add('libre');
+                }
             } else {
-                if (flagAveria_Bel === 1 && tic) { v2pm.className = "via v-abajo via-fantasma"; v2p.className = "via v-abajo via-fantasma"; }
-                else { v2pm.classList.add('ocupado'); v2p.classList.add('ocupado'); }
+                if (flagAveria_Bel === 1 && tic) {
+                    v2pm.classList.add('via-fantasma'); v2p.classList.add('via-fantasma');
+                }
             }
+
         } else {
             v1p.classList.add('via-fantasma'); 
             v2p.classList.add('via-fantasma');
 
             if (!w1_ocupado) {
-                if (flagAveria_Bel === 1 && tic) { v1pm.className = "via v-arriba via-fantasma"; v1m.className = "via diagonal v-arriba via-fantasma"; } 
-                else { v1pm.classList.add('libre'); v1m.classList.add('libre'); }
+                if (flagAveria_Bel === 1 && tic) {
+                    v1pm.classList.add('via-fantasma'); v1m.classList.add('via-fantasma');
+                } else {
+                    v1pm.classList.add('libre'); v1m.classList.add('libre');
+                }
             } else {
-                if (flagAveria_Bel === 1 && tic) { v1pm.className = "via v-arriba via-fantasma"; v1m.className = "via diagonal v-arriba via-fantasma"; }
-                else { v1pm.classList.add('ocupado'); v1m.classList.add('ocupado'); }
+                if (flagAveria_Bel === 1 && tic) {
+                    v1pm.classList.add('via-fantasma'); v1m.classList.add('via-fantasma');
+                }
             }
 
             if (!w2_ocupado) {
-                if (flagAveria_Bel === 1 && tic) { v2pm.className = "via v-abajo via-fantasma"; v2m.className = "via diagonal v-abajo via-fantasma"; } 
-                else { v2pm.classList.add('libre'); v2m.classList.add('libre'); }
+                if (flagAveria_Bel === 1 && tic) {
+                    v2pm.classList.add('via-fantasma'); v2m.classList.add('via-fantasma');
+                } else {
+                    v2pm.classList.add('libre'); v2m.classList.add('libre');
+                }
             } else {
-                if (flagAveria_Bel === 1 && tic) { v2pm.className = "via v-abajo via-fantasma"; v2m.className = "via diagonal v-abajo via-fantasma"; }
-                else { v2pm.classList.add('ocupado'); v2m.classList.add('ocupado'); }
+                if (flagAveria_Bel === 1 && tic) {
+                    v2pm.classList.add('via-fantasma'); v2m.classList.add('via-fantasma');
+                }
             }
         }
 
         Object.keys(viasEstadoBel).forEach(function(id) {
             if(!["w1plus", "w1minus", "w2plus", "w2minus", "w1pm", "w2pm"].includes(id)) {
-                var el = document.getElementById(id); 
-                if(el) {
-                    el.classList.toggle('libre', viasEstadoBel[id] === 0);
-                    el.classList.toggle('ocupado', viasEstadoBel[id] === 1);
-                }
+                var el = document.getElementById(id); if(el) el.classList.toggle('libre', viasEstadoBel[id] === 0);
             }
         });
     }
 
     function actualizarChangeNuz(idW) {
         var c = cambiosNuz[idW]; if (!c) return;
+        
         var wArribaP = document.getElementById(c.ids[0]), wArribaM = document.getElementById(c.ids[2]), wArribaPm = document.getElementById(c.ids[1]);
         var lP = document.getElementById(c.leds[0]), lM = document.getElementById(c.leds[1]), lA = document.getElementById(c.leds[2]);
-        var wAbajoP = null, wAbajoM = null, wAbajoPm = null; var ocuAbajo = false;
+        
+        var wAbajoP = null, wAbajoM = null, wAbajoPm = null; var ocuAbajo = false; var ocuArriba = false;
 
+        // --- 1. ASIGNACIÓN EXCLUSIVA PARA CRUZAMIENTOS DOBLES (Núñez, Olivos, San Isidro) ---
         if(idW === "1011") { wAbajoP = document.getElementById('w10plus'); wAbajoM = document.getElementById('w10minus'); wAbajoPm = document.getElementById('w10pm'); ocuAbajo = w10_ocupado; } 
         else if(idW === "1215") { wAbajoP = document.getElementById('w12plus'); wAbajoM = document.getElementById('w12minus'); wAbajoPm = document.getElementById('w12pm'); ocuAbajo = w12_ocupado; } 
         else if(idW === "124123") { wAbajoP = document.getElementById('w124plus'); wAbajoM = document.getElementById('w124minus'); wAbajoPm = document.getElementById('w124pm'); ocuAbajo = w124_ocupado; }
@@ -1752,483 +1781,825 @@ rotate(45deg);"></div>
         else if(idW === "3031") { wAbajoP = document.getElementById('w30plus'); wAbajoM = document.getElementById('w30minus'); wAbajoPm = document.getElementById('w30pm'); ocuAbajo = w30_ocupado; } 
         else if(idW === "3233") { wAbajoP = document.getElementById('w32plus'); wAbajoM = document.getElementById('w32minus'); wAbajoPm = document.getElementById('w32pm'); ocuAbajo = w32_ocupado; } 
         else if(idW === "152m151m") { 
-            wAbajoP = document.getElementById('w152mplus'); wAbajoM = document.getElementById('w152mminus'); wAbajoPm = document.getElementById('w152mpm'); 
+            wAbajoP = document.getElementById('w152mplus'); 
+            wAbajoM = document.getElementById('w152mminus'); 
+            wAbajoPm = document.getElementById('w152mpm'); 
             ocuAbajo = (typeof w152m_ocupado !== 'undefined' ? w152m_ocupado : false); 
         }
+        
+        // --- 2. ASIGNACIÓN PARA DESVÍOS SIMPLES CON RELACIÓN DE "VÍA DE ABAJO" ---
         else if(idW === "4041") { 
-            var el41plus = document.getElementById('w41plus'), el41minus = document.getElementById('w41minus'), el41pm = document.getElementById('w41pm'); 
-            var el40plus = document.getElementById('w40plus'), el40minus = document.getElementById('w40minus'), el40pm = document.getElementById('w40pm'); 
+            var el41plus  = document.getElementById('w41plus'); 
+            var el41minus = document.getElementById('w41minus'); 
+            var el41pm    = document.getElementById('w41pm'); 
+            var el40plus  = document.getElementById('w40plus');
+            var el40minus = document.getElementById('w40minus');
+            var el40pm    = document.getElementById('w40pm'); 
+            
             var lP = document.getElementById('LW4041P'), lM = document.getElementById('LW4041M'), lA = document.getElementById('AW4041');
-            var ocu41 = c.ocu, ocu40 = c.ocuAbajo, esAveria = (c.avg === 1 || c.avg === "1"), col41 = ocu41 ? 'ocupado' : 'libre', col40 = ocu40 ? 'ocupado' : 'libre';
+            
+            var ocu41 = (cambiosNuz["4041"] ? cambiosNuz["4041"].ocu : false);
+            var ocu40 = (cambiosNuz["4041"] ? cambiosNuz["4041"].ocuAbajo : false);
+            var esAveria = (c.avg === 1 || c.avg === "1"); 
+            
+            var col41 = ocu41 ? 'ocupado' : 'libre';
+            var col40 = ocu40 ? 'ocupado' : 'libre';
 
             if(lP && lM) lP.className = lM.className = "led-rd";
             if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
-            if (c.cur === "1" || c.cur === 1) { if(lP) lP.classList.add('l-white'); } else { if(lM) lM.classList.add('l-white'); }
+            
+            if (c.cur === "1" || c.cur === 1) { if(lP) lP.classList.add('l-white'); } 
+            else { if(lM) lM.classList.add('l-white'); }
 
             if (c.cur === "1" || c.cur === 1) {
-                if(el41minus) el41minus.className = "via diagonal via-fantasma v-arriba"; if(el40minus) el40minus.className = "via diagonal via-fantasma v-abajo";
+                if(el41minus) el41minus.className = "via diagonal via-fantasma v-arriba";
+                if(el40minus) el40minus.className = "via diagonal via-fantasma v-abajo";
+
                 if (esAveria && tic) {
-                    if(el41pm) el41pm.className = "via v-arriba via-fantasma"; if(el41plus) el41plus.className = "via v-arriba via-fantasma";
-                    if(el40pm) el40pm.className = "via v-abajo via-fantasma"; if(el40plus) el40plus.className = "via v-abajo via-fantasma";
+                    if(el41pm)   el41pm.className   = "via v-arriba via-fantasma";
+                    if(el41plus) el41plus.className = "via v-arriba via-fantasma";
+                    if(el40pm)   el40pm.className   = "via v-abajo via-fantasma";
+                    if(el40plus) el40plus.className = "via v-abajo via-fantasma";
                 } else {
-                    if(el41pm) el41pm.className = "via v-arriba " + col41; if(el41plus) el41plus.className = "via v-arriba " + col41;
-                    if(el40pm) el40pm.className = "via v-abajo " + col40; if(el40plus) el40plus.className = "via v-abajo " + col40;
+                    if(el41pm)   el41pm.className   = "via v-arriba " + col41;
+                    if(el41plus) el41plus.className = "via v-arriba " + col41;
+                    if(el40pm)   el40pm.className   = "via v-abajo " + col40;
+                    if(el40plus) el40plus.className = "via v-abajo " + col40;
                 }
             } else {
-                if(el41plus) el41plus.className = "via v-arriba via-fantasma"; if(el40plus) el40plus.className = "via v-abajo via-fantasma";
+                if(el41plus) el41plus.className = "via v-arriba via-fantasma";
+                if(el40plus) el40plus.className = "via v-abajo via-fantasma";
+
                 if (esAveria && tic) {
-                    if(el41pm) el41pm.className = "via v-arriba via-fantasma"; if(el41minus) el41minus.className = "via diagonal v-arriba via-fantasma";
-                    if(el40pm) el40pm.className = "via v-abajo via-fantasma"; if(el40minus) el40minus.className = "via diagonal v-abajo via-fantasma";
+                    if(el41pm)    el41pm.className    = "via v-arriba via-fantasma";
+                    if(el41minus) el41minus.className = "via diagonal v-arriba via-fantasma";
+                    if(el40pm)    el40pm.className    = "via v-abajo via-fantasma";
+                    if(el40minus) el40minus.className = "via diagonal v-abajo via-fantasma";
                 } else {
-                    if(el41pm) el41pm.className = "via v-arriba " + col41; if(el41minus) el41minus.className = "via diagonal v-arriba " + col41;
-                    if(el40pm) el40pm.className = "via v-abajo " + col40; if(el40minus) el40minus.className = "via diagonal v-abajo " + col40;
+                    if(el41pm)    el41pm.className    = "via v-arriba " + col41;
+                    if(el41minus) el41minus.className = "via diagonal v-arriba " + col41;
+                    if(el40pm)    el40pm.className    = "via v-abajo " + col40;
+                    if(el40minus) el40minus.className = "via diagonal v-abajo " + col40;
                 }
             }
             return;
         }
+
         else if(idW === "152") {
-            var el152plus = document.getElementById('w152plus'), el152minus = document.getElementById('w152minus'), el152pm = document.getElementById('w152pm');
+            var el152plus  = document.getElementById('w152plus');  
+            var el152minus = document.getElementById('w152minus'); 
+            var el152pm    = document.getElementById('w152pm');    
+            
             var lP = document.getElementById('LW152P'), lM = document.getElementById('LW152M'), lA = document.getElementById('AW152');
-            var pos152 = c.cur, esAveria = (c.avg === 1 || c.avg === "1"), colorCvd = c.ocu ? 'ocupado' : 'libre';
+            
+            var pos152   = cambiosNuz["152"] ? cambiosNuz["152"].cur : "1";
+            var avg152   = cambiosNuz["152"] ? cambiosNuz["152"].avg : 0;
+            var ocu152   = cambiosNuz["152"] ? cambiosNuz["152"].ocu : false; 
+            
+            var esAveria = (avg152 === 1 || avg152 === "1" || avg152 === true); 
+            var colorCvd = ocu152 ? 'ocupado' : 'libre'; 
+            
             if(lP && lM) { lP.className = "led-rd"; lM.className = "led-rd"; }
             if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
-            if (pos152 === "1" || pos152 === 1) { if(lP) lP.classList.add('l-white'); } else { if(lM) lM.classList.add('l-white'); }
-
+            
+            if (pos152 === "1" || pos152 === 1) { if(lP) lP.classList.add('l-white'); } 
+            else { if(lM) lM.classList.add('l-white'); }
+            
             if (pos152 === "1" || pos152 === 1) {
                 if(el152minus) el152minus.className = "via diagonal v-abajo via-fantasma";
-                if (esAveria && tic) { if(el152pm) el152pm.className = "via v-abajo via-fantasma"; if(el152plus) el152plus.className = "via v-abajo via-fantasma"; } 
-                else { if(el152pm) el152pm.className = "via v-abajo " + colorCvd; if(el152plus) el152plus.className = "via v-abajo " + colorCvd; }
+                if (esAveria && tic) {
+                    if(el152pm)  el152pm.className   = "via v-abajo via-fantasma";
+                    if(el152plus) el152plus.className = "via v-abajo via-fantasma";
+                } else {
+                    if(el152pm)  el152pm.className   = "via v-abajo " + colorCvd;
+                    if(el152plus) el152plus.className = "via v-abajo " + colorCvd;
+                }
             } else {
                 if(el152plus) el152plus.className = "via v-abajo via-fantasma";
-                if (esAveria && tic) { if(el152pm) el152pm.className = "via v-abajo via-fantasma"; if(el152minus) el152minus.className = "via diagonal v-abajo via-fantasma"; } 
-                else { if(el152pm) el152pm.className = "via v-abajo " + colorCvd; if(el152minus) el152minus.className = "via diagonal v-abajo " + colorCvd; }
+                if (esAveria && tic) {
+                    if(el152pm)    el152pm.className    = "via v-abajo via-fantasma";
+                    if(el152minus) el152minus.className = "via diagonal v-abajo via-fantasma";
+                } else {
+                    if(el152pm)    el152pm.className    = "via v-abajo " + colorCvd;
+                    if(el152minus) el152minus.className = "via diagonal v-abajo " + colorCvd;
+                }
             }
             return;
         }
+
         else if(idW === "43141") {
-            var el141plus = document.getElementById('w141plus'), el141minus = document.getElementById('w141minus'), el141pm = document.getElementById('w141pm');
-            var el43plus = document.getElementById('w43plus'), el43minus = document.getElementById('w43minus'), el43pm = document.getElementById('w43pm');
+            var el141plus  = document.getElementById('w141plus'); 
+            var el141minus = document.getElementById('w141minus'); 
+            var el141pm    = document.getElementById('w141pm'); 
+            var el43plus   = document.getElementById('w43plus');
+            var el43minus  = document.getElementById('w43minus');
+            var el43pm     = document.getElementById('w43pm'); 
+            
             var lP = document.getElementById('LW43141P'), lM = document.getElementById('LW43141M'), lA = document.getElementById('AW43141');
-            var pos43 = c.cur, esAveria = (c.avg === 1 || c.avg === "1"), col141 = c.ocu ? 'ocupado' : 'libre', col43 = c.ocuAbajo ? 'ocupado' : 'libre';
-            if(lP && lM) lP.className = lM.className = "led-rd"; if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
-            if (pos43 === "1" || pos43 === 1) { if(lP) lP.classList.add('l-white'); } else { if(lM) lM.classList.add('l-white'); }
+            
+            var pos43 = c.cur; var avg43 = c.avg; var ocu141 = c.ocu; var ocu43  = c.ocuAbajo;
+            var esAveria = (avg43 === 1 || avg43 === "1" || avg43 === true);
+            var col141 = ocu141 ? 'ocupado' : 'libre'; var col43  = ocu43 ? 'ocupado' : 'libre';
+
+            if(lP && lM) lP.className = lM.className = "led-rd";
+            if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
+            
+            if (pos43 === "1" || pos43 === 1) { if(lP) lP.classList.add('l-white'); } 
+            else { if(lM) lM.classList.add('l-white'); }
 
             if (pos43 === "1" || pos43 === 1) {
-                if(el141minus) el141minus.className = "via diagonal via-fantasma v-arriba"; if(el43minus) el43minus.className = "via diagonal via-fantasma v-abajo";
+                if(el141minus) el141minus.className = "via diagonal via-fantasma v-arriba";
+                if(el43minus)  el43minus.className  = "via diagonal via-fantasma v-abajo";
                 if (esAveria && tic) {
-                    if(el141pm) el141pm.className = "via v-arriba via-fantasma"; if(el141plus) el141plus.className = "via v-arriba via-fantasma";
-                    if(el43pm) el43pm.className = "via v-abajo via-fantasma"; if(el43plus) el43plus.className = "via v-abajo via-fantasma";
+                    if(el141pm) el141pm.className = "via v-arriba via-fantasma";
+                    if(el141plus) el141plus.className = "via v-arriba via-fantasma";
+                    if(el43pm) el43pm.className = "via v-abajo via-fantasma";
+                    if(el43plus) el43plus.className = "via v-abajo via-fantasma";
                 } else {
-                    if(el141pm) el141pm.className = "via v-arriba " + col141; if(el141plus) el141plus.className = "via v-arriba " + col141;
-                    if(el43pm) el43pm.className = "via v-abajo " + col43; if(el43plus) el43plus.className = "via v-abajo " + col43;
+                    if(el141pm) el141pm.className = "via v-arriba " + col141;
+                    if(el141plus) el141plus.className = "via v-arriba " + col141;
+                    if(el43pm) el43pm.className = "via v-abajo " + col43;
+                    if(el43plus) el43plus.className = "via v-abajo " + col43;
                 }
             } else {
-                if(el141plus) el141plus.className = "via v-arriba via-fantasma"; if(el43plus) el43plus.className = "via v-abajo via-fantasma";
+                if(el141plus) el141plus.className = "via v-arriba via-fantasma";
+                if(el43plus)  el43plus.className  = "via v-abajo via-fantasma";
                 if (esAveria && tic) {
-                    if(el141pm) el141pm.className = "via v-arriba via-fantasma"; if(el141minus) el141minus.className = "via diagonal v-arriba via-fantasma";
-                    if(el43pm) el43pm.className = "via v-abajo via-fantasma"; if(el43minus) el43minus.className = "via diagonal v-abajo via-fantasma";
+                    if(el141pm) el141pm.className = "via v-arriba via-fantasma";
+                    if(el141minus) el141minus.className = "via diagonal v-arriba via-fantasma";
+                    if(el43pm) el43pm.className = "via v-abajo via-fantasma";
+                    if(el43minus) el43minus.className = "via diagonal v-abajo via-fantasma";
                 } else {
-                    if(el141pm) el141pm.className = "via v-arriba " + col141; if(el141minus) el141minus.className = "via diagonal v-arriba " + col141;
-                    if(el43pm) el43pm.className = "via v-abajo " + col43; if(el43minus) el43minus.className = "via diagonal v-abajo " + col43;
+                    if(el141pm) el141pm.className = "via v-arriba " + col141;
+                    if(el141minus) el141minus.className = "via diagonal v-arriba " + col141;
+                    if(el43pm) el43pm.className = "via v-abajo " + col43;
+                    if(el43minus) el43minus.className = "via diagonal v-abajo " + col43;
                 }
             }
-            return;
+            return; 
         }
+
         else if(idW === "4545a") {
-            var el45aplus = document.getElementById('w45aplus'), el45aminus = document.getElementById('w45aminus'), el45apm = document.getElementById('w45apm');
-            var el45plus = document.getElementById('w45plus'), el45minus = document.getElementById('w45minus'), el45pm = document.getElementById('w45pm');
+            var el45aplus  = document.getElementById('w45aplus'); var el45aminus = document.getElementById('w45aminus'); var el45apm    = document.getElementById('w45apm');
+            var el45plus   = document.getElementById('w45plus'); var el45minus  = document.getElementById('w45minus'); var el45pm     = document.getElementById('w45pm');
             var lP = document.getElementById('LW4545aP'), lM = document.getElementById('LW4545aM'), lA = document.getElementById('AW4545a');
-            var pos45 = c.cur, esAveria = (c.avg === 1 || c.avg === "1"), col45a = c.ocu ? 'ocupado' : 'libre', col45 = c.ocuAbajo ? 'ocupado' : 'libre';
-            if(lP && lM) lP.className = lM.className = "led-rd"; if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
-            if (pos45 === "1" || pos45 === 1) { if(lP) lP.classList.add('l-white'); } else { if(lM) lM.classList.add('l-white'); }
+
+            var pos45 = c.cur; var avg45 = c.avg; var ocu45a = c.ocu; var ocu45  = c.ocuAbajo;
+            var esAveria = (avg45 === 1 || avg45 === "1" || avg45 === true);
+            var col45a = ocu45a ? 'ocupado' : 'libre'; var col45  = ocu45 ? 'ocupado' : 'libre';
+
+            if(lP && lM) lP.className = lM.className = "led-rd";
+            if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
+
+            if (pos45 === "1" || pos45 === 1) { if(lP) lP.classList.add('l-white'); }
+            else { if(lM) lM.classList.add('l-white'); }
 
             if (pos45 === "1" || pos45 === 1) {
-                if(el45aminus) el45aminus.className = "via diagonal via-fantasma v-arriba"; if(el45minus) el45minus.className = "via diagonal via-fantasma v-abajo";
+                if(el45aminus) el45aminus.className = "via diagonal via-fantasma v-arriba";
+                if(el45minus)  el45minus.className  = "via diagonal via-fantasma v-abajo";
                 if (esAveria && tic) {
-                    if(el45apm) el45apm.className = "via v-arriba via-fantasma"; if(el45aplus) el45aplus.className = "via v-arriba via-fantasma";
-                    if(el45pm) el45pm.className = "via v-abajo via-fantasma"; if(el45plus) el45plus.className = "via v-abajo via-fantasma";
+                    if(el45apm) el45apm.className = "via v-arriba via-fantasma";
+                    if(el45aplus) el45aplus.className = "via v-arriba via-fantasma";
+                    if(el45pm) el45pm.className = "via v-abajo via-fantasma";
+                    if(el45plus) el45plus.className = "via v-abajo via-fantasma";
                 } else {
-                    if(el45apm) el45apm.className = "via v-arriba " + col45a; if(el45aplus) el45aplus.className = "via v-arriba " + col45a;
-                    if(el45pm) el45pm.className = "via v-abajo " + col45; if(el45plus) el45plus.className = "via v-abajo " + col45;
+                    if(el45apm) el45apm.className = "via v-arriba " + col45a;
+                    if(el45aplus) el45aplus.className = "via v-arriba " + col45a;
+                    if(el45pm) el45pm.className = "via v-abajo " + col45;
+                    if(el45plus) el45plus.className = "via v-abajo " + col45;
                 }
             } else {
-                if(el45aplus) el45aplus.className = "via v-arriba via-fantasma"; if(el45plus) el45plus.className = "via v-abajo via-fantasma";
+                if(el45aplus) el45aplus.className = "via v-arriba via-fantasma";
+                if(el45plus)  el45plus.className  = "via v-abajo via-fantasma";
                 if (esAveria && tic) {
-                    if(el45apm) el45apm.className = "via v-arriba via-fantasma"; if(el45aminus) el45aminus.className = "via diagonal v-arriba via-fantasma";
-                    if(el45pm) el45pm.className = "via v-abajo via-fantasma"; if(el45minus) el45minus.className = "via diagonal v-abajo via-fantasma";
+                    if(el45apm) el45apm.className = "via v-arriba via-fantasma";
+                    if(el45aminus) el45aminus.className = "via diagonal v-arriba via-fantasma";
+                    if(el45pm) el45pm.className = "via v-abajo via-fantasma";
+                    if(el45minus) el45minus.className = "via diagonal v-abajo via-fantasma";
                 } else {
-                    if(el45apm) el45apm.className = "via v-arriba " + col45a; if(el45aminus) el45aminus.className = "via diagonal v-arriba " + col45a;
-                    if(el45pm) el45pm.className = "via v-abajo " + col45; if(el45minus) el45minus.className = "via diagonal v-abajo " + col45;
+                    if(el45apm) el45apm.className = "via v-arriba " + col45a;
+                    if(el45aminus) el45aminus.className = "via diagonal v-arriba " + col45a;
+                    if(el45pm) el45pm.className = "via v-abajo " + col45;
+                    if(el45minus) el45minus.className = "via diagonal v-abajo " + col45;
                 }
             }
-            return;
+            return; 
         }
+
         else if(idW === "4649") {
-            var el46plus = document.getElementById('w46plus'), el46minus = document.getElementById('w46minus'), el46pm = document.getElementById('w46pm');
-            var el49plus = document.getElementById('w49plus'), el49minus = document.getElementById('w49minus'), el49pm = document.getElementById('w49pm');
+            var el46plus   = document.getElementById('w46plus'); var el46minus  = document.getElementById('w46minus'); var el46pm     = document.getElementById('w46pm');
+            var el49plus   = document.getElementById('w49plus'); var el49minus  = document.getElementById('w49minus'); var el49pm     = document.getElementById('w49pm');
             var lP = document.getElementById('LW4649P'), lM = document.getElementById('LW4649M'), lA = document.getElementById('AW4649');
-            var pos46 = c.cur, esAveria = (c.avg === 1 || c.avg === "1"), col46 = c.ocu ? 'ocupado' : 'libre', col49 = c.ocuAbajo ? 'ocupado' : 'libre';
-            if(lP && lM) lP.className = lM.className = "led-rd"; if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
-            if (pos46 === "1" || pos46 === 1) { if(lP) lP.classList.add('l-white'); } else { if(lM) lM.classList.add('l-white'); }
+
+            var pos46 = c.cur; var avg46 = c.avg; var ocu46 = c.ocu; var ocu49 = c.ocuAbajo;
+            var esAveria = (avg46 === 1 || avg46 === "1" || avg46 === true);
+            var col46 = ocu46 ? 'ocupado' : 'libre'; var col49 = ocu49 ? 'ocupado' : 'libre';
+
+            if(lP && lM) lP.className = lM.className = "led-rd";
+            if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
+
+            if (pos46 === "1" || pos46 === 1) { if(lP) lP.classList.add('l-white'); }
+            else { if(lM) lM.classList.add('l-white'); }
 
             if (pos46 === "1" || pos46 === 1) {
-                if(el46minus) el46minus.className = "via diagonal via-fantasma v-arriba"; if(el49minus) el49minus.className = "via diagonal via-fantasma v-abajo";
+                if(el46minus) el46minus.className = "via diagonal via-fantasma v-arriba";
+                if(el49minus) el49minus.className = "via diagonal via-fantasma v-abajo";
                 if (esAveria && tic) {
-                    if(el46pm) el46pm.className = "via v-arriba via-fantasma"; if(el46plus) el46plus.className = "via v-arriba via-fantasma";
-                    if(el49pm) el49pm.className = "via v-abajo via-fantasma"; if(el49plus) el49plus.className = "via v-abajo via-fantasma";
+                    if(el46pm) el46pm.className = "via v-arriba via-fantasma";
+                    if(el46plus) el46plus.className = "via v-arriba via-fantasma";
+                    if(el49pm) el49pm.className = "via v-abajo via-fantasma";
+                    if(el49plus) el49plus.className = "via v-abajo via-fantasma";
                 } else {
-                    if(el46pm) el46pm.className = "via v-arriba " + col46; if(el46plus) el46plus.className = "via v-arriba " + col46;
-                    if(el49pm) el49pm.className = "via v-abajo " + col49; if(el49plus) el49plus.className = "via v-abajo " + col49;
+                    if(el46pm) el46pm.className = "via v-arriba " + col46;
+                    if(el46plus) el46plus.className = "via v-arriba " + col46;
+                    if(el49pm) el49pm.className = "via v-abajo " + col49;
+                    if(el49plus) el49plus.className = "via v-abajo " + col49;
                 }
             } else {
-                if(el46plus) el46plus.className = "via v-arriba via-fantasma"; if(el49plus) el49plus.className = "via v-abajo via-fantasma";
+                if(el46plus) el46plus.className = "via v-arriba via-fantasma";
+                if(el49plus) el49plus.className = "via v-abajo via-fantasma";
                 if (esAveria && tic) {
-                    if(el46pm) el46pm.className = "via v-arriba via-fantasma"; if(el46minus) el46minus.className = "via diagonal v-arriba via-fantasma";
-                    if(el49pm) el49pm.className = "via v-abajo via-fantasma"; if(el49minus) el49minus.className = "via diagonal v-abajo via-fantasma";
+                    if(el46pm) el46pm.className = "via v-arriba via-fantasma";
+                    if(el46minus) el46minus.className = "via diagonal v-arriba via-fantasma";
+                    if(el49pm) el49pm.className = "via v-abajo via-fantasma";
+                    if(el49minus) el49minus.className = "via diagonal v-abajo via-fantasma";
                 } else {
-                    if(el46pm) el46pm.className = "via v-arriba " + col46; if(el46minus) el46minus.className = "via diagonal v-arriba " + col46;
-                    if(el49pm) el49pm.className = "via v-abajo " + col49; if(el49minus) el49minus.className = "via diagonal v-abajo " + col49;
+                    if(el46pm) el46pm.className = "via v-arriba " + col46;
+                    if(el46minus) el46minus.className = "via diagonal v-arriba " + col46;
+                    if(el49pm) el49pm.className = "via v-abajo " + col49;
+                    if(el49minus) el49minus.className = "via diagonal v-abajo " + col49;
                 }
             }
-            return;
+            return; 
         }
+
         else if(idW === "5152") {
-            var el51plus = document.getElementById('w51plus'), el51minus = document.getElementById('w51minus'), el51pm = document.getElementById('w51pm');
-            var el52plus = document.getElementById('w52plus'), el52minus = document.getElementById('w52minus'), el52pm = document.getElementById('w52pm');
+            var el51plus   = document.getElementById('w51plus'); var el51minus  = document.getElementById('w51minus'); var el51pm     = document.getElementById('w51pm');
+            var el52plus   = document.getElementById('w52plus'); var el52minus  = document.getElementById('w52minus'); var el52pm     = document.getElementById('w52pm');
             var lP = document.getElementById('LW5152P'), lM = document.getElementById('LW5152M'), lA = document.getElementById('AW5152');
-            var pos51 = c.cur, esAveria = (c.avg === 1 || c.avg === "1"), col51 = c.ocu ? 'ocupado' : 'libre', col52 = c.ocuAbajo ? 'ocupado' : 'libre';
-            if(lP && lM) lP.className = lM.className = "led-rd"; if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
-            if (pos51 === "1" || pos51 === 1) { if(lP) lP.classList.add('l-white'); } else { if(lM) lM.classList.add('l-white'); }
+
+            var pos51 = c.cur; var avg51 = c.avg; var ocu51 = c.ocu; var ocu52 = c.ocuAbajo;
+            var esAveria = (avg51 === 1 || avg51 === "1" || avg51 === true);
+            var col51 = ocu51 ? 'ocupado' : 'libre'; var col52 = ocu52 ? 'ocupado' : 'libre';
+
+            if(lP && lM) lP.className = lM.className = "led-rd";
+            if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
+
+            if (pos51 === "1" || pos51 === 1) { if(lP) lP.classList.add('l-white'); }
+            else { if(lM) lM.classList.add('l-white'); }
 
             if (pos51 === "1" || pos51 === 1) {
-                if(el51minus) el51minus.className = "via diagonal via-fantasma v-abajo"; if(el52minus) el52minus.className = "via diagonal via-fantasma v-abajo";
+                if(el51minus) el51minus.className = "via diagonal via-fantasma v-abajo";
+                if(el52minus) el52minus.className = "via diagonal via-fantasma v-abajo";
                 if (esAveria && tic) {
-                    if(el51pm) el51pm.className = "via v-abajo via-fantasma"; if(el51plus) el51plus.className = "via v-abajo via-fantasma";
-                    if(el52pm) el52pm.className = "via v-abajo via-fantasma"; if(el52plus) el52plus.className = "via v-abajo via-fantasma";
+                    if(el51pm) el51pm.className = "via v-abajo via-fantasma";
+                    if(el51plus) el51plus.className = "via v-abajo via-fantasma";
+                    if(el52pm) el52pm.className = "via v-abajo via-fantasma";
+                    if(el52plus) el52plus.className = "via v-abajo via-fantasma";
                 } else {
-                    if(el51pm) el51pm.className = "via v-abajo " + col51; if(el51plus) el51plus.className = "via v-abajo " + col51;
-                    if(el52pm) el52pm.className = "via v-abajo " + col52; if(el52plus) el52plus.className = "via v-abajo " + col52;
+                    if(el51pm) el51pm.className = "via v-abajo " + col51;
+                    if(el51plus) el51plus.className = "via v-abajo " + col51;
+                    if(el52pm) el52pm.className = "via v-abajo " + col52;
+                    if(el52plus) el52plus.className = "via v-abajo " + col52;
                 }
             } else {
-                if(el51plus) el51plus.className = "via v-abajo via-fantasma"; if(el52plus) el52plus.className = "via v-abajo via-fantasma";
+                if(el51plus) el51plus.className = "via v-abajo via-fantasma";
+                if(el52plus) el52plus.className = "via v-abajo via-fantasma";
                 if (esAveria && tic) {
-                    if(el51pm) el51pm.className = "via v-abajo via-fantasma"; if(el51minus) el51minus.className = "via diagonal v-abajo via-fantasma";
-                    if(el52pm) el52pm.className = "via v-abajo via-fantasma"; if(el52minus) el52minus.className = "via diagonal v-abajo via-fantasma";
+                    if(el51pm) el51pm.className = "via v-abajo via-fantasma";
+                    if(el51minus) el51minus.className = "via diagonal v-abajo via-fantasma";
+                    if(el52pm) el52pm.className = "via v-abajo via-fantasma";
+                    if(el52minus) el52minus.className = "via diagonal v-abajo via-fantasma";
                 } else {
-                    if(el51pm) el51pm.className = "via v-abajo " + col51; if(el51minus) el51minus.className = "via diagonal v-abajo " + col51;
-                    if(el52pm) el52pm.className = "via v-abajo " + col52; if(el52minus) el52minus.className = "via diagonal v-abajo " + col52;
+                    if(el51pm) el51pm.className = "via v-abajo " + col51;
+                    if(el51minus) el51minus.className = "via diagonal v-abajo " + col51;
+                    if(el52pm) el52pm.className = "via v-abajo " + col52;
+                    if(el52minus) el52minus.className = "via diagonal v-abajo " + col52;
                 }
             }
-            return;
+            return; 
         }
+
         else if(idW === "15454") {
-            var el54plus = document.getElementById('w54plus'), el54minus = document.getElementById('w54minus'), el54pm = document.getElementById('w54pm');
-            var el154plus = document.getElementById('w154plus'), el154minus = document.getElementById('w154minus'), el154pm = document.getElementById('w154pm');
+            var el54plus   = document.getElementById('w54plus'); var el54minus  = document.getElementById('w54minus'); var el54pm     = document.getElementById('w54pm');
+            var el154plus  = document.getElementById('w154plus'); var el154minus = document.getElementById('w154minus'); var el154pm    = document.getElementById('w154pm');
             var lP = document.getElementById('LW15454P'), lM = document.getElementById('LW15454M'), lA = document.getElementById('AW15454');
-            var pos54 = c.cur, esAveria = (c.avg === 1 || c.avg === "1"), col54 = c.ocu ? 'ocupado' : 'libre', col154 = c.ocuAbajo ? 'ocupado' : 'libre';
-            if(lP && lM) lP.className = lM.className = "led-rd"; if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
-            if (pos54 === "1" || pos54 === 1) { if(lP) lP.classList.add('l-white'); } else { if(lM) lM.classList.add('l-white'); }
+
+            var pos54 = c.cur; var avg54 = c.avg; var ocu54 = c.ocu; var ocu154 = c.ocuAbajo;
+            var esAveria = (avg54 === 1 || avg54 === "1" || avg54 === true);
+            var col54 = ocu54 ? 'ocupado' : 'libre'; var col154 = ocu154 ? 'ocupado' : 'libre';
+
+            if(lP && lM) lP.className = lM.className = "led-rd";
+            if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
+
+            if (pos54 === "1" || pos54 === 1) { if(lP) lP.classList.add('l-white'); }
+            else { if(lM) lM.classList.add('l-white'); }
 
             if (pos54 === "1" || pos54 === 1) {
-                if(el54minus) el54minus.className = "via diagonal via-fantasma v-arriba"; if(el154minus) el154minus.className = "via diagonal via-fantasma v-abajo";
+                if(el54minus)  el54minus.className  = "via diagonal via-fantasma v-arriba";
+                if(el154minus) el154minus.className = "via diagonal via-fantasma v-abajo";
                 if (esAveria && tic) {
-                    if(el54pm) el54pm.className = "via v-arriba via-fantasma"; if(el54plus) el54plus.className = "via v-arriba via-fantasma";
-                    if(el154pm) el154pm.className = "via v-abajo via-fantasma"; if(el154plus) el154plus.className = "via v-abajo via-fantasma";
+                    if(el54pm) el54pm.className = "via v-arriba via-fantasma";
+                    if(el54plus) el54plus.className = "via v-arriba via-fantasma";
+                    if(el154pm) el154pm.className = "via v-abajo via-fantasma";
+                    if(el154plus) el154plus.className = "via v-abajo via-fantasma";
                 } else {
-                    if(el54pm) el54pm.className = "via v-arriba " + col54; if(el54plus) el54plus.className = "via v-arriba " + col54;
-                    if(el154pm) el154pm.className = "via v-abajo " + col154; if(el154plus) el154plus.className = "via v-abajo " + col154;
+                    if(el54pm) el54pm.className = "via v-arriba " + col54;
+                    if(el54plus) el54plus.className = "via v-arriba " + col54;
+                    if(el154pm) el154pm.className = "via v-abajo " + col154;
+                    if(el154plus) el154plus.className = "via v-abajo " + col154;
                 }
             } else {
-                if(el54plus) el54plus.className = "via v-arriba via-fantasma"; if(el154plus) el154plus.className = "via v-abajo via-fantasma";
+                if(el54plus)  el54plus.className  = "via v-arriba via-fantasma";
+                if(el154plus) el154plus.className = "via v-abajo via-fantasma";
                 if (esAveria && tic) {
-                    if(el54pm) el54pm.className = "via v-arriba via-fantasma"; if(el54minus) el54minus.className = "via diagonal v-arriba via-fantasma";
-                    if(el154pm) el154pm.className = "via v-abajo via-fantasma"; if(el154minus) el154minus.className = "via diagonal v-abajo via-fantasma";
+                    if(el54pm) el54pm.className = "via v-arriba via-fantasma";
+                    if(el54minus) el54minus.className = "via diagonal v-arriba via-fantasma";
+                    if(el154pm) el154pm.className = "via v-abajo via-fantasma";
+                    if(el154minus) el154minus.className = "via diagonal v-abajo via-fantasma";
                 } else {
-                    if(el54pm) el54pm.className = "via v-arriba " + col54; if(el54minus) el54minus.className = "via diagonal v-arriba " + col54;
-                    if(el154pm) el154pm.className = "via v-abajo " + col154; if(el154minus) el154minus.className = "via diagonal v-abajo " + col154;
+                    if(el54pm) el54pm.className = "via v-arriba " + col54;
+                    if(el54minus) el54minus.className = "via diagonal v-arriba " + col54;
+                    if(el154pm) el154pm.className = "via v-abajo " + col154;
+                    if(el154minus) el154minus.className = "via diagonal v-abajo " + col154;
                 }
             }
-            return;
-        }       
+            return; 
+        }      
+
         else if(idW === "15656b") {
-            var el56bplus = document.getElementById('w56bplus'), el56bminus = document.getElementById('w56bminus'), el56bpm = document.getElementById('w56bpm');
-            var el156plus = document.getElementById('w156plus'), el156minus = document.getElementById('w156minus'), el156pm = document.getElementById('w156pm');
+            var el56bplus  = document.getElementById('w56bplus'); var el56bminus = document.getElementById('w56bminus'); var el56bpm    = document.getElementById('w56bpm');
+            var el156plus  = document.getElementById('w156plus'); var el156minus = document.getElementById('w156minus'); var el156pm    = document.getElementById('w156pm');
             var lP = document.getElementById('LW15656bP'), lM = document.getElementById('LW15656bM'), lA = document.getElementById('AW15656b');
-            var pos56b = c.cur, esAveria = (c.avg === 1 || c.avg === "1"), col56b = c.ocu ? 'ocupado' : 'libre', col156 = c.ocuAbajo ? 'ocupado' : 'libre';
-            if(lP && lM) lP.className = lM.className = "led-rd"; if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
-            if (pos56b === "1" || pos56b === 1) { if(lP) lP.classList.add('l-white'); } else { if(lM) lM.classList.add('l-white'); }
+
+            var pos56b = c.cur; var avg56b = c.avg; var ocu56b = c.ocu; var ocu156 = c.ocuAbajo;
+            var esAveria = (avg56b === 1 || avg56b === "1" || avg56b === true);
+            var col56b = ocu56b ? 'ocupado' : 'libre'; var col156 = ocu156 ? 'ocupado' : 'libre';
+
+            if(lP && lM) lP.className = lM.className = "led-rd";
+            if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
+
+            if (pos56b === "1" || pos56b === 1) { if(lP) lP.classList.add('l-white'); }
+            else { if(lM) lM.classList.add('l-white'); }
 
             if (pos56b === "1" || pos56b === 1) {
-                if(el56bminus) el56bminus.className = "via diagonal via-fantasma v-arriba"; if(el156minus) el156minus.className = "via diagonal via-fantasma v-abajo";
+                if(el56bminus)  el56bminus.className  = "via diagonal via-fantasma v-arriba";
+                if(el156minus) el156minus.className = "via diagonal via-fantasma v-abajo";
                 if (esAveria && tic) {
-                    if(el56bpm) el56bpm.className = "via v-arriba via-fantasma"; if(el56bplus) el56bplus.className = "via v-arriba via-fantasma";
-                    if(el156pm) el156pm.className = "via v-abajo via-fantasma"; if(el156plus) el156plus.className = "via v-abajo via-fantasma";
+                    if(el56bpm) el56bpm.className = "via v-arriba via-fantasma";
+                    if(el56bplus) el56bplus.className = "via v-arriba via-fantasma";
+                    if(el156pm) el156pm.className = "via v-abajo via-fantasma";
+                    if(el156plus) el156plus.className = "via v-abajo via-fantasma";
                 } else {
-                    if(el56bpm) el56bpm.className = "via v-arriba " + col56b; if(el56bplus) el56bplus.className = "via v-arriba " + col56b;
-                    if(el156pm) el156pm.className = "via v-abajo " + col156; if(el156plus) el156plus.className = "via v-abajo " + col156;
+                    if(el56bpm) el56bpm.className = "via v-arriba " + col56b;
+                    if(el56bplus) el56bplus.className = "via v-arriba " + col56b;
+                    if(el156pm) el156pm.className = "via v-abajo " + col156;
+                    if(el156plus) el156plus.className = "via v-abajo " + col156;
                 }
             } else {
-                if(el56bplus) el56bplus.className = "via v-arriba via-fantasma"; if(el156plus) el156plus.className = "via v-abajo via-fantasma";
+                if(el56bplus)  el56bplus.className  = "via v-arriba via-fantasma";
+                if(el156plus) el156plus.className = "via v-abajo via-fantasma";
                 if (esAveria && tic) {
-                    if(el56bpm) el56bpm.className = "via v-arriba via-fantasma"; if(el56bminus) el56bminus.className = "via diagonal v-arriba via-fantasma";
-                    if(el156pm) el156pm.className = "via v-abajo via-fantasma"; if(el156minus) el156minus.className = "via diagonal v-abajo via-fantasma";
+                    if(el56bpm) el56bpm.className = "via v-arriba via-fantasma";
+                    if(el56bminus) el56bminus.className = "via diagonal v-arriba via-fantasma";
+                    if(el156pm) el156pm.className = "via v-abajo via-fantasma";
+                    if(el156minus) el156minus.className = "via diagonal v-abajo via-fantasma";
                 } else {
-                    if(el56bpm) el56bpm.className = "via v-arriba " + col56b; if(el56bminus) el56bminus.className = "via diagonal v-arriba " + col56b;
-                    if(el156pm) el156pm.className = "via v-abajo " + col156; if(el156minus) el156minus.className = "via diagonal v-abajo " + col156;
+                    if(el56bpm) el56bpm.className = "via v-arriba " + col56b;
+                    if(el56bminus) el56bminus.className = "via diagonal v-arriba " + col56b;
+                    if(el156pm) el156pm.className = "via v-abajo " + col156;
+                    if(el156minus) el156minus.className = "via diagonal v-abajo " + col156;
                 }
             }
-            return;
+            return; 
         }
+
         else if(idW === "50150") {
-            var el150plus = document.getElementById('w150plus'), el150minus = document.getElementById('w150minus'), el150pm = document.getElementById('w150pm');
-            var el50plus = document.getElementById('w50plus'), el50minus = document.getElementById('w50minus'), el50pm = document.getElementById('w50pm');
+            var el150plus  = document.getElementById('w150plus'); var el150minus = document.getElementById('w150minus'); var el150pm    = document.getElementById('w150pm');
+            var el50plus   = document.getElementById('w50plus'); var el50minus  = document.getElementById('w50minus'); var el50pm     = document.getElementById('w50pm');
             var lP = document.getElementById('LW50150P'), lM = document.getElementById('LW50150M'), lA = document.getElementById('AW50150');
-            var pos50 = c.cur, esAveria = (c.avg === 1 || c.avg === "1"), col150 = c.ocu ? 'ocupado' : 'libre', col50 = c.ocuAbajo ? 'ocupado' : 'libre';
-            if(lP && lM) lP.className = lM.className = "led-rd"; if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
-            if (pos50 === "1" || pos50 === 1) { if(lP) lP.classList.add('l-white'); } else { if(lM) lM.classList.add('l-white'); }
+
+            var pos50 = c.cur; var avg50 = c.avg; var ocu150 = c.ocu; var ocu50  = c.ocuAbajo;
+            var esAveria = (avg50 === 1 || avg50 === "1" || avg50 === true);
+            var col150 = ocu150 ? 'ocupado' : 'libre'; var col50  = ocu50 ? 'ocupado' : 'libre';
+
+            if(lP && lM) lP.className = lM.className = "led-rd";
+            if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
+
+            if (pos50 === "1" || pos50 === 1) { if(lP) lP.classList.add('l-white'); }
+            else { if(lM) lM.classList.add('l-white'); }
 
             if (pos50 === "1" || pos50 === 1) {
-                if(el150minus) el150minus.className = "via diagonal via-fantasma v-arriba"; if(el50minus) el50minus.className = "via diagonal via-fantasma v-abajo";
+                if(el150minus) el150minus.className = "via diagonal via-fantasma v-arriba";
+                if(el50minus)  el50minus.className  = "via diagonal via-fantasma v-abajo";
                 if (esAveria && tic) {
-                    if(el150pm) el150pm.className = "via v-arriba via-fantasma"; if(el150plus) el150plus.className = "via v-arriba via-fantasma";
-                    if(el50pm) el50pm.className = "via v-abajo via-fantasma"; if(el50plus) el50plus.className = "via v-abajo via-fantasma";
+                    if(el150pm) el150pm.className = "via v-arriba via-fantasma";
+                    if(el150plus) el150plus.className = "via v-arriba via-fantasma";
+                    if(el50pm) el50pm.className = "via v-abajo via-fantasma";
+                    if(el50plus) el50plus.className = "via v-abajo via-fantasma";
                 } else {
-                    if(el150pm) el150pm.className = "via v-arriba " + col150; if(el150plus) el150plus.className = "via v-arriba " + col150;
-                    if(el50pm) el50pm.className = "via v-abajo " + col50; if(el50plus) el50plus.className = "via v-abajo " + col50;
+                    if(el150pm) el150pm.className = "via v-arriba " + col150;
+                    if(el150plus) el150plus.className = "via v-arriba " + col150;
+                    if(el50pm) el50pm.className = "via v-abajo " + col50;
+                    if(el50plus) el50plus.className = "via v-abajo " + col50;
                 }
             } else {
-                if(el150plus) el150plus.className = "via v-arriba via-fantasma"; if(el50plus) el50plus.className = "via v-abajo via-fantasma";
+                if(el150plus) el150plus.className = "via v-arriba via-fantasma";
+                if(el50plus)  el50plus.className  = "via v-abajo via-fantasma";
                 if (esAveria && tic) {
-                    if(el150pm) el150pm.className = "via v-arriba via-fantasma"; if(el150minus) el150minus.className = "via diagonal v-arriba via-fantasma";
-                    if(el50pm) el50pm.className = "via v-abajo via-fantasma"; if(el50minus) el50minus.className = "via diagonal v-abajo via-fantasma";
+                    if(el150pm) el150pm.className = "via v-arriba via-fantasma";
+                    if(el150minus) el150minus.className = "via diagonal v-arriba via-fantasma";
+                    if(el50pm) el50pm.className = "via v-abajo via-fantasma";
+                    if(el50minus) el50minus.className = "via diagonal v-abajo via-fantasma";
                 } else {
-                    if(el150pm) el150pm.className = "via v-arriba " + col150; if(el150minus) el150minus.className = "via diagonal v-arriba " + col150;
-                    if(el50pm) el50pm.className = "via v-abajo " + col50; if(el50minus) el50minus.className = "via diagonal v-abajo " + col50;
+                    if(el150pm) el150pm.className = "via v-arriba " + col150;
+                    if(el150minus) el150minus.className = "via diagonal v-arriba " + col150;
+                    if(el50pm) el50pm.className = "via v-abajo " + col50;
+                    if(el50minus) el50minus.className = "via diagonal v-abajo " + col50;
                 }
             }
-            return;
+            return; 
         }
+
         else if(idW === "56a55") {
-            var el56aplus = document.getElementById('w56aplus'), el56aminus = document.getElementById('w56aminus'), el56apm = document.getElementById('w56apm');
-            var el55plus = document.getElementById('w55plus'), el55minus = document.getElementById('w55minus'), el55pm = document.getElementById('w55pm');
+            var el56aplus  = document.getElementById('w56aplus'); var el56aminus = document.getElementById('w56aminus'); var el56apm    = document.getElementById('w56apm');
+            var el55plus   = document.getElementById('w55plus'); var el55minus  = document.getElementById('w55minus'); var el55pm     = document.getElementById('w55pm');
             var lP = document.getElementById('LW56a55P'), lM = document.getElementById('LW56a55M'), lA = document.getElementById('AW56a55');
-            var pos56a = c.cur, esAveria = (c.avg === 1 || c.avg === "1"), col56a = c.ocu ? 'ocupado' : 'libre', col55 = c.ocuAbajo ? 'ocupado' : 'libre';
-            if(lP && lM) lP.className = lM.className = "led-rd"; if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
-            if (pos56a === "1" || pos56a === 1) { if(lP) lP.classList.add('l-white'); } else { if(lM) lM.classList.add('l-white'); }
+
+            var pos56a = c.cur; var avg56a = c.avg; var ocu56a = c.ocu; var ocu55  = c.ocuAbajo;
+            var esAveria = (avg56a === 1 || avg56a === "1" || avg56a === true);
+            var col56a = ocu56a ? 'ocupado' : 'libre'; var col55  = ocu55 ? 'ocupado' : 'libre';
+
+            if(lP && lM) lP.className = lM.className = "led-rd";
+            if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
+
+            if (pos56a === "1" || pos56a === 1) { if(lP) lP.classList.add('l-white'); }
+            else { if(lM) lM.classList.add('l-white'); }
 
             if (pos56a === "1" || pos56a === 1) {
-                if(el56aminus) el56aminus.className = "via diagonal via-fantasma v-arriba"; if(el55minus) el55minus.className = "via diagonal via-fantasma v-abajo";
+                if(el56aminus) el56aminus.className = "via diagonal via-fantasma v-arriba";
+                if(el55minus)  el55minus.className  = "via diagonal via-fantasma v-abajo";
                 if (esAveria && tic) {
-                    if(el56apm) el56apm.className = "via v-arriba via-fantasma"; if(el56aplus) el56aplus.className = "via v-arriba via-fantasma";
-                    if(el55pm) el55pm.className = "via v-abajo via-fantasma"; if(el55plus) el55plus.className = "via v-abajo via-fantasma";
+                    if(el56apm) el56apm.className = "via v-arriba via-fantasma";
+                    if(el56aplus) el56aplus.className = "via v-arriba via-fantasma";
+                    if(el55pm) el55pm.className = "via v-abajo via-fantasma";
+                    if(el55plus) el55plus.className = "via v-abajo via-fantasma";
                 } else {
-                    if(el56apm) el56apm.className = "via v-arriba " + col56a; if(el56aplus) el56aplus.className = "via v-arriba " + col56a;
-                    if(el55pm) el55pm.className = "via v-abajo " + col55; if(el55plus) el55plus.className = "via v-abajo " + col55;
+                    if(el56apm) el56apm.className = "via v-arriba " + col56a;
+                    if(el56aplus) el56aplus.className = "via v-arriba " + col56a;
+                    if(el55pm) el55pm.className = "via v-abajo " + col55;
+                    if(el55plus) el55plus.className = "via v-abajo " + col55;
                 }
             } else {
-                if(el56aplus) el56aplus.className = "via v-arriba via-fantasma"; if(el55plus) el55plus.className = "via v-abajo via-fantasma";
+                if(el56aplus) el56aplus.className = "via v-arriba via-fantasma";
+                if(el55plus)  el55plus.className  = "via v-abajo via-fantasma";
                 if (esAveria && tic) {
-                    if(el56apm) el56apm.className = "via v-arriba via-fantasma"; if(el56aminus) el56aminus.className = "via diagonal v-arriba via-fantasma";
-                    if(el55pm) el55pm.className = "via v-abajo via-fantasma"; if(el55minus) el55minus.className = "via diagonal v-abajo via-fantasma";
+                    if(el56apm) el56apm.className = "via v-arriba via-fantasma";
+                    if(el56aminus) el56aminus.className = "via diagonal v-arriba via-fantasma";
+                    if(el55pm) el55pm.className = "via v-abajo via-fantasma";
+                    if(el55minus) el55minus.className = "via diagonal v-abajo via-fantasma";
                 } else {
-                    if(el56apm) el56apm.className = "via v-arriba " + col56a; if(el56aminus) el56aminus.className = "via diagonal v-arriba " + col56a;
-                    if(el55pm) el55pm.className = "via v-abajo " + col55; if(el55minus) el55minus.className = "via diagonal v-abajo " + col55;
+                    if(el56apm) el56apm.className = "via v-arriba " + col56a;
+                    if(el56aminus) el56aminus.className = "via diagonal v-arriba " + col56a;
+                    if(el55pm) el55pm.className = "via v-abajo " + col55;
+                    if(el55minus) el55minus.className = "via diagonal v-abajo " + col55;
                 }
             }
-            return;
+            return; 
         }
+
         else if(idW === "151") {
-            var el151plus = document.getElementById('w151plus'), el151minus = document.getElementById('w151minus'), el151pm = document.getElementById('w151pm');
+            var el151plus  = document.getElementById('w151plus'); var el151minus = document.getElementById('w151minus'); var el151pm    = document.getElementById('w151pm');
             var lP = document.getElementById('LW151P'), lM = document.getElementById('LW151M'), lA = document.getElementById('AW151');
-            var pos151 = c.cur, esAveria = (c.avg === 1 || c.avg === "1"), col151 = c.ocu ? 'ocupado' : 'libre';
-            if(lP && lM) lP.className = lM.className = "led-rd"; if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
-            if (pos151 === "1" || pos151 === 1) { if(lP) lP.classList.add('l-white'); } else { if(lM) lM.classList.add('l-white'); }
+
+            var pos151 = c.cur; var avg151 = c.avg; var ocu151 = c.ocu; 
+            var esAveria = (avg151 === 1 || avg151 === "1" || avg151 === true); var col151 = ocu151 ? 'ocupado' : 'libre';
+
+            if(lP && lM) lP.className = lM.className = "led-rd";
+            if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
+
+            if (pos151 === "1" || pos151 === 1) { if(lP) lP.classList.add('l-white'); }
+            else { if(lM) lM.classList.add('l-white'); }
 
             if (pos151 === "1" || pos151 === 1) {
                 if(el151minus) el151minus.className = "via diagonal via-fantasma";
-                if (esAveria && tic) { if(el151pm) el151pm.className = "via via-fantasma"; if(el151plus) el151plus.className = "via via-fantasma"; } 
-                else { if(el151pm) el151pm.className = "via " + col151; if(el151plus) el151plus.className = "via " + col151; }
+                if (esAveria && tic) {
+                    if(el151pm) el151pm.className = "via via-fantasma";
+                    if(el151plus) el151plus.className = "via via-fantasma";
+                } else {
+                    if(el151pm) el151pm.className = "via " + col151;
+                    if(el151plus) el151plus.className = "via " + col151;
+                }
             } else {
                 if(el151plus) el151plus.className = "via via-fantasma";
-                if (esAveria && tic) { if(el151pm) el151pm.className = "via via-fantasma"; if(el151minus) el151minus.className = "via diagonal via-fantasma"; } 
-                else { if(el151pm) el151pm.className = "via " + col151; if(el151minus) el151minus.className = "via diagonal " + col151; }
+                if (esAveria && tic) {
+                    if(el151pm) el151pm.className = "via via-fantasma";
+                    if(el151minus) el151minus.className = "via diagonal via-fantasma";
+                } else {
+                    if(el151pm) el151pm.className = "via " + col151;
+                    if(el151minus) el151minus.className = "via diagonal " + col151;
+                }
             }
-            return;
+            return; 
         }
+
         else if(idW === "142") {
-            var el142plus = document.getElementById('w142plus'), el142minus = document.getElementById('w142minus'), el142pm = document.getElementById('w142pm');
+            var el142plus  = document.getElementById('w142plus'); var el142minus = document.getElementById('w142minus'); var el142pm    = document.getElementById('w142pm');
             var lP = document.getElementById('LW142P'), lM = document.getElementById('LW142M'), lA = document.getElementById('AW142');
-            var pos142 = c.cur, esAveria = (c.avg === 1 || c.avg === "1"), col142 = c.ocu ? 'ocupado' : 'libre';
-            if(lP && lM) lP.className = lM.className = "led-rd"; if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
-            if (pos142 === "1" || pos142 === 1) { if(lP) lP.classList.add('l-white'); } else { if(lM) lM.classList.add('l-white'); }
+
+            var pos142 = c.cur; var avg142 = c.avg; var ocu142 = c.ocu; 
+            var esAveria = (avg142 === 1 || avg142 === "1" || avg142 === true); var col142 = ocu142 ? 'ocupado' : 'libre';
+
+            if(lP && lM) lP.className = lM.className = "led-rd";
+            if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
+
+            if (pos142 === "1" || pos142 === 1) { if(lP) lP.classList.add('l-white'); }
+            else { if(lM) lM.classList.add('l-white'); }
 
             if (pos142 === "1" || pos142 === 1) {
                 if(el142minus) el142minus.className = "via diagonal via-fantasma";
-                if (esAveria && tic) { if(el142pm) el142pm.className = "via via-fantasma"; if(el142plus) el142plus.className = "via via-fantasma"; } 
-                else { if(el142pm) el142pm.className = "via " + col142; if(el142plus) el142plus.className = "via " + col142; }
+                if (esAveria && tic) {
+                    if(el142pm) el142pm.className = "via via-fantasma";
+                    if(el142plus) el142plus.className = "via via-fantasma";
+                } else {
+                    if(el142pm) el142pm.className = "via " + col142;
+                    if(el142plus) el142plus.className = "via " + col142;
+                }
             } else {
                 if(el142plus) el142plus.className = "via via-fantasma";
-                if (esAveria && tic) { if(el142pm) el142pm.className = "via via-fantasma"; if(el142minus) el142minus.className = "via diagonal via-fantasma"; } 
-                else { if(el142pm) el142pm.className = "via " + col142; if(el142minus) el142minus.className = "via diagonal " + col142; }
+                if (esAveria && tic) {
+                    if(el142pm) el142pm.className = "via via-fantasma";
+                    if(el142minus) el142minus.className = "via diagonal via-fantasma";
+                } else {
+                    if(el142pm) el142pm.className = "via " + col142;
+                    if(el142minus) el142minus.className = "via diagonal " + col142;
+                }
             }
-            return;
+            return; 
         }
+
         else if(idW === "53") {
-            var el53plus = document.getElementById('w53plus'), el53minus = document.getElementById('w53minus'), el53pm = document.getElementById('w53pm');
+            var el53plus  = document.getElementById('w53plus'); var el53minus = document.getElementById('w53minus'); var el53pm    = document.getElementById('w53pm');
             var lP = document.getElementById('LW53P'), lM = document.getElementById('LW53M'), lA = document.getElementById('AW53');
-            var pos53 = c.cur, esAveria = (c.avg === 1 || c.avg === "1"), col53 = c.ocu ? 'ocupado' : 'libre';
-            if(lP && lM) lP.className = lM.className = "led-rd"; if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
-            if (pos53 === "1" || pos53 === 1) { if(lP) lP.classList.add('l-white'); } else { if(lM) lM.classList.add('l-white'); }
+
+            var pos53 = c.cur; var avg53 = c.avg; var ocu53 = c.ocu; 
+            var esAveria = (avg53 === 1 || avg53 === "1" || avg53 === true); var col53 = ocu53 ? 'ocupado' : 'libre';
+
+            if(lP && lM) lP.className = lM.className = "led-rd";
+            if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
+
+            if (pos53 === "1" || pos53 === 1) { if(lP) lP.classList.add('l-white'); }
+            else { if(lM) lM.classList.add('l-white'); }
 
             if (pos53 === "1" || pos53 === 1) {
                 if(el53minus) el53minus.className = "via diagonal via-fantasma";
-                if (esAveria && tic) { if(el53pm) el53pm.className = "via via-fantasma"; if(el53plus) el53plus.className = "via via-fantasma"; } 
-                else { if(el53pm) el53pm.className = "via " + col53; if(el53plus) el53plus.className = "via " + col53; }
+                if (esAveria && tic) {
+                    if(el53pm) el53pm.className = "via via-fantasma";
+                    if(el53plus) el53plus.className = "via via-fantasma";
+                } else {
+                    if(el53pm) el53pm.className = "via " + col53;
+                    if(el53plus) el53plus.className = "via " + col53;
+                }
             } else {
                 if(el53plus) el53plus.className = "via via-fantasma";
-                if (esAveria && tic) { if(el53pm) el53pm.className = "via via-fantasma"; if(el53minus) el53minus.className = "via diagonal via-fantasma"; } 
-                else { if(el53pm) el53pm.className = "via " + col53; if(el53minus) el53minus.className = "via diagonal " + col53; }
+                if (esAveria && tic) {
+                    if(el53pm) el53pm.className = "via via-fantasma";
+                    if(el53minus) el53minus.className = "via diagonal via-fantasma";
+                } else {
+                    if(el53pm) el53pm.className = "via " + col53;
+                    if(el53minus) el53minus.className = "via diagonal " + col53;
+                }
             }
-            return;
+            return; 
         }
+
         else if(idW === "147140") {
-            var el147plus = document.getElementById('w147plus'), el147minus = document.getElementById('w147minus'), el147pm = document.getElementById('w147pm');
-            var el140plus = document.getElementById('w140plus'), el140minus = document.getElementById('w140minus'), el140pm = document.getElementById('w140pm');
+            var el147plus  = document.getElementById('w147plus'); var el147minus = document.getElementById('w147minus'); var el147pm    = document.getElementById('w147pm');
+            var el140plus  = document.getElementById('w140plus'); var el140minus = document.getElementById('w140minus'); var el140pm    = document.getElementById('w140pm');
             var lP = document.getElementById('LW147140P'), lM = document.getElementById('LW147140M'), lA = document.getElementById('AW147140');
-            var pos147 = c.cur, esAveria = (c.avg === 1 || c.avg === "1"), col147 = c.ocu ? 'ocupado' : 'libre', col140 = c.ocuAbajo ? 'ocupado' : 'libre';
-            if(lP && lM) lP.className = lM.className = "led-rd"; if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
-            if (pos147 === "1" || pos147 === 1) { if(lP) lP.classList.add('l-white'); } else { if(lM) lM.classList.add('l-white'); }
+
+            var pos147 = c.cur; var avg147 = c.avg; var ocu147 = c.ocu; var ocu140 = c.ocuAbajo;
+            var esAveria = (avg147 === 1 || avg147 === "1" || avg147 === true);
+            var col147 = ocu147 ? 'ocupado' : 'libre'; var col140 = ocu140 ? 'ocupado' : 'libre';
+
+            if(lP && lM) lP.className = lM.className = "led-rd";
+            if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
+
+            if (pos147 === "1" || pos147 === 1) { if(lP) lP.classList.add('l-white'); }
+            else { if(lM) lM.classList.add('l-white'); }
 
             if (pos147 === "1" || pos147 === 1) {
-                if(el147minus) el147minus.className = "via diagonal via-fantasma v-arriba"; if(el140minus) el140minus.className = "via diagonal via-fantasma v-abajo";
+                if(el147minus) el147minus.className = "via diagonal via-fantasma v-arriba";
+                if(el140minus) el140minus.className = "via diagonal via-fantasma v-abajo";
                 if (esAveria && tic) {
-                    if(el147pm) el147pm.className = "via v-arriba via-fantasma"; if(el147plus) el147plus.className = "via v-arriba via-fantasma";
-                    if(el140pm) el140pm.className = "via v-abajo via-fantasma"; if(el140plus) el140plus.className = "via v-abajo via-fantasma";
+                    if(el147pm) el147pm.className = "via v-arriba via-fantasma";
+                    if(el147plus) el147plus.className = "via v-arriba via-fantasma";
+                    if(el140pm) el140pm.className = "via v-abajo via-fantasma";
+                    if(el140plus) el140plus.className = "via v-abajo via-fantasma";
                 } else {
-                    if(el147pm) el147pm.className = "via v-arriba " + col147; if(el147plus) el147plus.className = "via v-arriba " + col147;
-                    if(el140pm) el140pm.className = "via v-abajo " + col140; if(el140plus) el140plus.className = "via v-abajo " + col140;
+                    if(el147pm) el147pm.className = "via v-arriba " + col147;
+                    if(el147plus) el147plus.className = "via v-arriba " + col147;
+                    if(el140pm) el140pm.className = "via v-abajo " + col140;
+                    if(el140plus) el140plus.className = "via v-abajo " + col140;
                 }
             } else {
-                if(el147plus) el147plus.className = "via v-arriba via-fantasma"; if(el140plus) el140plus.className = "via v-abajo via-fantasma";
+                if(el147plus) el147plus.className = "via v-arriba via-fantasma";
+                if(el140plus) el140plus.className = "via v-abajo via-fantasma";
                 if (esAveria && tic) {
-                    if(el147pm) el147pm.className = "via v-arriba via-fantasma"; if(el147minus) el147minus.className = "via diagonal v-arriba via-fantasma";
-                    if(el140pm) el140pm.className = "via v-abajo via-fantasma"; if(el140minus) el140minus.className = "via diagonal v-abajo via-fantasma";
+                    if(el147pm) el147pm.className = "via v-arriba via-fantasma";
+                    if(el147minus) el147minus.className = "via diagonal v-arriba via-fantasma";
+                    if(el140pm) el140pm.className = "via v-abajo via-fantasma";
+                    if(el140minus) el140minus.className = "via diagonal v-abajo via-fantasma";
                 } else {
-                    if(el147pm) el147pm.className = "via v-arriba " + col147; if(el147minus) el147minus.className = "via diagonal v-arriba " + col147;
-                    if(el140pm) el140pm.className = "via v-abajo " + col140; if(el140minus) el140minus.className = "via diagonal v-abajo " + col140;
+                    if(el147pm) el147pm.className = "via v-arriba " + col147;
+                    if(el147minus) el147minus.className = "via diagonal v-arriba " + col147;
+                    if(el140pm) el140pm.className = "via v-abajo " + col140;
+                    if(el140minus) el140minus.className = "via diagonal v-abajo " + col140;
                 }
             }
-            return;
+            return; 
         }
+
         else if(idW === "145") {
-            var el145plus = document.getElementById('w145plus'), el145minus = document.getElementById('w145minus'), el145pm = document.getElementById('w145pm');
+            var el145plus  = document.getElementById('w145plus'); var el145minus = document.getElementById('w145minus'); var el145pm    = document.getElementById('w145pm');
             var lP = document.getElementById('LW145P'), lM = document.getElementById('LW145M'), lA = document.getElementById('AW145');
-            var pos145 = c.cur, esAveria = (c.avg === 1 || c.avg === "1"), col145 = c.ocu ? 'ocupado' : 'libre';
-            if(lP && lM) lP.className = lM.className = "led-rd"; if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
-            if (pos145 === "1" || pos145 === 1) { if(lP) lP.classList.add('l-white'); } else { if(lM) lM.classList.add('l-white'); }
+
+            var pos145 = c.cur; var avg145 = c.avg; var ocu145 = c.ocu; 
+            var esAveria = (avg145 === 1 || avg145 === "1" || avg145 === true); var col145 = ocu145 ? 'ocupado' : 'libre';
+
+            if(lP && lM) lP.className = lM.className = "led-rd";
+            if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
+
+            if (pos145 === "1" || pos145 === 1) { if(lP) lP.classList.add('l-white'); }
+            else { if(lM) lM.classList.add('l-white'); }
 
             if (pos145 === "1" || pos145 === 1) {
                 if(el145minus) el145minus.className = "via diagonal via-fantasma";
-                if (esAveria && tic) { if(el145pm) el145pm.className = "via via-fantasma"; if(el145plus) el145plus.className = "via via-fantasma"; } 
-                else { if(el145pm) el145pm.className = "via " + col145; if(el145plus) el145plus.className = "via " + col145; }
+                if (esAveria && tic) {
+                    if(el145pm) el145pm.className = "via via-fantasma";
+                    if(el145plus) el145plus.className = "via via-fantasma";
+                } else {
+                    if(el145pm) el145pm.className = "via " + col145;
+                    if(el145plus) el145plus.className = "via " + col145;
+                }
             } else {
                 if(el145plus) el145plus.className = "via via-fantasma";
-                if (esAveria && tic) { if(el145pm) el145pm.className = "via via-fantasma"; if(el145minus) el145minus.className = "via diagonal via-fantasma"; } 
-                else { if(el145pm) el145pm.className = "via " + col145; if(el145minus) el145minus.className = "via diagonal " + col145; }
+                if (esAveria && tic) {
+                    if(el145pm) el145pm.className = "via via-fantasma";
+                    if(el145minus) el145minus.className = "via diagonal via-fantasma";
+                } else {
+                    if(el145pm) el145pm.className = "via " + col145;
+                    if(el145minus) el145minus.className = "via diagonal " + col145;
+                }
             }
-            return;
+            return; 
         }
+
         else if(idW === "47143") {
-            var el47plus = document.getElementById('w47plus'), el47minus = document.getElementById('w47minus'), el47pm = document.getElementById('w47pm');
-            var el143plus = document.getElementById('w143plus'), el143minus = document.getElementById('w143minus'), el143pm = document.getElementById('w143pm');
+            var el47plus   = document.getElementById('w47plus'); var el47minus  = document.getElementById('w47minus'); var el47pm     = document.getElementById('w47pm');
+            var el143plus  = document.getElementById('w143plus'); var el143minus = document.getElementById('w143minus'); var el143pm    = document.getElementById('w143pm');
             var lP = document.getElementById('LW47143P'), lM = document.getElementById('LW47143M'), lA = document.getElementById('AW47143');
-            var pos47 = c.cur, esAveria = (c.avg === 1 || c.avg === "1"), col47 = c.ocu ? 'ocupado' : 'libre', col143 = c.ocuAbajo ? 'ocupado' : 'libre';
-            if(lP && lM) lP.className = lM.className = "led-rd"; if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
-            if (pos47 === "1" || pos47 === 1) { if(lP) lP.classList.add('l-white'); } else { if(lM) lM.classList.add('l-white'); }
+
+            var pos47 = c.cur; var avg47 = c.avg; var ocu47 = c.ocu; var ocu143 = c.ocuAbajo;
+            var esAveria = (avg47 === 1 || avg47 === "1" || avg47 === true);
+            var col47 = ocu47 ? 'ocupado' : 'libre'; var col143 = ocu143 ? 'ocupado' : 'libre';
+
+            if(lP && lM) lP.className = lM.className = "led-rd";
+            if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
+
+            if (pos47 === "1" || pos47 === 1) { if(lP) lP.classList.add('l-white'); }
+            else { if(lM) lM.classList.add('l-white'); }
 
             if (pos47 === "1" || pos47 === 1) {
-                if(el47minus) el47minus.className = "via diagonal via-fantasma v-arriba"; if(el143minus) el143minus.className = "via diagonal via-fantasma v-abajo";
+                if(el47minus) el47minus.className = "via diagonal via-fantasma v-arriba";
+                if(el143minus) el143minus.className = "via diagonal via-fantasma v-abajo";
                 if (esAveria && tic) {
-                    if(el47pm) el47pm.className = "via v-arriba via-fantasma"; if(el47plus) el47plus.className = "via v-arriba via-fantasma";
-                    if(el143pm) el143pm.className = "via v-abajo via-fantasma"; if(el143plus) el143plus.className = "via v-abajo via-fantasma";
+                    if(el47pm) el47pm.className = "via v-arriba via-fantasma";
+                    if(el47plus) el47plus.className = "via v-arriba via-fantasma";
+                    if(el143pm) el143pm.className = "via v-abajo via-fantasma";
+                    if(el143plus) el143plus.className = "via v-abajo via-fantasma";
                 } else {
-                    if(el47pm) el47pm.className = "via v-arriba " + col47; if(el47plus) el47plus.className = "via v-arriba " + col47;
-                    if(el143pm) el143pm.className = "via v-abajo " + col143; if(el143plus) el143plus.className = "via v-abajo " + col143;
+                    if(el47pm) el47pm.className = "via v-arriba " + col47;
+                    if(el47plus) el47plus.className = "via v-arriba " + col47;
+                    if(el143pm) el143pm.className = "via v-abajo " + col143;
+                    if(el143plus) el143plus.className = "via v-abajo " + col143;
                 }
             } else {
-                if(el47plus) el47plus.className = "via v-arriba via-fantasma"; if(el143plus) el143plus.className = "via v-abajo via-fantasma";
+                if(el47plus) el47plus.className = "via v-arriba via-fantasma";
+                if(el143plus) el143plus.className = "via v-abajo via-fantasma";
                 if (esAveria && tic) {
-                    if(el47pm) el47pm.className = "via v-arriba via-fantasma"; if(el47minus) el47minus.className = "via diagonal v-arriba via-fantasma";
-                    if(el143pm) el143pm.className = "via v-abajo via-fantasma"; if(el143minus) el143minus.className = "via diagonal v-abajo via-fantasma";
+                    if(el47pm) el47pm.className = "via v-arriba via-fantasma";
+                    if(el47minus) el47minus.className = "via diagonal v-arriba via-fantasma";
+                    if(el143pm) el143pm.className = "via v-abajo via-fantasma";
+                    if(el143minus) el143minus.className = "via diagonal v-abajo via-fantasma";
                 } else {
-                    if(el47pm) el47pm.className = "via v-arriba " + col47; if(el47minus) el47minus.className = "via diagonal v-arriba " + col47;
-                    if(el143pm) el143pm.className = "via v-abajo " + col143; if(el143minus) el143minus.className = "via diagonal v-abajo " + col143;
+                    if(el47pm) el47pm.className = "via v-arriba " + col47;
+                    if(el47minus) el47minus.className = "via diagonal v-arriba " + col47;
+                    if(el143pm) el143pm.className = "via v-abajo " + col143;
+                    if(el143minus) el143minus.className = "via diagonal v-abajo " + col143;
                 }
             }
-            return;
+            return; 
         }
+
         else if(idW === "4449x") {
-            var el44plus = document.getElementById('w44plus'), el44minus = document.getElementById('w44minus'), el44pm = document.getElementById('w44pm');
-            var el49plus = document.getElementById('w49xplus'), el49minus = document.getElementById('w49xminus'), el49pm = document.getElementById('w49xpm');
+            var el44plus  = document.getElementById('w44plus'); var el44minus = document.getElementById('w44minus'); var el44pm    = document.getElementById('w44pm');
+            var el49plus  = document.getElementById('w49xplus'); var el49minus = document.getElementById('w49xminus'); var el49pm    = document.getElementById('w49xpm');
+
             var lP = document.getElementById('LW4449xP'), lM = document.getElementById('LW4449xM'), lA = document.getElementById('AW4449x');
-            var pos44 = c.cur, esAveria = (c.avg === 1 || c.avg === "1"), col44 = c.ocu ? 'ocupado' : 'libre', col49 = c.ocuAbajo ? 'ocupado' : 'libre';
-            if(lP && lM) lP.className = lM.className = "led-rd"; if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
-            if (pos44 === "1" || pos44 === 1) { if(lP) lP.classList.add('l-white'); } else { if(lM) lM.classList.add('l-white'); }
+
+            var pos44 = c.cur; var avg44 = c.avg; var ocu44 = c.ocu; var ocu49 = c.ocuAbajo; 
+            var esAveria = (avg44 === 1 || avg44 === "1" || avg44 === true);
+            var col44 = ocu44 ? 'ocupado' : 'libre'; var col49 = ocu49 ? 'ocupado' : 'libre';
+
+            if(lP && lM) lP.className = lM.className = "led-rd";
+            if(lA) lA.className = esAveria ? "led-rd l-red" : "led-rd";
+
+            if (pos44 === "1" || pos44 === 1) { if(lP) lP.classList.add('l-white'); }
+            else { if(lM) lM.classList.add('l-white'); }
 
             if (pos44 === "1" || pos44 === 1) {
-                if(el44minus) el44minus.className = "via diagonal via-fantasma v-arriba"; if(el49minus) el49minus.className = "via diagonal via-fantasma v-abajo";
+                if(el44minus) el44minus.className = "via diagonal via-fantasma v-arriba";
+                if(el49minus) el49minus.className = "via diagonal via-fantasma v-abajo";
                 if (esAveria && tic) {
-                    if(el44pm) el44pm.className = "via v-arriba via-fantasma"; if(el44plus) el44plus.className = "via v-arriba via-fantasma";
-                    if(el49pm) el49pm.className = "via v-abajo via-fantasma"; if(el49plus) el49plus.className = "via v-abajo via-fantasma";
+                    if(el44pm) el44pm.className = "via v-arriba via-fantasma";
+                    if(el44plus) el44plus.className = "via v-arriba via-fantasma";
+                    if(el49pm) el49pm.className = "via v-abajo via-fantasma";
+                    if(el49plus) el49plus.className = "via v-abajo via-fantasma";
                 } else {
-                    if(el44pm) el44pm.className = "via v-arriba " + col44; if(el44plus) el44plus.className = "via v-arriba " + col44;
-                    if(el49pm) el49pm.className = "via v-abajo " + col49; if(el49plus) el49plus.className = "via v-abajo " + col49;
+                    if(el44pm) el44pm.className = "via v-arriba " + col44;
+                    if(el44plus) el44plus.className = "via v-arriba " + col44;
+                    if(el49pm) el49pm.className = "via v-abajo " + col49;
+                    if(el49plus) el49plus.className = "via v-abajo " + col49;
                 }
             } else {
-                if(el44plus) el44plus.className = "via v-arriba via-fantasma"; if(el49plus) el49plus.className = "via v-abajo via-fantasma";
+                if(el44plus) el44plus.className = "via v-arriba via-fantasma";
+                if(el49plus) el49plus.className = "via v-abajo via-fantasma";
                 if (esAveria && tic) {
-                    if(el44pm) el44pm.className = "via v-arriba via-fantasma"; if(el44minus) el44minus.className = "via diagonal v-arriba via-fantasma";
-                    if(el49pm) el49pm.className = "via v-abajo via-fantasma"; if(el49minus) el49minus.className = "via diagonal v-abajo via-fantasma";
+                    if(el44pm) el44pm.className = "via v-arriba via-fantasma";
+                    if(el44minus) el44minus.className = "via diagonal v-arriba via-fantasma";
+                    if(el49pm) el49pm.className = "via v-abajo via-fantasma";
+                    if(el49minus) el49minus.className = "via diagonal v-abajo via-fantasma";
                 } else {
-                    if(el44pm) el44pm.className = "via v-arriba " + col44; if(el44minus) el44minus.className = "via diagonal v-arriba " + col44;
-                    if(el49pm) el49pm.className = "via v-abajo " + col49; if(el49minus) el49minus.className = "via diagonal v-abajo " + col49;
+                    if(el44pm) el44pm.className = "via v-arriba " + col44;
+                    if(el44minus) el44minus.className = "via diagonal v-arriba " + col44;
+                    if(el49pm) el49pm.className = "via v-abajo " + col49;
+                    if(el49minus) el49minus.className = "via diagonal v-abajo " + col49;
                 }
             }
             return;
         }
+
         else if(idW === "6061") { 
-            wArribaP = document.getElementById('w61plus'); wArribaM = document.getElementById('w61minus'); wArribaPm = document.getElementById('w61pm');
-            wAbajoP = document.getElementById('w60plus'); wAbajoM = document.getElementById('w60minus'); wAbajoPm = document.getElementById('w60pm'); 
-            ocuArriba = c.ocu; ocuAbajo = c.ocuAbajo; 
+            wArribaP  = document.getElementById('w61plus'); wArribaM  = document.getElementById('w61minus'); wArribaPm = document.getElementById('w61pm');
+            wAbajoP   = document.getElementById('w60plus'); wAbajoM   = document.getElementById('w60minus'); wAbajoPm  = document.getElementById('w60pm'); 
+            ocuArriba = (cambiosNuz["6061"] ? cambiosNuz["6061"].ocu : false);
+            ocuAbajo  = (cambiosNuz["6061"] ? cambiosNuz["6061"].ocuAbajo : false); 
         }
+        
         else if(idW === "6265") { 
-            wArribaP = document.getElementById('w65plus'); wArribaM = document.getElementById('w65minus'); wArribaPm = document.getElementById('w65pm');
-            wAbajoP = document.getElementById('w62plus'); wAbajoM = document.getElementById('w62minus'); wAbajoPm = document.getElementById('w62pm'); 
-            ocuArriba = c.ocu; ocuAbajo = c.ocuAbajo; 
+            wArribaP  = document.getElementById('w65plus'); wArribaM  = document.getElementById('w65minus'); wArribaPm = document.getElementById('w65pm');
+            wAbajoP   = document.getElementById('w62plus'); wAbajoM   = document.getElementById('w62minus'); wAbajoPm  = document.getElementById('w62pm'); 
+            ocuArriba = (cambiosNuz["6265"] ? cambiosNuz["6265"].ocu : false);
+            ocuAbajo  = (cambiosNuz["6265"] ? cambiosNuz["6265"].ocuAbajo : false); 
         }
+        
         else if(idW === "7071") { wAbajoP = document.getElementById('w70plus'); wAbajoM = document.getElementById('w70minus'); wAbajoPm = document.getElementById('w70pm'); ocuAbajo = false; } 
         else if(idW === "7473") { wAbajoP = document.getElementById('w74plus'); wAbajoM = document.getElementById('w74minus'); wAbajoPm = document.getElementById('w74pm'); ocuAbajo = false; }
+        
         else {
             wAbajoP = null; wAbajoM = null; wAbajoPm = null; ocuAbajo = false;
         }
         
         if(lP && lM) lP.className = lM.className = "led-rd";
         if(lA) lA.className = (c.avg === 1 || c.avg === "1") ? "led-rd l-red" : "led-rd";
-        if (c.cur === "1" || c.cur === 1) { if(lP) lP.classList.add('l-white'); } else { if(lM) lM.classList.add('l-white'); }
+
+        if (c.cur === "1" || c.cur === 1) { if(lP) lP.classList.add('l-white'); } 
+        else { if(lM) lM.classList.add('l-white'); }
 
         if (idW === "72" || idW === "75") {
             if (idW === "72" && wArribaP && wArribaPm && wArribaM) {
                 wArribaP.className = "via v-abajo"; wArribaPm.className = "via v-abajo"; wArribaM.className = "via diagonal v-abajo";
                 var claseEst72 = c.ocu ? 'ocupado' : 'libre'; 
-                if (c.cur === "1" || c.cur === 1) { wArribaPm.classList.add(claseEst72); wArribaP.classList.add(claseEst72); wArribaM.classList.add('via-fantasma'); } 
-                else { wArribaPm.classList.add(claseEst72); wArribaM.classList.add(claseEst72); wArribaP.classList.add('via-fantasma'); }
+                if (c.cur === "1" || c.cur === 1) {
+                    wArribaPm.classList.add(claseEst72); wArribaP.classList.add(claseEst72); wArribaM.classList.add('via-fantasma');
+                } else {
+                    wArribaPm.classList.add(claseEst72); wArribaM.classList.add(claseEst72); wArribaP.classList.add('via-fantasma');
+                }
             }
             if (idW === "75") {
-                var colorEst75 = c.ocu ? 'ocupado' : 'libre', esAv75 = (c.avg === 1 || c.avg === "1");
+                var colorEst75 = c.ocu ? 'ocupado' : 'libre'; 
+                var esAv75 = (c.avg === 1 || c.avg === "1");
                 var v75pm = document.getElementById('w75pm'), v75mm = document.getElementById('w75mm') || document.getElementById('W75MM');
                 var v75plus = document.getElementById('w75plus') || document.getElementById('W75PLUS'), v75minus = document.getElementById('w75minus') || document.getElementById('W75MINUS');
-                if (esAv75 && tic) { if (v75pm) v75pm.className = "via v-arriba via-fantasma"; if (v75mm) v75mm.className = "via diagonal v-arriba via-fantasma"; } 
-                else { if (v75pm) { v75pm.className = "via v-arriba"; v75pm.classList.add(colorEst75); } if (v75mm) { v75mm.className = "via diagonal v-arriba"; v75mm.classList.add(colorEst75); } }
+
+                if (esAv75 && tic) {
+                    if (v75pm) v75pm.className = "via v-arriba via-fantasma"; if (v75mm) v75mm.className = "via diagonal v-arriba via-fantasma";
+                } else {
+                    if (v75pm) { v75pm.className = "via v-arriba"; v75pm.classList.add(colorEst75); }
+                    if (v75mm) { v75mm.className = "via diagonal v-arriba"; v75mm.classList.add(colorEst75); }
+                }
+
                 if (c.cur === "1" || c.cur === 1) {
                     if (v75plus) { v75plus.className = "via v-arriba"; if (!(esAv75 && tic)) v75plus.classList.add(colorEst75); else v75plus.classList.add('via-fantasma'); }
                     if (v75minus) v75minus.className = "via diagonal v-arriba via-fantasma";
@@ -2237,36 +2608,65 @@ rotate(45deg);"></div>
                     if (v75plus) v75plus.className = "via v-arriba via-fantasma";
                 }
             }
-            return;
+            return; 
         }
 
         if(!wArribaP || !wArribaM || !wArribaPm) return;
 
         wArribaP.className = "via v-arriba"; wArribaM.className = "via diagonal v-arriba"; wArribaPm.className = "via v-arriba";
         if(wAbajoP && wAbajoM && wAbajoPm) { wAbajoP.className = "via v-abajo"; wAbajoM.className = "via diagonal v-abajo"; wAbajoPm.className = "via v-abajo"; }
+
         var esAveria = (c.avg === 1 || c.avg === "1");
 
         if (c.cur === "1" || c.cur === 1) {
-            wArribaM.classList.add('via-fantasma'); if(wAbajoM) wAbajoM.classList.add('via-fantasma');
-            if (!c.ocu) { if (esAveria && tic) { wArribaPm.classList.add('via-fantasma'); wArribaP.classList.add('via-fantasma'); } else { wArribaPm.classList.add('libre'); wArribaP.classList.add('libre'); } } 
-            else { if (esAveria && tic) { wArribaPm.classList.add('via-fantasma'); wArribaP.classList.add('via-fantasma'); } else { wArribaPm.classList.add('ocupado'); wArribaP.classList.add('ocupado'); } }
-            if (wAbajoP && wAbajoPm) {
-                if (!ocuAbajo) { if (esAveria && tic) { wAbajoPm.classList.add('via-fantasma'); wAbajoP.classList.add('via-fantasma'); } else { wAbajoPm.classList.add('libre'); wAbajoP.classList.add('libre'); } } 
-                else { if (esAveria && tic) { wAbajoPm.classList.add('via-fantasma'); wAbajoP.classList.add('via-fantasma'); } else { wAbajoPm.classList.add('ocupado'); wAbajoP.classList.add('ocupado'); } }
+            wArribaM.classList.add('via-fantasma'); 
+            if(wAbajoM) wAbajoM.classList.add('via-fantasma');
+
+            if (!c.ocu) {
+                if (esAveria && tic) { wArribaPm.classList.add('via-fantasma'); wArribaP.classList.add('via-fantasma'); } 
+                else { wArribaPm.classList.add('libre'); wArribaP.classList.add('libre'); }
+            } else {
+                if (esAveria && tic) { wArribaPm.classList.add('via-fantasma'); wArribaP.classList.add('via-fantasma'); }
+                else { wArribaPm.classList.add('ocupado'); wArribaP.classList.add('ocupado'); }
             }
+
+            if (wAbajoP && wAbajoPm) {
+                if (!ocuAbajo) {
+                    if (esAveria && tic) { wAbajoPm.classList.add('via-fantasma'); wAbajoP.classList.add('via-fantasma'); } 
+                    else { wAbajoPm.classList.add('libre'); wAbajoP.classList.add('libre'); }
+                } else {
+                    if (esAveria && tic) { wAbajoPm.classList.add('via-fantasma'); wAbajoP.classList.add('via-fantasma'); }
+                    else { wAbajoPm.classList.add('ocupado'); wAbajoP.classList.add('ocupado'); }
+                }
+            }
+
         } else {
-            wArribaP.classList.add('via-fantasma'); if(wAbajoP) wAbajoP.classList.add('via-fantasma');
-            if (!c.ocu) { if (esAveria && tic) { wArribaPm.classList.add('via-fantasma'); wArribaM.classList.add('via-fantasma'); } else { wArribaPm.classList.add('libre'); wArribaM.classList.add('libre'); } } 
-            else { if (esAveria && tic) { wArribaPm.classList.add('via-fantasma'); wArribaM.classList.add('via-fantasma'); } else { wArribaPm.classList.add('ocupado'); wArribaM.classList.add('ocupado'); } }
+            wArribaP.classList.add('via-fantasma'); 
+            if(wAbajoP) wAbajoP.classList.add('via-fantasma');
+
+            if (!c.ocu) {
+                if (esAveria && tic) { wArribaPm.classList.add('via-fantasma'); wArribaM.classList.add('via-fantasma'); } 
+                else { wArribaPm.classList.add('libre'); wArribaM.classList.add('libre'); }
+            } else {
+                if (esAveria && tic) { wArribaPm.classList.add('via-fantasma'); wArribaM.classList.add('via-fantasma'); }
+                else { wArribaPm.classList.add('ocupado'); wArribaM.classList.add('ocupado'); }
+            }
+
             if (wAbajoM && wAbajoPm) {
-                if (!ocuAbajo) { if (esAveria && tic) { wAbajoPm.classList.add('via-fantasma'); wAbajoM.classList.add('via-fantasma'); } else { wAbajoPm.classList.add('libre'); wAbajoM.classList.add('libre'); } } 
-                else { if (esAveria && tic) { wAbajoPm.classList.add('via-fantasma'); wAbajoM.classList.add('via-fantasma'); } else { wAbajoPm.classList.add('ocupado'); wAbajoM.classList.add('ocupado'); } }
+                if (!ocuAbajo) {
+                    if (esAveria && tic) { wAbajoPm.classList.add('via-fantasma'); wAbajoM.classList.add('via-fantasma'); } 
+                    else { wAbajoPm.classList.add('libre'); wAbajoM.classList.add('libre'); }
+                } else {
+                    if (esAveria && tic) { wAbajoPm.classList.add('via-fantasma'); wAbajoM.classList.add('via-fantasma'); }
+                    else { wAbajoPm.classList.add('ocupado'); wAbajoM.classList.add('ocupado'); }
+                }
             }
         }
     }
     
     function procesarEnclavamientosCambios(datosEnclav) {
         if (!datosEnclav) return;
+        
         var parejasCambios = [
             { ids: ["EW1", "EW2"],   claves: ["EW1", "ew1", "EW2", "ew2"] },
             { ids: ["EW11", "EW10"], claves: ["EW11", "ew11", "EW10", "ew10"] },
@@ -2279,7 +2679,7 @@ rotate(45deg);"></div>
             { ids: ["EW65", "EW62"], claves: ["EW65", "ew65", "EW62", "ew62"] },
             { ids: ["EW71", "EW70"], claves: ["EW71", "ew71", "EW70", "ew70"] },
             { ids: ["EW73", "EW74"], claves: ["EW73", "ew73", "EW74", "ew74"] },
-            { ids: ["EW72"],         claves: ["EW72", "ew72"] },
+            { ids: ["EW72"],         claves: ["EW72", "ew72"] }, 
             { ids: ["EW75"],         claves: ["EW75", "ew75"] },
             { ids: ["EW41", "EW40"], claves: ["EW41", "ew41", "EW40", "ew40"] },
             { ids: ["EW152"],        claves: ["EW152", "ew152"] },
@@ -2301,14 +2701,26 @@ rotate(45deg);"></div>
         ];
 
         parejasCambios.forEach(function(pareja) {
-            var encontrado = false; var estadoActivo = false;
-            pareja.claves.forEach(function(clave) { if (datosEnclav[clave] !== undefined) { encontrado = true; if (datosEnclav[clave] === 1 || datosEnclav[clave] === "1") estadoActivo = true; } });
+            var encontrado = false; var estadoActive = false;
+            
+            pareja.claves.forEach(function(clave) {
+                if (datosEnclav[clave] !== undefined) {
+                    encontrado = true;
+                    if (datosEnclav[clave] === 1 || datosEnclav[clave] === "1") {
+                        estadoActive = true;
+                    }
+                }
+            });
+
             if (encontrado) {
                 pareja.ids.forEach(function(idHtml) {
                     var el = document.getElementById(idHtml) || document.getElementById(idHtml.toLowerCase()) || document.getElementById(idHtml.toUpperCase());
                     if (el) {
-                        if (estadoActivo) { el.style.backgroundColor = "#0F23DB"; el.style.borderColor = "#ffffff"; el.style.boxShadow = "0 0 14px #0F23DB"; } 
-                        else { el.style.backgroundColor = "#1a1a1a"; el.style.borderColor = "#444"; el.style.boxShadow = "none"; }
+                        if (estadoActive) {
+                            el.style.backgroundColor = "#0F23DB"; el.style.borderColor = "#ffffff"; el.style.boxShadow = "0 0 14px #0F23DB";
+                        } else {
+                            el.style.backgroundColor = "#1a1a1a"; el.style.borderColor = "#444"; el.style.boxShadow = "none";
+                        }
                     }
                 });
             }
@@ -2318,8 +2730,11 @@ rotate(45deg);"></div>
             if (!idId.toUpperCase().startsWith("EW")) {
                 var elEnc = document.getElementById(idId) || document.getElementById(idId.toUpperCase()) || document.getElementById(idId.toLowerCase());
                 if (elEnc) {
-                    if (datosEnclav[idId] === 1 || datosEnclav[idId] === "1") { elEnc.style.backgroundColor = "#0F23DB"; elEnc.style.borderColor = "#ffffff"; elEnc.style.boxShadow = "0 0 14px #0F23DB"; } 
-                    else { elEnc.style.backgroundColor = "#1a1a1a"; elEnc.style.borderColor = "#444"; elEnc.style.boxShadow = "none"; }
+                    if (datosEnclav[idId] === 1 || datosEnclav[idId] === "1") {
+                        elEnc.style.backgroundColor = "#0F23DB"; elEnc.style.borderColor = "#ffffff"; elEnc.style.boxShadow = "0 0 14px #0F23DB";
+                    } else {
+                        elEnc.style.backgroundColor = "#1a1a1a"; elEnc.style.borderColor = "#444"; elEnc.style.boxShadow = "none";
+                    }
                 }
             }
         });
@@ -2327,13 +2742,21 @@ rotate(45deg);"></div>
 
     function procesarDatosTrafico(datosTrafico, sufijoPanel) {
         if (!datosTrafico) return;
-        var mapeoLeds = { "CDV1": "led-CDV1_" + sufijoPanel, "CDV2": "led-CDV2_" + sufijoPanel, "RF": "led-RF_" + sufijoPanel, "RU": "led-RU_" + sufijoPanel };
+        
+        var mapeoLeds = {
+            "CDV1": "led-CDV1_" + sufijoPanel, "CDV2": "led-CDV2_" + sufijoPanel,
+            "RF":   "led-RF_" + sufijoPanel,     "RU":   "led-RU_" + sufijoPanel
+        };
+        
         Object.keys(mapeoLeds).forEach(function(claveKey) {
             var ledEl = document.getElementById(mapeoLeds[claveKey]);
             if (ledEl) {
                 var valor = datosTrafico[claveKey] !== undefined ? datosTrafico[claveKey] : datosTrafico[claveKey.split('').join('.')];
-                if (valor === 1 || valor === "1") ledEl.className = (claveKey === "CDV1" || claveKey === "CDV2") ? "led-10mm l-on-w" : "led-10mm l-on-b";
-                else ledEl.className = "led-10mm";
+                if (valor === 1 || valor === "1") {
+                    ledEl.className = (claveKey === "CDV1" || claveKey === "CDV2") ? "led-10mm l-on-w" : "led-10mm l-on-b";
+                } else {
+                    ledEl.className = "led-10mm";
+                }
             }
         });
     }
@@ -2343,24 +2766,40 @@ rotate(45deg);"></div>
         Object.keys(dataSenales).forEach(function(id) {
             var idHtml = id.trim();
             var base = document.getElementById(idHtml + '_base') || document.getElementById(idHtml.toLowerCase() + '_base') || document.getElementById(idHtml.toUpperCase() + '_base');
+            
             if(!base) {
                 var idL = idHtml.toLowerCase();
-                if(idL === "sa-bel") base = document.getElementById("sA-BEL_base"); if(idL === "sb-bel") base = document.getElementById("sB-BEL_base");
-                if(idL === "sy-bel") base = document.getElementById("sY-BEL_base"); if(idL === "sz-bel") base = document.getElementById("sZ-BEL_base");
-                if(idL === "sa-nun") base = document.getElementById("sA-NUN_base"); if(idL === "sb-nun") base = document.getElementById("sB-NUN_base");
-                if(idL === "sy-nun") base = document.getElementById("sY-NUN_base"); if(idL === "sz-nun") base = document.getElementById("sZ-NUN_base");
-                if(idL === "sa-riv") base = document.getElementById("sA-RIV_base"); if(idL === "sz-riv") base = document.getElementById("sZ-RIV_base");
-                if(idL === "sa-lop") base = document.getElementById("sA-LOP_base"); if(idL === "sz-lop") base = document.getElementById("sZ-LOP_base");
-                if(idL === "sa-oli") base = document.getElementById("sA-OLI_base"); if(idL === "sb-oli") base = document.getElementById("sB-OLI_base");
-                if(idL === "sy-oli") base = document.getElementById("sY-OLI_base"); if(idL === "sz-oli") base = document.getElementById("sZ-OLI_base");
-                if(idL === "sa-isi") base = document.getElementById("sA-ISI_base"); if(idL === "sb-isi") base = document.getElementById("sB-ISI_base");
-                if(idL === "sw-isi") base = document.getElementById("sW-ISI_base"); if(idL === "sx-isi") base = document.getElementById("sX-ISI_base");
-                if(idL === "sa-mar") base = document.getElementById("sA-MAR_base"); if(idL === "sz-mar") base = document.getElementById("sZ-MAR_base");
-                if(idL === "sa-sf") base = document.getElementById("sA-SF_base");   if(idL === "sz-sf") base = document.getElementById("sZ-SF_base");
-                if(idL === "sa-tig") base = document.getElementById("sA-TIG_base"); if(idL === "sz1-tig") base = document.getElementById("sZ1-TIG_base");
-                if(idL === "sz2-tig") base = document.getElementById("sZ2-TIG_base");if(idL === "sz3-tig") base = document.getElementById("sZ3-TIG_base");
+                if(idL === "sa-bel") base = document.getElementById("sA-BEL_base");
+                if(idL === "sb-bel") base = document.getElementById("sB-BEL_base");
+                if(idL === "sy-bel") base = document.getElementById("sY-BEL_base");
+                if(idL === "sz-bel") base = document.getElementById("sZ-BEL_base");
+                if(idL === "sa-nun") base = document.getElementById("sA-NUN_base");
+                if(idL === "sb-nun") base = document.getElementById("sB-NUN_base");
+                if(idL === "sy-nun") base = document.getElementById("sY-NUN_base");
+                if(idL === "sz-nun") base = document.getElementById("sZ-NUN_base");
+                if(idL === "sa-riv") base = document.getElementById("sA-RIV_base");
+                if(idL === "sz-riv") base = document.getElementById("sZ-RIV_base");
+                if(idL === "sa-lop") base = document.getElementById("sA-LOP_base");
+                if(idL === "sz-lop") base = document.getElementById("sZ-LOP_base");
+                if(idL === "sa-oli") base = document.getElementById("sA-OLI_base");
+                if(idL === "sb-oli") base = document.getElementById("sB-OLI_base");
+                if(idL === "sy-oli") base = document.getElementById("sY-OLI_base");
+                if(idL === "sz-oli") base = document.getElementById("sZ-OLI_base");
+                if(idL === "sa-isi") base = document.getElementById("sA-ISI_base");
+                if(idL === "sb-isi") base = document.getElementById("sB-ISI_base");
+                if(idL === "sw-isi") base = document.getElementById("sW-ISI_base");
+                if(idL === "sx-isi") base = document.getElementById("sX-ISI_base");
+                if(idL === "sa-mar") base = document.getElementById("sA-MAR_base");
+                if(idL === "sz-mar") base = document.getElementById("sZ-MAR_base");
+                if(idL === "sa-sf") base = document.getElementById("sA-SF_base");
+                if(idL === "sz-sf") base = document.getElementById("sZ-SF_base");
+                if(idL === "sa-tig") base = document.getElementById("sA-TIG_base");
+                if(idL === "sz1-tig") base = document.getElementById("sZ1-TIG_base");
+                if(idL === "sz2-tig") base = document.getElementById("sZ2-TIG_base");
+                if(idL === "sz3-tig") base = document.getElementById("sZ3-TIG_base");
                 if(idL === "sz4-tig") base = document.getElementById("sZ4-TIG_base");
             }
+
             if(base) {
                 base.classList.remove('f-rojo', 'f-verde', 'f-maniobra');
                 var estado = dataSenales[id];
@@ -2371,47 +2810,44 @@ rotate(45deg);"></div>
         });
     }
 
-    // ==================================================================
-    // >>> LA ÚNICA ESCUCHA GLOBAL DESDE LA RAÍZ 'CABINAS' (SIN DUPLICADOS)
-    // ==================================================================
+    // ESCUCHA GENERAL DESDE LA RAÍZ 'CABINAS' - ÚNICA ESCUCHA GLOBAL SANEADA
     db.ref('cabinas').on('value', function(snapshot) {
         var cabinas = snapshot.val();
         if(!snapshot.exists() || !cabinas) return;
 
-        // --------------------------------------------------
-        // SECTOR 1: BELGRANO C (CON ACOPLAMIENTO INMEDIATO)
-        // --------------------------------------------------
+        // --- 1. PROCESAMIENTO SECTOR BELGRANO C ---
         var dataBel = cabinas.belgrano;
         if (dataBel) {
             if (dataBel.vias) {
                 Object.keys(dataBel.vias).forEach(function(id) {
-                    var val = dataBel.vias[id], esOcupado = (val === 1 || val === "1"), idL = id.toLowerCase().trim();
+                    var val = dataBel.vias[id]; var esOcupado = (val === 1 || val === "1"); var idL = id.toLowerCase().trim();
                     var el = document.getElementById(id) || document.getElementById(idL) || document.getElementById(id.toUpperCase()) || document.getElementById("c" + idL) || document.getElementById("cdv" + idL) || document.getElementById("CDV" + id.toUpperCase());
+                    
                     if (!el) {
-                        if (idL === "a-bel" || idL === "a-belgrano") el = document.getElementById("a-Bel"); if (idL === "b-bel" || idL === "b-belgrano") el = document.getElementById("b-Bel");
-                        if (idL === "y-bel" || idL === "y-belgrano") el = document.getElementById("y-Bel"); if (idL === "z-bel" || idL === "z-belgrano") el = document.getElementById("z-Bel");
+                        if (idL === "a-bel" || idL === "a-belgrano") el = document.getElementById("a-Bel");
+                        if (idL === "b-bel" || idL === "b-belgrano") el = document.getElementById("b-Bel");
+                        if (idL === "y-bel" || idL === "y-belgrano") el = document.getElementById("y-Bel");
+                        if (idL === "z-bel" || idL === "z-belgrano") el = document.getElementById("z-Bel");
                         if (idL === "cvt7") el = document.getElementById("CVT7");
                     }
-                    if (el) { if (esOcupado) { el.classList.remove('libre'); el.classList.add('ocupado'); } else { el.classList.remove('ocupado'); el.classList.add('libre'); } }
+                    if (el) {
+                        if (esOcupado) { el.classList.remove('libre'); el.classList.add('ocupado'); } 
+                        else { el.classList.remove('ocupado'); el.classList.add('libre'); }
+                    }
                 });
                 if(dataBel.vias["w1pm"] !== undefined) w1_ocupado = (dataBel.vias["w1pm"] === 1 || dataBel.vias["w1pm"] === "1");
                 if(dataBel.vias["w2pm"] !== undefined) w2_ocupado = (dataBel.vias["w2pm"] === 1 || dataBel.vias["w2pm"] === "1");
             }
-            if (dataBel.senales) procesarBloqueSenales(dataBel.senales);
+            if (dataBel.senales) { procesarBloqueSenales(dataBel.senales); }
             if (dataBel.cambios) {
                 if (dataBel.cambios.W12 !== undefined) curW = dataBel.cambios.W12.toString();
                 if (dataBel.cambios.AW12 !== undefined) flagAveria_Bel = dataBel.cambios.AW12;
             }
             procesarDatosTrafico(dataBel.trafico || dataBel.datos_trafico, "B");
             procesarEnclavamientosCambios(dataBel.enclavamientos);
-            
-            // >>> EL SECRETO: Ejecutamos el render de vías de Belgrano al toque en la misma milésima
-            pW(); 
         }
 
-        // --------------------------------------------------
-        // SECTOR 2: NÚÑEZ / RIVADAVIA
-        // --------------------------------------------------
+        // --- 2. PROCESAMIENTO NÚÑEZ / RIVADAVIA ---
         var dataNuz = cabinas.nunez;
         if(dataNuz) {
             if(dataNuz.vias) {
@@ -2455,21 +2891,26 @@ rotate(45deg);"></div>
             procesarEnclavamientosCambios(dataNuz.enclavamientos);
         }
 
-        if(cabinas.trafico_nunez) procesarDatosTrafico(cabinas.trafico_nunez, "N"); else if(dataNuz && dataNuz.trafico) procesarDatosTrafico(dataNuz.trafico, "N");
-        if(cabinas.trafico_rivadavia) procesarDatosTrafico(cabinas.trafico_rivadavia, "R"); else if(cabinas.rivadavia) procesarDatosTrafico(cabinas.rivadavia, "R");
-        if(cabinas.trafico_vlopez) procesarDatosTrafico(cabinas.trafico_vlopez, "VL"); else if(cabinas["vicente lopez"]) procesarDatosTrafico(cabinas["vicente lopez"], "VL");
-        if(cabinas.trafico_lucila) procesarDatosTrafico(cabinas.trafico_lucila, "LL"); else if(cabinas["la lucila"]) procesarDatosTrafico(cabinas["la lucila"], "LL");
-        if(cabinas.trafico_martinez) procesarDatosTrafico(cabinas.trafico_martinez, "MA"); else if(cabinas.martinez) procesarDatosTrafico(cabinas.martinez, "MA");
-        if(cabinas.trafico_acassuso) procesarDatosTrafico(cabinas.trafico_acassuso, "AC"); else if(cabinas.acassuso) procesarDatosTrafico(cabinas.acassuso, "AC");
+        // --- 3. TRAFICOS DE LA RAÍZ ---
+        if(cabinas.trafico_nunez) procesarDatosTrafico(cabinas.trafico_nunez, "N");
+        else if(dataNuz && dataNuz.trafico) procesarDatosTrafico(dataNuz.trafico, "N");
+        if(cabinas.trafico_rivadavia) procesarDatosTrafico(cabinas.trafico_rivadavia, "R");
+        else if(cabinas.rivadavia) procesarDatosTrafico(cabinas.rivadavia, "R");
+        if(cabinas.trafico_vlopez) procesarDatosTrafico(cabinas.trafico_vlopez, "VL");
+        else if(cabinas["vicente lopez"]) procesarDatosTrafico(cabinas["vicente lopez"], "VL");
+        if(cabinas.trafico_lucila) procesarDatosTrafico(cabinas.trafico_lucila, "LL");
+        else if(cabinas["la lucila"]) procesarDatosTrafico(cabinas["la lucila"], "LL");
+        if(cabinas.trafico_martinez) procesarDatosTrafico(cabinas.trafico_martinez, "MA");
+        else if(cabinas.martinez) procesarDatosTrafico(cabinas.martinez, "MA");
+        if(cabinas.trafico_acassuso) procesarDatosTrafico(cabinas.trafico_acassuso, "AC");
+        else if(cabinas.acassuso) procesarDatosTrafico(cabinas.acassuso, "AC");
         if(cabinas.trafico_sisidro) procesarDatosTrafico(cabinas.trafico_sisidro, "SI");
         if(cabinas.trafico_virreyes) procesarDatosTrafico(cabinas.trafico_virreyes, "V");
         if(cabinas.sanfernando && cabinas.sanfernando.trafico) procesarDatosTrafico(cabinas.sanfernando.trafico, "SF");
         if(cabinas.trafico_carupa) procesarDatosTrafico(cabinas.trafico_carupa, "C");
         if(cabinas.trafico_beccar) procesarDatosTrafico(cabinas.trafico_beccar, "BC");
 
-        // --------------------------------------------------
-        // SECTOR 3: OLIVOS
-        // --------------------------------------------------
+        // --- 4. PROCESAMIENTO CABINA OLIVOS ---
         var dataOli = cabinas.olivos;
         if(dataOli) {
             if(dataOli.vias) {
@@ -2514,9 +2955,7 @@ rotate(45deg);"></div>
             procesarEnclavamientosCambios(dataOli.enclavamientos);
         }
 
-        // --------------------------------------------------
-        // SECTOR 4: SAN ISIDRO
-        // --------------------------------------------------
+        // --- 5. PROCESAMIENTO CABINA SAN ISIDRO ---
         var dataIsi = cabinas["san isidro"] || cabinas.sanIsidro || cabinas.isidro || cabinas.sanisidro; 
         if(dataIsi) {
             if(dataIsi.vias) {
@@ -2557,9 +2996,7 @@ rotate(45deg);"></div>
             procesarEnclavamientosCambios(dataIsi.enclavamientos);
         }
 
-        // --------------------------------------------------
-        // SECTOR 5: SAN FERNANDO
-        // --------------------------------------------------
+        // --- 6. PROCESAMIENTO CABINA SAN FERNANDO ---
         var dataSf = cabinas.sanfernando || cabinas["san fernando"];
         if(dataSf) {
             if(dataSf.vias) {
@@ -2597,9 +3034,7 @@ rotate(45deg);"></div>
             procesarEnclavamientosCambios(dataSf.enclavamientos);
         }
 
-        // --------------------------------------------------
-        // SECTOR 6: TIGRE
-        // --------------------------------------------------
+        // --- 7. PROCESAMIENTO CABINA TERMINAL TIGRE ---
         var dataTig = cabinas.tigre || cabinas["tigre"];
         if(dataTig) {
             if(dataTig.vias) {
@@ -2610,7 +3045,7 @@ rotate(45deg);"></div>
 
                 Object.keys(dataTig.vias).forEach(function(id) {
                     var el = document.getElementById(id) || document.getElementById(id.toLowerCase()) || document.getElementById(id.toUpperCase());
-                    if(el) el.classList.toggle('libre', dataTig.vias[id] === 0);
+                    if(el) { el.classList.toggle('libre', dataTig.vias[id] === 0); }
                 });
             }
             if(dataTig.panes) {
@@ -2632,7 +3067,7 @@ rotate(45deg);"></div>
                 if(dataTig.cambios.AW72 !== undefined) cambiosNuz["72"].avg = dataTig.cambios.AW72;
                 if(dataTig.cambios.AW75 !== undefined) cambiosNuz["75"].avg = dataTig.cambios.AW75;
             }
-            if(dataTig.trafico) procesarDatosTrafico(dataTig.trafico, "T");
+            if(dataTig.trafico) { procesarDatosTrafico(dataTig.trafico, "T"); }
             procesarBloqueSenales(dataTig.senales);
             procesarEnclavamientosCambios(dataTig.enclavamientos);
 
@@ -2641,84 +3076,128 @@ rotate(45deg);"></div>
             }
         }
 
-        // --------------------------------------------------
-        // SECTOR 7: VICTORIA
-        // --------------------------------------------------
+        // --- 8. PROCESAMIENTO CABINA VICTORIA ---
         var dataVic = cabinas.victoria || cabinas["victoria"] || cabinas.vic;
         if (dataVic) {
             if(dataVic.vias) {
                 if(dataVic.vias["w41pm"] !== undefined) cambiosNuz["4041"].ocu = (dataVic.vias["w41pm"] === 1);  
                 if(dataVic.vias["w40pm"] !== undefined) cambiosNuz["4041"].ocuAbajo = (dataVic.vias["w40pm"] === 1);
-                if(dataVic.vias["w152pm"] !== undefined) cambiosNuz["152"].ocu = (dataVic.vias["w152pm"] === 1); else if(dataVic.vias["w152"] !== undefined) cambiosNuz["152"].ocu = (dataVic.vias["w152"] === 1);
+                
+                if(dataVic.vias["w152pm"] !== undefined) { cambiosNuz["152"].ocu = (dataVic.vias["w152pm"] === 1); } 
+                else if(dataVic.vias["w152"] !== undefined) { cambiosNuz["152"].ocu = (dataVic.vias["w152"] === 1); }
+
                 if(dataVic.vias["w141pm"] !== undefined) cambiosNuz["43141"].ocu = (dataVic.vias["w141pm"] === 1);
                 if(dataVic.vias["w43pm"] !== undefined)  cambiosNuz["43141"].ocuAbajo = (dataVic.vias["w43pm"] === 1);
+
                 if(dataVic.vias["w45apm"] !== undefined) cambiosNuz["4545a"].ocu = (dataVic.vias["w45apm"] === 1);
                 if(dataVic.vias["w45pm"] !== undefined)  cambiosNuz["4545a"].ocuAbajo = (dataVic.vias["w45pm"] === 1);
+
                 if(dataVic.vias["w46pm"] !== undefined) cambiosNuz["4649"].ocu = (dataVic.vias["w46pm"] === 1);
                 if(dataVic.vias["w49pm"] !== undefined) cambiosNuz["4649"].ocuAbajo = (dataVic.vias["w49pm"] === 1);
+
                 if(dataVic.vias["w51pm"] !== undefined) cambiosNuz["5152"].ocu = (dataVic.vias["w51pm"] === 1);
                 if(dataVic.vias["w52pm"] !== undefined) cambiosNuz["5152"].ocuAbajo = (dataVic.vias["w52pm"] === 1);
+
                 if(dataVic.vias["w54pm"] !== undefined)  cambiosNuz["15454"].ocu = (dataVic.vias["w54pm"] === 1);
                 if(dataVic.vias["w154pm"] !== undefined) cambiosNuz["15454"].ocuAbajo = (dataVic.vias["w154pm"] === 1);
+
                 if(dataVic.vias["w56bpm"] !== undefined)  cambiosNuz["15656b"].ocu = (dataVic.vias["w56bpm"] === 1);
                 if(dataVic.vias["w156pm"] !== undefined) cambiosNuz["15656b"].ocuAbajo = (dataVic.vias["w156pm"] === 1);
+
                 if(dataVic.vias["w150pm"] !== undefined) cambiosNuz["50150"].ocu = (dataVic.vias["w150pm"] === 1);
                 if(dataVic.vias["w50pm"] !== undefined)  cambiosNuz["50150"].ocuAbajo = (dataVic.vias["w50pm"] === 1);
+
                 if(dataVic.vias["w56apm"] !== undefined) cambiosNuz["56a55"].ocu = (dataVic.vias["w56apm"] === 1);
                 if(dataVic.vias["w55pm"] !== undefined)  cambiosNuz["56a55"].ocuAbajo = (dataVic.vias["w55pm"] === 1);
-                if(dataVic.vias["w151pm"] !== undefined) cambiosNuz["151"].ocu = (dataVic.vias["w151pm"] === 1); else if(dataVic.vias["w151"] !== undefined) cambiosNuz["151"].ocu = (dataVic.vias["w151"] === 1);
-                if(dataVic.vias["w142pm"] !== undefined) cambiosNuz["142"].ocu = (dataVic.vias["w142pm"] === 1); else if(dataVic.vias["w142"] !== undefined) cambiosNuz["142"].ocu = (dataVic.vias["w142"] === 1);
-                if(dataVic.vias["w53pm"] !== undefined)  cambiosNuz["53"].ocu = (dataVic.vias["w53pm"] === 1); else if(dataVic.vias["w53"] !== undefined) cambiosNuz["53"].ocu = (dataVic.vias["w53"] === 1);
+
+                if(dataVic.vias["w151pm"] !== undefined) { cambiosNuz["151"].ocu = (dataVic.vias["w151pm"] === 1); } 
+                else if(dataVic.vias["w151"] !== undefined) { cambiosNuz["151"].ocu = (dataVic.vias["w151"] === 1); }
+
+                if(dataVic.vias["w142pm"] !== undefined) { cambiosNuz["142"].ocu = (dataVic.vias["w142pm"] === 1); } 
+                else if(dataVic.vias["w142"] !== undefined) { cambiosNuz["142"].ocu = (dataVic.vias["w142"] === 1); }
+
+                if(dataVic.vias["w53pm"] !== undefined) { cambiosNuz["53"].ocu = (dataVic.vias["w53pm"] === 1); } 
+                else if(dataVic.vias["w53"] !== undefined) { cambiosNuz["53"].ocu = (dataVic.vias["w53"] === 1); }
+
                 if(dataVic.vias["w147pm"] !== undefined) cambiosNuz["147140"].ocu = (dataVic.vias["w147pm"] === 1);
                 if(dataVic.vias["w140pm"] !== undefined) cambiosNuz["147140"].ocuAbajo = (dataVic.vias["w140pm"] === 1);
-                if(dataVic.vias["w145pm"] !== undefined)  cambiosNuz["145"].ocu = (dataVic.vias["w145pm"] === 1); else if(dataVic.vias["w145"] !== undefined) cambiosNuz["145"].ocu = (dataVic.vias["w145"] === 1);
+
+                if(dataVic.vias["w145pm"] !== undefined)  cambiosNuz["145"].ocu = (dataVic.vias["w145pm"] === 1);
+                else if(dataVic.vias["w145"] !== undefined) cambiosNuz["145"].ocu = (dataVic.vias["w145"] === 1);
+
                 if(dataVic.vias["w47pm"] !== undefined)  cambiosNuz["47143"].ocu = (dataVic.vias["w47pm"] === 1);
                 if(dataVic.vias["w143pm"] !== undefined) cambiosNuz["47143"].ocuAbajo = (dataVic.vias["w143pm"] === 1);
+                
                 if(dataVic.vias["w44pm"] !== undefined)  cambiosNuz["4449x"].ocu = (dataVic.vias["w44pm"] === 1);  
-                if(dataVic.vias["w49xpm"] !== undefined) cambiosNuz["4449x"].ocuAbajo = (dataVic.vias["w49xpm"] === 1);
+                if(dataVic.vias["w49xpm"] !== undefined)  cambiosNuz["4449x"].ocuAbajo = (dataVic.vias["w49xpm"] === 1);
 
                 Object.keys(dataVic.vias).forEach(function(id) {
-                    if (["w41plus", "w41minus", "w41pm", "w40plus", "w40minus", "w40pm", "w152plus", "w152minus", "w152pm", "w141plus", "w141minus", "w141pm", "w43plus", "w43minus", "w43pm", "w45aplus", "w45aminus", "w45apm", "w45plus", "w45minus", "w45pm", "w46plus", "w46minus", "w46pm", "w49plus", "w49minus", "w49pm", "w51plus", "w51minus", "w51pm", "w52plus", "w52minus", "w52pm", "w54plus", "w54minus", "w54pm", "w154plus", "w154minus", "w154pm", "w56bplus", "w56bminus", "w56bpm", "w156plus", "w156minus", "w156pm", "w150plus", "w150minus", "w150pm", "w50plus", "w50minus", "w50pm", "w56aplus", "w56aminus", "w56apm", "w55plus", "w55minus", "w55pm", "w151plus", "w151minus", "w151pm", "w142plus", "w142minus", "w142pm", "w53plus", "w53minus", "w53pm", "w147plus", "w147minus", "w147pm", "w140plus", "w140minus", "w140pm", "w145plus", "w145minus", "w145pm", "w47plus", "w47minus", "w47pm", "w143plus", "w143minus", "w143pm", "w44plus", "w44minus", "w44pm", "w49xplus", "w49xminus", "w49xpm"].includes(id)) return;
+                    if (["w41plus", "w41minus", "w41pm", "w40plus", "w40minus", "w40pm", "w152plus", "w152minus", "w152pm", "w141plus", "w141minus", "w141pm", "w43plus", "w43minus", "w43pm", "w45aplus", "w45aminus", "w45apm", "w45plus", "w45minus", "w45pm", "w46plus", "w46minus", "w46pm", "w49plus", "w49minus", "w49pm", "w51plus", "w51minus", "w51pm", "w52plus", "w52minus", "w52pm", "w54plus", "w54minus", "w54pm", "w154plus", "w154minus", "w154pm", "w56bplus", "w56bminus", "w56bpm", "w156plus", "w156minus", "w156pm", "w150plus", "w150minus", "w150pm", "w50plus", "w50minus", "w50pm", "w56aplus", "w56aminus", "w56apm", "w55plus", "w55minus", "w55pm", "w151plus", "w151minus", "w151pm", "w142plus", "w142minus", "w142pm", "w53plus", "w53minus", "w53pm", "w147plus", "w147minus", "w147pm", "w140plus", "w140minus", "w140pm", "w145plus", "w145minus", "w145pm", "w47plus", "w47minus", "w47pm", "w143plus", "w143minus", "w143pm", "w44plus", "w44minus", "w44pm", "w49xplus", "w49xminus", "w49xpm"].includes(id)) { 
+                        return; 
+                    }
                     var el = document.getElementById(id) || document.getElementById(id.toLowerCase()) || document.getElementById(id.toUpperCase());
-                    if(el) { el.classList.toggle('libre', dataVic.vias[id] === 0); el.classList.toggle('ocupado', dataVic.vias[id] === 1); }
+                    if(el) {
+                        el.classList.toggle('libre', dataVic.vias[id] === 0); el.classList.toggle('ocupado', dataVic.vias[id] === 1);
+                    }
                 });
             } 
 
             if(dataVic.cambios) {
                 if(dataVic.cambios.W4041 !== undefined)   cambiosNuz["4041"].cur = dataVic.cambios.W4041.toString();
                 if(dataVic.cambios.W152 !== undefined)    cambiosNuz["152"].cur = dataVic.cambios.W152.toString();
-                if(dataVic.cambios.W43141 !== undefined) cambiosNuz["43141"].cur = dataVic.cambios.W43141.toString(); else if(dataVic.cambios.W43 !== undefined) cambiosNuz["43141"].cur = dataVic.cambios.W43.toString();
-                if(dataVic.cambios.W4545a !== undefined) cambiosNuz["4545a"].cur = dataVic.cambios.W4545a.toString(); else if(dataVic.cambios.W45 !== undefined) cambiosNuz["4545a"].cur = dataVic.cambios.W45.toString();
-                if(dataVic.cambios.W4649 !== undefined) cambiosNuz["4649"].cur = dataVic.cambios.W4649.toString(); else if(dataVic.cambios.W46 !== undefined) cambiosNuz["4649"].cur = dataVic.cambios.W46.toString();
-                if(dataVic.cambios.W5152 !== undefined) cambiosNuz["5152"].cur = dataVic.cambios.W5152.toString(); else if(dataVic.cambios.W51 !== undefined) cambiosNuz["5152"].cur = dataVic.cambios.W51.toString();
-                if(dataVic.cambios.W15454 !== undefined) cambiosNuz["15454"].cur = dataVic.cambios.W15454.toString(); else if(dataVic.cambios.W54 !== undefined) cambiosNuz["15454"].cur = dataVic.cambios.W54.toString();
-                if(dataVic.cambios.W15656b !== undefined) cambiosNuz["15656b"].cur = dataVic.cambios.W15656b.toString(); else if(dataVic.cambios.W56b !== undefined) cambiosNuz["15656b"].cur = dataVic.cambios.W56b.toString();
-                if(dataVic.cambios.W50150 !== undefined) cambiosNuz["50150"].cur = dataVic.cambios.W50150.toString(); else if(dataVic.cambios.W50 !== undefined) cambiosNuz["50150"].cur = dataVic.cambios.W50.toString();
-                if(dataVic.cambios.W56a55 !== undefined) cambiosNuz["56a55"].cur = dataVic.cambios.W56a55.toString(); else if(dataVic.cambios.W56a !== undefined) cambiosNuz["56a55"].cur = dataVic.cambios.W56a.toString();
+                if(dataVic.cambios.W43141 !== undefined) cambiosNuz["43141"].cur = dataVic.cambios.W43141.toString();
+                else if(dataVic.cambios.W43 !== undefined) cambiosNuz["43141"].cur = dataVic.cambios.W43.toString();
+                if(dataVic.cambios.W4545a !== undefined) cambiosNuz["4545a"].cur = dataVic.cambios.W4545a.toString();
+                else if(dataVic.cambios.W45 !== undefined) cambiosNuz["4545a"].cur = dataVic.cambios.W45.toString();
+                if(dataVic.cambios.W4649 !== undefined) cambiosNuz["4649"].cur = dataVic.cambios.W4649.toString();
+                else if(dataVic.cambios.W46 !== undefined) cambiosNuz["4649"].cur = dataVic.cambios.W46.toString();
+                if(dataVic.cambios.W5152 !== undefined) cambiosNuz["5152"].cur = dataVic.cambios.W5152.toString();
+                else if(dataVic.cambios.W51 !== undefined) cambiosNuz["5152"].cur = dataVic.cambios.W51.toString();
+                if(dataVic.cambios.W15454 !== undefined) cambiosNuz["15454"].cur = dataVic.cambios.W15454.toString();
+                else if(dataVic.cambios.W54 !== undefined) cambiosNuz["15454"].cur = dataVic.cambios.W54.toString();
+                if(dataVic.cambios.W15656b !== undefined) cambiosNuz["15656b"].cur = dataVic.cambios.W15656b.toString();
+                else if(dataVic.cambios.W56B !== undefined) cambiosNuz["15656b"].cur = dataVic.cambios.W56B.toString();
+                else if(dataVic.cambios.W56b !== undefined) cambiosNuz["15656b"].cur = dataVic.cambios.W56b.toString();
+                if(dataVic.cambios.W50150 !== undefined) cambiosNuz["50150"].cur = dataVic.cambios.W50150.toString();
+                else if(dataVic.cambios.W50 !== undefined) cambiosNuz["50150"].cur = dataVic.cambios.W50.toString();
+                if(dataVic.cambios.W56a55 !== undefined) cambiosNuz["56a55"].cur = dataVic.cambios.W56a55.toString();
+                else if(dataVic.cambios.W56a !== undefined) cambiosNuz["56a55"].cur = dataVic.cambios.W56a.toString();
                 if(dataVic.cambios.W151 !== undefined) cambiosNuz["151"].cur = dataVic.cambios.W151.toString();
                 if(dataVic.cambios.W142 !== undefined) cambiosNuz["142"].cur = dataVic.cambios.W142.toString();
                 if(dataVic.cambios.W53 !== undefined)  cambiosNuz["53"].cur = dataVic.cambios.W53.toString();
                 if(dataVic.cambios.W147140 !== undefined) cambiosNuz["147140"].cur = dataVic.cambios.W147140.toString();
                 if(dataVic.cambios.W145 !== undefined) cambiosNuz["145"].cur = dataVic.cambios.W145.toString();
-                if(dataVic.cambios.W47143 !== undefined) cambiosNuz["47143"].cur = dataVic.cambios.W47143.toString(); else if(dataVic.cambios.W47 !== undefined) cambiosNuz["47143"].cur = dataVic.cambios.W47.toString();
+                if(dataVic.cambios.W47143 !== undefined) cambiosNuz["47143"].cur = dataVic.cambios.W47143.toString();
+                else if(dataVic.cambios.W47 !== undefined) cambiosNuz["47143"].cur = dataVic.cambios.W47.toString();
 
                 if(dataVic.cambios.AW4041 !== undefined)  cambiosNuz["4041"].avg = dataVic.cambios.AW4041;
                 if(dataVic.cambios.AW152 !== undefined)   cambiosNuz["152"].avg = dataVic.cambios.AW152;
-                if(dataVic.cambios.AW43141 !== undefined) cambiosNuz["43141"].avg = dataVic.cambios.AW43141; else if(dataVic.cambios.AW43 !== undefined) cambiosNuz["43141"].avg = dataVic.cambios.AW43;
-                if(dataVic.cambios.AW4545a !== undefined) cambiosNuz["4545a"].avg = dataVic.cambios.AW4545a; else if(dataVic.cambios.AW45 !== undefined) cambiosNuz["4545a"].avg = dataVic.cambios.AW45;
-                if(dataVic.cambios.AW4649 !== undefined) cambiosNuz["4649"].avg = dataVic.cambios.AW4649; else if(dataVic.cambios.AW46 !== undefined) cambiosNuz["4649"].avg = dataVic.cambios.AW46;
-                if(dataVic.cambios.AW5152 !== undefined) cambiosNuz["5152"].avg = dataVic.cambios.AW5152; else if(dataVic.cambios.AW51 !== undefined) cambiosNuz["5152"].avg = dataVic.cambios.AW51;
-                if(dataVic.cambios.AW15454 !== undefined) cambiosNuz["15454"].avg = dataVic.cambios.AW15454; else if(dataVic.cambios.AW54 !== undefined) cambiosNuz["15454"].avg = dataVic.cambios.AW54;
-                if(dataVic.cambios.AW15656b !== undefined) cambiosNuz["15656b"].avg = dataVic.cambios.AW15656b; else if(dataVic.cambios.AW56b !== undefined) cambiosNuz["15656b"].avg = dataVic.cambios.AW56b;
-                if(dataVic.cambios.AW50150 !== undefined) cambiosNuz["50150"].avg = dataVic.cambios.AW50150; else if(dataVic.cambios.AW50 !== undefined) cambiosNuz["50150"].avg = dataVic.cambios.AW50;
-                if(dataVic.cambios.AW56a55 !== undefined) cambiosNuz["56a55"].avg = dataVic.cambios.AW56a55; else if(dataVic.cambios.AW56a !== undefined) cambiosNuz["56a55"].avg = dataVic.cambios.AW56a;
+                if(dataVic.cambios.AW43141 !== undefined) cambiosNuz["43141"].avg = dataVic.cambios.AW43141;
+                else if(dataVic.cambios.AW43 !== undefined) cambiosNuz["43141"].avg = dataVic.cambios.AW43;
+                if(dataVic.cambios.AW4545a !== undefined) cambiosNuz["4545a"].avg = dataVic.cambios.AW4545a;
+                else if(dataVic.cambios.AW45 !== undefined) cambiosNuz["4545a"].avg = dataVic.cambios.AW45;
+                if(dataVic.cambios.AW4649 !== undefined) cambiosNuz["4649"].avg = dataVic.cambios.AW4649;
+                else if(dataVic.cambios.AW46 !== undefined) cambiosNuz["4649"].avg = dataVic.cambios.AW46;
+                if(dataVic.cambios.AW5152 !== undefined) cambiosNuz["5152"].avg = dataVic.cambios.AW5152;
+                else if(dataVic.cambios.AW51 !== undefined) cambiosNuz["5152"].avg = dataVic.cambios.AW51;
+                if(dataVic.cambios.AW15454 !== undefined) cambiosNuz["15454"].avg = dataVic.cambios.AW15454;
+                else if(dataVic.cambios.AW54 !== undefined) cambiosNuz["15454"].avg = dataVic.cambios.AW54;
+                if(dataVic.cambios.AW15656b !== undefined) cambiosNuz["15656b"].avg = dataVic.cambios.AW15656b;
+                else if(dataVic.cambios.AW56b !== undefined) cambiosNuz["15656b"].avg = dataVic.cambios.AW56b;
+                if(dataVic.cambios.AW50150 !== undefined) cambiosNuz["50150"].avg = dataVic.cambios.AW50150;
+                else if(dataVic.cambios.AW50 !== undefined) cambiosNuz["50150"].avg = dataVic.cambios.AW50;
+                if(dataVic.cambios.AW56a55 !== undefined) cambiosNuz["56a55"].avg = dataVic.cambios.AW56a55;
+                else if(dataVic.cambios.AW56a !== undefined) cambiosNuz["56a55"].avg = dataVic.cambios.AW56a;
                 if(dataVic.cambios.AW151 !== undefined) cambiosNuz["151"].avg = dataVic.cambios.AW151;
                 if(dataVic.cambios.AW142 !== undefined) cambiosNuz["142"].avg = dataVic.cambios.AW142;
                 if(dataVic.cambios.AW53 !== undefined) cambiosNuz["53"].avg = dataVic.cambios.AW53;
-                if(dataVic.cambios.AW147140 !== undefined) cambiosNuz["147140"].avg = dataVic.cambios.AW147140; else if(dataVic.cambios.AW147 !== undefined) cambiosNuz["147140"].avg = dataVic.cambios.AW147;
+                if(dataVic.cambios.AW147140 !== undefined) cambiosNuz["147140"].avg = dataVic.cambios.AW147140;
+                else if(dataVic.cambios.AW147 !== undefined) cambiosNuz["147140"].avg = dataVic.cambios.AW147;
                 if(dataVic.cambios.AW145 !== undefined) cambiosNuz["145"].avg = dataVic.cambios.AW145;
-                if(dataVic.cambios.AW47143 !== undefined) cambiosNuz["47143"].avg = dataVic.cambios.AW47143; else if(dataVic.cambios.AW47 !== undefined) cambiosNuz["47143"].avg = dataVic.cambios.AW47;
-                if(dataVic.cambios.AW4449x !== undefined) cambiosNuz["4449x"].avg = dataVic.cambios.AW4449x; else if(dataVic.cambios.AW44 !== undefined) cambiosNuz["4449x"].avg = dataVic.cambios.AW44;
+                if(dataVic.cambios.AW47143 !== undefined) cambiosNuz["47143"].avg = dataVic.cambios.AW47143;
+                else if(dataVic.cambios.AW47 !== undefined) cambiosNuz["47143"].avg = dataVic.cambios.AW47;
+                if(dataVic.cambios.AW4449x !== undefined) cambiosNuz["4449x"].avg = dataVic.cambios.AW4449x;
+                else if(dataVic.cambios.AW44 !== undefined) cambiosNuz["4449x"].avg = dataVic.cambios.AW44;
             }
 
             if(dataVic.panes) {
@@ -2731,36 +3210,51 @@ rotate(45deg);"></div>
                 });
             }
 
-            if(dataVic.trafico) procesarDatosTrafico(dataVic.trafico, "VI");
+            if(dataVic.trafico) { procesarDatosTrafico(dataVic.trafico, "VI"); }
             procesarBloqueSenales(dataVic.senales);
             procesarEnclavamientosCambios(dataVic.enclavamientos);
 
-            if(dataVic.itinerario_v_vic !== undefined) actualizarCartelEspecifico('cartel_ruta_v_vic', 'texto_ruta_v_vic', dataVic.itinerario_v_vic);
-            if(dataVic.itinerario_w_vic !== undefined) actualizarCartelEspecifico('cartel_ruta_w_vic', 'texto_ruta_w_vic', dataVic.itinerario_w_vic);
+            if(dataVic.itinerario_v_vic !== undefined) {
+                actualizarCartelEspecifico('cartel_ruta_v_vic', 'texto_ruta_v_vic', dataVic.itinerario_v_vic);
+            }
+            if(dataVic.itinerario_w_vic !== undefined) {
+                actualizarCartelEspecifico('cartel_ruta_w_vic', 'texto_ruta_w_vic', dataVic.itinerario_w_vic);
+            }
 
             sincronizarViasEspejo(dataVic);
         }
-    }); // FIN DE LA ÚNICA ESCUCHA FIREBASE
+    }); // FIN DE LA ESCUCHA FIREBASE GENERAL
 
     // ==================================================================
-    // >>> FUNCIONES SUELTAS (FUERA DE FIREBASE)
+    // FUNCIONES SUELTAS (AFUERA DE LA ESCUCHA DE FIREBASE)
     // ==================================================================
     function sincronizarViasEspejo(dataVic) {
         if (!dataVic || !dataVic.vias) return;
         var estadoVia = dataVic.vias["cv-vic"];
         if (estadoVia !== undefined) {
-            var elRecta = document.getElementById('cv-vic'), elDiagonal = document.getElementById('cvv-vic'), esLibre = (estadoVia === 0);
+            var elRecta = document.getElementById('cv-vic');
+            var elDiagonal = document.getElementById('cvv-vic');
+            var esLibre = (estadoVia === 0);
             if (elRecta) { elRecta.classList.toggle('libre', esLibre); elRecta.classList.toggle('ocupado', !esLibre); }
             if (elDiagonal) { elDiagonal.classList.toggle('libre', esLibre); elDiagonal.classList.toggle('ocupado', !esLibre); }
         }
     }
 
     function actualizarCartelEspecifico(idCaja, idTexto, datoItinerario) {
-        var cajaExterior = document.getElementById(idCaja), textoInterior = document.getElementById(idTexto);
+        var cajaExterior = document.getElementById(idCaja);
+        var textoInterior = document.getElementById(idTexto);
         if (!cajaExterior || !textoInterior) return;
-        var ruta = String(datoItinerario).trim().toUpperCase(), rutasValidas = ['1', '2', '3', '4', 'T', 'G', 'P', 'M'];
-        if (rutasValidas.includes(ruta)) { textoInterior.innerText = ruta; cajaExterior.style.display = 'flex'; } 
-        else { textoInterior.innerText = ''; cajaExterior.style.display = 'none'; }
+
+        var ruta = String(datoItinerario).trim().toUpperCase();
+        var rutasValidas = ['1', '2', '3', '4', 'T', 'G', 'P', 'M'];
+
+        if (rutasValidas.includes(ruta)) {
+            textoInterior.innerText = ruta;
+            cajaExterior.style.display = 'flex'; 
+        } else {
+            textoInterior.innerText = '';
+            cajaExterior.style.display = 'none'; 
+        }
     }
 
     window.onload = function() {
