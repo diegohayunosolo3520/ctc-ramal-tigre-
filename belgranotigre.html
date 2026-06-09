@@ -3074,6 +3074,9 @@ else if(idW === "7473") {
         if(lP && lM) lP.className = lM.className = "led-rd";
         if(lA) lA.className = (c.avg === 1 || c.avg === "1") ? "led-rd l-red" : "led-rd";
 
+
+
+
         if (c.cur === "1" || c.cur === 1) { if(lP) lP.classList.add('l-white'); } 
         else { if(lM) lM.classList.add('l-white'); }
 
@@ -3248,7 +3251,7 @@ else if(idW === "7473") {
 
         // Procesamiento de LEDs individuales (no compuestos)
         Object.keys(datosEnclav).forEach(function(idId) {
-            if (!idId.toUpperCase().startsWith("EW")) {
+            if (!idId.toUpperCase().startsWith("EW") && !idId.toUpperCase().startsWith("AW")) { // <-- AGREGA ESTE FILTRO
                 var elEnc = document.getElementById(idId) || document.getElementById(idId.toUpperCase()) || document.getElementById(idId.toLowerCase());
                 if (elEnc) {
                     if (datosEnclav[idId] === 1 || datosEnclav[idId] === "1") {
