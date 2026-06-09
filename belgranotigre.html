@@ -38,14 +38,7 @@
     .v-abajo::after { top: 18px; }
 
     .via-fantasma { background-color: #2a2d32 !important; border: none !important; color: transparent !important; z-index: 25 !important; box-shadow: none !important; }
-    .libre { 
-    /* Un blanco grisáceo suave (#F0F0F0) en lugar de blanco puro (#FFFFFF) */
-    background-color: #F0F0F0 !important; 
-    border-color: #DCDCDC !important; /* Un borde un poco más oscuro para que se defina la forma */
-    color: #333333 !important; /* Un gris oscuro en lugar de negro puro, es más descansado para la vista */
-    /* Sombra mucho más sutil y difusa */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) !important; 
-}
+  .libre { background-color: #00FF00 !important; border-color: #00FF00 !important; color: transparent !important; box-shadow: 0 0 10px #0f0 !important; }
 
     .diagonal { transform-origin: 0% 50%; }
 
@@ -1087,7 +1080,7 @@ rotate(45deg);"></div>
 <div class="pan-etiqueta" style="top: 705px; left: 8620px;">MAIPU</div><div class="pan-rect" style="top: 650px; left: 8600px;"></div>
     <div class="ind-pan-container" style="top: 1060px; left: 8600px;"><div id="B_MAI_A" class="ind-alto active"></div><div id="B_MAI_B" class="ind-bajo"></div></div>
 
-<div class="pan-etiqueta" style="top: 685px; left: 8955px;">9DEJULIO</div><div class="pan-rect" style="top: 650px; left: 8930px;"></div>
+<div class="pan-etiqueta" style="top: 705px; left: 8950px;">9DEJULIO</div><div class="pan-rect" style="top: 650px; left: 8930px;"></div>
     <div class="ind-pan-container" style="top: 1060px; left: 8930px;"><div id="B_9DJ_A" class="ind-alto active"></div><div id="B_9DJ_B" class="ind-bajo"></div></div>
 
 <div class="pan-etiqueta" style="top: 705px; left: 9195px;">ALVEAR</div><div class="pan-rect" style="top: 650px; left: 9175px;"></div>
@@ -1905,7 +1898,7 @@ rotate(45deg);"></div>
         "AYACUCHO":    { pos: 0, av: 1, idAlto: 'B_AYA_A', idBajo: 'B_AYA_B' },
         "GUIDO SPANO":     { pos: 0, av: 1, idAlto: 'B_GSP_A', idBajo: 'B_GSP_B' },
         "MAIPU":       { pos: 0, av: 1, idAlto: 'B_MAI_A', idBajo: 'B_MAI_B' },
-        "9DEJULIO":    { pos: 0, av: 1, idAlto: 'B_9DJ_A', idBajo: 'B_9DJ_B' },
+        "9 DE JULIO":    { pos: 0, av: 1, idAlto: 'B_9DJ_A', idBajo: 'B_9DJ_B' },
         "ALVEAR":      { pos: 0, av: 1, idAlto: 'B_AVR_A', idBajo: 'B_AVR_B' },
         "RIVADAVIA":   { pos: 0, av: 1, idAlto: 'B_RIV_A', idBajo: 'B_RIV_B' },
         "MARABOTTO":   { pos: 0, av: 1, idAlto: 'B_MAR_A', idBajo: 'B_MAR_B' },
@@ -3040,16 +3033,37 @@ rotate(45deg);"></div>
             wAbajoPm  = document.getElementById('w62pm'); 
             
             // ASIGNACIÓN CRÍTICA: Ambas ocupaciones listas
-            ocuArriba = (cambiosNuz["6265"] ? cambiosNuz["6265"].ocu : false); // <-- ¡ESTA TAMBIÉN FALTABA!
+            ocuArriba = (cambiosNuz["6265"] ? cambiosNuz["6265"].ocu : false);            
             ocuAbajo  = (cambiosNuz["6265"] ? cambiosNuz["6265"].ocuAbajo : false); 
+
         }
-        // Cabina Tigre (7071 y 7473)
-        else if(idW === "7071"){
-            wAbajoP = document.getElementById('w70plus');
-            wAbajoM = document.getElementById('w70minus'); 
-            wAbajoPm = document.getElementById('w70pm'); ocuAbajo = false; } 
-        
-        else if(idW === "7473") { wAbajoP = document.getElementById('w74plus'); wAbajoM = document.getElementById('w74minus'); wAbajoPm = document.getElementById('w74pm'); ocuAbajo = false; }
+      // Cabina Tigre (7071)
+else if(idW === "7071") { 
+    // Usamos variables distintas para no sobreescribir
+    wArribaP = document.getElementById('w71plus'); 
+    wArribaM = document.getElementById('w71minus'); 
+    wArribaPm = document.getElementById('w71pm');
+
+    wAbajoP = document.getElementById('w70plus'); 
+    wAbajoM = document.getElementById('w70minus'); 
+    wAbajoPm = document.getElementById('w70pm');
+
+    ocuArriba = (cambiosNuz["7071"] ? cambiosNuz["7071"].ocu : false);            
+    ocuAbajo  = (cambiosNuz["7071"] ? cambiosNuz["7071"].ocuAbajo : false); 
+}
+else if(idW === "7473") { 
+    wArribaP = document.getElementById('w73plus'); 
+    wArribaM = document.getElementById('w73minus'); 
+    wArribaPm = document.getElementById('w73pm');
+
+    wAbajoP = document.getElementById('w74plus'); 
+    wAbajoM = document.getElementById('w74minus'); 
+    wAbajoPm = document.getElementById('w74pm');
+
+    ocuArriba = (cambiosNuz["7473"] ? cambiosNuz["7473"].ocu : false);            
+    ocuAbajo  = (cambiosNuz["7473"] ? cambiosNuz["7473"].ocuAbajo : false); 
+}
+
         
         // --- 3. FILTRO PARA DESVÍOS INDEPENDIENTES / EXCLUSIVOS TERMINALES (W72, W75, W152, etc.) ---
         else {
@@ -3074,28 +3088,36 @@ rotate(45deg);"></div>
                     wArribaPm.classList.add(claseEst72); wArribaM.classList.add(claseEst72); wArribaP.classList.add('via-fantasma');
                 }
             }
-            if (idW === "75") {
-                var colorEst75 = c.ocu ? 'ocupado' : 'libre'; 
-                var esAv75 = (c.avg === 1 || c.avg === "1");
-                var v75pm = document.getElementById('w75pm'), v75mm = document.getElementById('w75mm') || document.getElementById('W75MM');
-                var v75plus = document.getElementById('w75plus') || document.getElementById('W75PLUS'), v75minus = document.getElementById('w75minus') || document.getElementById('W75MINUS');
 
-                if (esAv75 && tic) {
-                    if (v75pm) v75pm.className = "via v-arriba via-fantasma"; if (v75mm) v75mm.className = "via diagonal v-arriba via-fantasma";
-                } else {
-                    if (v75pm) { v75pm.className = "via v-arriba"; v75pm.classList.add(colorEst75); }
-                    if (v75mm) { v75mm.className = "via diagonal v-arriba"; v75mm.classList.add(colorEst75); }
-                }
 
-                if (c.cur === "1" || c.cur === 1) {
-                    if (v75plus) { v75plus.className = "via v-arriba"; if (!(esAv75 && tic)) v75plus.classList.add(colorEst75); else v75plus.classList.add('via-fantasma'); }
-                    if (v75minus) v75minus.className = "via diagonal v-arriba via-fantasma";
-                } else {
-                    if (v75minus) { v75minus.className = "via diagonal v-arriba"; if (!(esAv75 && tic)) v75minus.classList.add(colorEst75); else v75minus.classList.add('via-fantasma'); }
-                    if (v75plus) v75plus.className = "via v-arriba via-fantasma";
-                }
-            }
-            return; // Bloquea ejecución aquí para los desvíos directos a paragolpes
+           if (idW === "75") {
+        var colorEst75 = c.ocu ? 'ocupado' : 'libre'; 
+        var esAv75 = (c.avg === 1 || c.avg === "1");
+        var v75pm = document.getElementById('w75pm'), v75mm = document.getElementById('w75mm') || document.getElementById('W75MM');
+        var v75plus = document.getElementById('w75plus') || document.getElementById('W75PLUS'), v75minus = document.getElementById('w75minus') || document.getElementById('W75MINUS');
+
+        // 1. Avería general solo aplicada al segmento principal (w75pm)
+        if (esAv75 && tic) {
+            if (v75pm) v75pm.className = "via v-arriba via-fantasma"; 
+        } else {
+            if (v75pm) { v75pm.className = "via v-arriba"; v75pm.classList.add(colorEst75); }
+        }
+
+        // 2. Lógica de posición del cambio (Desvíos)
+        if (c.cur === "1" || c.cur === 1) {
+            if (v75plus) { v75plus.className = "via v-arriba"; if (!(esAv75 && tic)) v75plus.classList.add(colorEst75); else v75plus.classList.add('via-fantasma'); }
+            if (v75minus) v75minus.className = "via diagonal v-arriba via-fantasma";
+        } else {
+            if (v75minus) { v75minus.className = "via diagonal v-arriba"; if (!(esAv75 && tic)) v75minus.classList.add(colorEst75); else v75minus.classList.add('via-fantasma'); }
+            if (v75plus) v75plus.className = "via v-arriba via-fantasma";
+        }
+
+        // 3. ESPEJO EXACTO: w75mm copia w75minus independientemente de su estado
+        if (v75mm && v75minus) {
+            v75mm.className = v75minus.className;
+        }
+    }
+    return; // Bloquea ejecución aquí para los desvíos directos a paragolpes
         }
 
         if(!wArribaP || !wArribaM || !wArribaPm) return;
@@ -3647,7 +3669,6 @@ if (dataTig && dataTig.status) {
     }
 
 
-           
             if(dataTig.vias) {
                 // --- CORRECCIÓN: Guardar ocupación en la matriz de cambios de Tigre ---
                 if(dataTig.vias["w71pm"] !== undefined) cambiosNuz["7071"].ocu = (dataTig.vias["w71pm"] === 1);
@@ -3666,7 +3687,6 @@ if (dataTig && dataTig.status) {
                     }
                 });
             }
-
             if(dataTig.panes) {
                 Object.keys(dataTig.panes).forEach(function(idPan) {
                     if(panesNuz[idPan] && dataTig.panes[idPan] !== undefined) {
