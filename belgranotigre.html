@@ -38,7 +38,15 @@
     .v-abajo::after { top: 18px; }
 
     .via-fantasma { background-color: #2a2d32 !important; border: none !important; color: transparent !important; z-index: 25 !important; box-shadow: none !important; }
-    .libre { background-color: #00FF00 !important; border-color: #00FF00 !important; color: transparent !important; box-shadow: 0 0 10px #0f0 !important; }
+    .libre { 
+    /* Un blanco grisáceo suave (#F0F0F0) en lugar de blanco puro (#FFFFFF) */
+    background-color: #F0F0F0 !important; 
+    border-color: #DCDCDC !important; /* Un borde un poco más oscuro para que se defina la forma */
+    color: #333333 !important; /* Un gris oscuro en lugar de negro puro, es más descansado para la vista */
+    /* Sombra mucho más sutil y difusa */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) !important; 
+}
+
     .diagonal { transform-origin: 0% 50%; }
 
     /* --- PANELES CONTROLES SUPERIORES --- */
