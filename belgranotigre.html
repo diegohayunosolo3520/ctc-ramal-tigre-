@@ -3036,7 +3036,11 @@ rotate(45deg);"></div>
             ocuAbajo  = (cambiosNuz["6265"] ? cambiosNuz["6265"].ocuAbajo : false); 
         }
         // Cabina Tigre (7071 y 7473)
-        else if(idW === "7071") { wAbajoP = document.getElementById('w70plus'); wAbajoM = document.getElementById('w70minus'); wAbajoPm = document.getElementById('w70pm'); ocuAbajo = false; } 
+        else if(idW === "7071"){
+            wAbajoP = document.getElementById('w70plus');
+            wAbajoM = document.getElementById('w70minus'); 
+            wAbajoPm = document.getElementById('w70pm'); ocuAbajo = false; } 
+        
         else if(idW === "7473") { wAbajoP = document.getElementById('w74plus'); wAbajoM = document.getElementById('w74minus'); wAbajoPm = document.getElementById('w74pm'); ocuAbajo = false; }
         
         // --- 3. FILTRO PARA DESVÍOS INDEPENDIENTES / EXCLUSIVOS TERMINALES (W72, W75, W152, etc.) ---
@@ -3635,10 +3639,15 @@ if (dataTig && dataTig.status) {
     }
 
 
+           
             if(dataTig.vias) {
                 // --- CORRECCIÓN: Guardar ocupación en la matriz de cambios de Tigre ---
                 if(dataTig.vias["w71pm"] !== undefined) cambiosNuz["7071"].ocu = (dataTig.vias["w71pm"] === 1);
+                if(dataTig.vias["w70pm"] !== undefined) cambiosNuz["7071"].ocuAbajo = (dataTig.vias["w70pm"] === 1);
+
                 if(dataTig.vias["w73pm"] !== undefined) cambiosNuz["7473"].ocu = (dataTig.vias["w73pm"] === 1);
+                if(dataTig.vias["w74pm"] !== undefined) cambiosNuz["7473"].ocuAbajo = (dataTig.vias["w74pm"] === 1);
+
                 if(dataTig.vias["w72pm"] !== undefined) cambiosNuz["72"].ocu = (dataTig.vias["w72pm"] === 1);
                 if(dataTig.vias["w75pm"] !== undefined) cambiosNuz["75"].ocu = (dataTig.vias["w75pm"] === 1);
 
@@ -3649,6 +3658,7 @@ if (dataTig && dataTig.status) {
                     }
                 });
             }
+
             if(dataTig.panes) {
                 Object.keys(dataTig.panes).forEach(function(idPan) {
                     if(panesNuz[idPan] && dataTig.panes[idPan] !== undefined) {
