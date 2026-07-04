@@ -13,11 +13,23 @@
     .s-nombre-real { color: #FFFF00; font-size: 10px; font-weight: bold; margin-bottom: -2px; text-shadow: 1px 1px 2px #000; }
     .s-grafico-real { display: flex; align-items: center; justify-content: center; }
     .t-girada { font-size: 35px; font-weight: bold; transform: rotate(-90deg); margin-right: -10px; line-height: 1; transition: 0.2s; }
-    .circulo-led { width: 22px; height: 22px; border-radius: 50%; background-color: #200; transition: 0.2s; }
+    .circulo-led { width: 22px; height: 22px; border-radius: 50%; background-color: #200; transition: 0.2s; } 
+.curva-led {
+        width: 14px; /* Aumentado */
+        height: 14px; /* Aumentado */
+        background-color: #B8F5B8;
+        transition: 0.2s;
+        border-radius: 0 14px 0 0; 
+        margin-top: -1px;
+transform: rotate(-270deg);
+    }
+
 
     /* --- SEÑALES ENANAS --- */
     .enana .t-girada { font-size: 22px !important; margin-right: -6px !important; }
     .enana .circulo-led { width: 14px !important; height: 14px !important; }
+    .enana .curva-led { width: 14px !important; height: 14px !important; }
+
     .enana .s-nombre-real { font-size: 10px !important; }
 
     .sentido-izq .s-grafico-real { flex-direction: row-reverse; }
@@ -26,10 +38,16 @@
     /* ESTADOS DE COLORES SEÑALES */
     .f-rojo .t-girada { color: #FF0000 !important; }
     .f-rojo .circulo-led { background-color: #FF0000 !important; box-shadow: 0 0 15px #FF0000; }
+    .f-rojo .curva-led { background-color: #FF0000 !important; box-shadow: 0 0 15px #FF0000; }
+
     .f-verde .t-girada { color: #00FF00 !important; }
     .f-verde .circulo-led { background-color: #00FF00 !important; box-shadow: 0 0 15px #00FF00; }
+    .f-verde .curva-led { background-color: #00FF00 !important; box-shadow: 0 0 15px #00FF00; }
+
     .f-maniobra .t-girada { color: #FFFF00 !important; }
     .f-maniobra .circulo-led { background-color: #FFFF00 !important; box-shadow: 0 0 15px #FFFF00; }
+    .f-maniobra .curva-led { background-color: #FFFF00 !important; box-shadow: 0 0 15px #FFFF00; }
+
 
 /* --- ESTILO VÍAS --- */
     .via { 
@@ -1414,7 +1432,7 @@ rotate(45deg);"></div>
   <div class="s-nombre-real">2A</div>
   <div class="s-grafico-real">
     <div class="t-girada">T</div>
-    <div class="circulo-led"></div>
+    <div class="curva-led"></div>
   </div>
 </div>
 
@@ -1422,19 +1440,20 @@ rotate(45deg);"></div>
   <div class="s-nombre-real">1BA</div>
   <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content: center;">
     <div class="t-girada">T</div>
-    <div class="circulo-led"></div>
-  </div>
+    <div class="curva-led"></div>
+</div>
 </div>
 
-    <div id="s12a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 1925px;"><div class="s-nombre-real">12A</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
-    <div id="s10a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 1550px;"><div class="s-nombre-real">10A</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+    <div id="s12a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 1925px;"><div class="s-nombre-real">12A</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="curva-led"></div></div></div>
+    <div id="s10a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 1550px;"><div class="s-nombre-real">10A</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="curva-led"></div></div></div>
     
 <div id="s17a_base" class="senal-unificada f-rojo nombre-s-abajo enana" style="top: 865px; left: 2125px;">
 
   <div class="s-nombre-real">17A</div>
   <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content: center;">
     <div class="t-girada">T</div>
-    <div class="circulo-led"></div>
+     <div class="curva-led"></div>
+
   </div>
 </div>
 
@@ -1444,7 +1463,7 @@ rotate(45deg);"></div>
 <div class="s-nombre-real">13A</div>
 <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content: center;">
     <div class="t-girada">T</div>
-    <div class="circulo-led"></div>
+    <div class="curva-led"></div>
   </div>
 </div>
 
@@ -1452,46 +1471,46 @@ rotate(45deg);"></div>
 <div class="s-nombre-real">21A</div>
 <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content: center;">
     <div class="t-girada">T</div>
-    <div class="circulo-led"></div>
+    <div class="curva-led"></div>
   </div>
 </div>
 
   
 <div id="s20a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 3360px;">
-<div class="s-nombre-real">20A</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+<div class="s-nombre-real">20A</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="curva-led"></div></div></div>
 
 <div id="s25a_base" class="senal-unificada f-rojo nombre-s-abajo enana" style="top: 865px; left: 3865px;">
 <div class="s-nombre-real">25A</div>
 <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content: center;">
     <div class="t-girada">T</div>
-    <div class="circulo-led"></div>
+    <div class="curva-led"></div>
   </div>
 </div>
  
 
 
 <div id="s24a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 3690px;">
-<div class="s-nombre-real">24A</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div></div>
+<div class="s-nombre-real">24A</div><div class="s-grafico-real"><div class="t-girada">T</div><div class="curva-led"></div></div></div>
 
 <div id="s31a_base" class="senal-unificada f-rojo nombre-s-abajo enana" style="top: 865px; left: 5400px;">
 <div class="s-nombre-real">31A</div>
         <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content: center;">
     <div class="t-girada">T</div>
-    <div class="circulo-led"></div>
+    <div class="curva-led"></div>
   </div>
 </div>
 
   
 <div id="s30a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 5235px;">
         <div class="s-nombre-real">30A</div>
-        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="curva-led"></div></div>
     </div>
 
 <div id="s33ba_base" class="senal-unificada f-rojo nombre-s-abajo enana" style="top: 865px; left: 5745px;">
 <div class="s-nombre-real">33BA</div>
         <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content: center;">
     <div class="t-girada">T</div>
-    <div class="circulo-led"></div>
+    <div class="curva-led"></div>
   </div>
 </div>
 
@@ -1499,7 +1518,7 @@ rotate(45deg);"></div>
 
 <div id="s32a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 5575px;">
         <div class="s-nombre-real">32A</div>
-        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="curva-led"></div></div>
     </div>
 
 
@@ -1509,7 +1528,7 @@ rotate(45deg);"></div>
 <div class="s-nombre-real">45B</div>
 <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content: center;">
 <div class="t-girada">T</div>
-<div class="circulo-led"></div>
+<div class="curva-led"></div>
 </div>
 </div>
 
@@ -1519,24 +1538,24 @@ rotate(45deg);"></div>
 
  <div id="s40a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 6440px;">
         <div class="s-nombre-real">40A</div>
-        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="curva-led"></div></div>
     </div>
 
 <div id="s47a_base" class="senal-unificada f-rojo enana" style="top: 865px; left: 7212px;">
         <div class="s-nombre-real">47A</div>
-        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="curva-led"></div></div>
     </div>
 
 <div id="s44a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 7212px;">
         <div class="s-nombre-real">44A</div>
-        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="curva-led"></div></div>
     </div>
 
  <div id="s49a_base" class="senal-unificada f-rojo nombre-s-abajo enana" style="top: 865px; left: 7830px;">
         <div class="s-nombre-real">49A</div>
        <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content: center;">
 <div class="t-girada">T</div>
-<div class="circulo-led"></div>
+<div class="curva-led"></div>
 </div>
 </div>
 
@@ -1549,7 +1568,7 @@ rotate(45deg);"></div>
         <div class="s-nombre-real">51A</div>
         <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content: center;">
 <div class="t-girada">T</div>
-<div class="circulo-led"></div>
+<div class="curva-led"></div>
 </div>
 </div>
 
@@ -1563,7 +1582,7 @@ rotate(45deg);"></div>
         <div class="s-nombre-real">147A</div>
          <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content: center;">
 <div class="t-girada">T</div>
-<div class="circulo-led"></div>
+<div class="curva-led"></div>
 </div>
 </div>
 
@@ -1572,7 +1591,7 @@ rotate(45deg);"></div>
         <div class="s-nombre-real">142A</div>
         <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content: center;">
 <div class="t-girada">T</div>
-<div class="circulo-led"></div>
+<div class="curva-led"></div>
 </div>
 </div>
 
@@ -1580,7 +1599,7 @@ rotate(45deg);"></div>
 
 <div id="s143c_base" class="senal-unificada f-rojo enana" style="top: 715px; left: 7240px;">
         <div class="s-nombre-real">143C</div>
-        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="curva-led"></div></div>
     </div>
 
  
@@ -1588,14 +1607,14 @@ rotate(45deg);"></div>
 
  <div id="s151a_base" class="senal-unificada f-rojo enana" style="top: 115px; left: 7575px;">
         <div class="s-nombre-real">151A</div>
-        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="curva-led"></div></div>
     </div>
 
 <div id="s45c_base" class="senal-unificada f-rojo nombre-s-abajo enana" style="top: 265px; left: 6985px;">
         <div class="s-nombre-real">45C</div>
          <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content: center;">
 <div class="t-girada">T</div>
-<div class="circulo-led"></div>
+<div class="curva-led"></div>
 </div>
 </div>
 
@@ -1606,7 +1625,7 @@ rotate(45deg);"></div>
         <div class="s-nombre-real">150A</div>
         <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content:center;">
 <div class="t-girada">T</div>
-<div class="circulo-led"></div>
+<div class="curva-led"></div>
 </div>
 </div>
 
@@ -1618,23 +1637,23 @@ rotate(45deg);"></div>
 
 <div id="s152b_base" class="senal-unificada f-rojo enana" style="top: 415px; left: 7655px;">
         <div class="s-nombre-real">152B</div>
-        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="curva-led"></div></div>
     </div>
 <div id="s152c_base" class="senal-unificada f-rojo enana" style="top: 490px; left: 7670px;transform: rotate(-45deg);">
         <div class="s-nombre-real">152C</div>
-        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="curva-led"></div></div>
     </div>
 
 <div id="s50a_base" class="senal-unificada f-rojo enana" style="top: 315px; left: 7220px;">
         <div class="s-nombre-real">50A</div>
-        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="curva-led"></div></div>
     </div>
 
 <div id="s141a_base" class="senal-unificada f-rojo nombre-s-abajo enana" style="top: 530px; left: 6730px;transform: rotate(-90deg);">
         <div class="s-nombre-real">141A</div>
         <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content: center;">
 <div class="t-girada">T</div>
-<div class="circulo-led"></div>
+<div class="curva-led"></div>
 </div>
 </div>
 
@@ -1643,14 +1662,14 @@ rotate(45deg);"></div>
 
 <div id="s141c_base" class="senal-unificada f-rojo enana" style="top: 715px; left: 6620px;">
         <div class="s-nombre-real">141C</div>
-        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="curva-led"></div></div>
     </div>
 
 <div id="s156a_base" class="senal-unificada f-rojo nombre-s-abajo enana" style="top: 465px; left: 8225px;">
         <div class="s-nombre-real">156A</div>
         <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content: center;">
 <div class="t-girada">T</div>
-<div class="circulo-led"></div>
+<div class="curva-led"></div>
 </div>
 </div>
 
@@ -1660,7 +1679,7 @@ rotate(45deg);"></div>
         <div class="s-nombre-real">61A</div>
          <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content:center;">
 <div class="t-girada">T</div>
-<div class="circulo-led"></div>
+<div class="curva-led"></div>
 </div>
 </div>
 
@@ -1668,14 +1687,14 @@ rotate(45deg);"></div>
   
 <div id="s60a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 8593px;">
         <div class="s-nombre-real">60A</div>
-        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="curva-led"></div></div>
     </div>
 
 <div id="s65a_base" class="senal-unificada f-rojo nombre-s-abajo enana" style="top: 865px; left: 9080px;">
         <div class="s-nombre-real">65A</div>
 <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content:center;">
 <div class="t-girada">T</div>
-<div class="circulo-led"></div>
+<div class="curva-led"></div>
 </div>
 </div>
  
@@ -1683,19 +1702,19 @@ rotate(45deg);"></div>
 
 <div id="s62a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 8923px;">
         <div class="s-nombre-real">62A</div>
-        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="curva-led"></div></div>
     </div>
 
 <div id="s72a_base" class="senal-unificada f-rojo enana" style="top: 915px; left: 9995px;">
         <div class="s-nombre-real">72A</div>
-        <div class="s-grafico-real"><div class="t-girada">T</div><div class="circulo-led"></div></div>
+        <div class="s-grafico-real"><div class="t-girada">T</div><div class="curva-led"></div></div>
     </div>
 
     <div id="s73a_base" class="senal-unificada f-rojo nombre-s-abajo enana" style="top: 865px; left: 10735px;">
         <div class="s-nombre-real">73A</div>
         <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content:center;">
 <div class="t-girada">T</div>
-<div class="circulo-led"></div>
+<div class="curva-led"></div>
 </div>
 </div>
 
@@ -1705,7 +1724,7 @@ rotate(45deg);"></div>
         <div class="s-nombre-real">74A</div>
         <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content:center;">
 <div class="t-girada">T</div>
-<div class="circulo-led"></div>
+<div class="curva-led"></div>
 </div>
 </div>
 
@@ -1713,7 +1732,7 @@ rotate(45deg);"></div>
         <div class="s-nombre-real">75B</div>
         <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content:center;">
 <div class="t-girada">T</div>
-<div class="circulo-led"></div>
+<div class="curva-led"></div>
 </div>
 </div>
 
@@ -1721,7 +1740,7 @@ rotate(45deg);"></div>
         <div class="s-nombre-real">75C</div>
         <div class="s-grafico-real" style="transform: scaleX(-1); display: flex; justify-content:center;">
 <div class="t-girada">T</div>
-<div class="circulo-led"></div>
+<div class="curva-led"></div>
 </div>
 </div>
 
